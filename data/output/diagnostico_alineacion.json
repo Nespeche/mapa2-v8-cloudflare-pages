@@ -1,0 +1,720 @@
+{
+  "ejecutado_en": "2026-07-04T22:27:06.181792+00:00",
+  "updates": {
+    "nombres_normalizados": 2370,
+    "provincia_id": 54,
+    "departamento_id": 0,
+    "relaciones": 2369
+  },
+  "coverage": [
+    {
+      "tipo_entidad": "gobierno_local",
+      "entidades": 2345,
+      "con_codigo_indec": 2291,
+      "con_codigo_georef": 0,
+      "con_codigo_refeglo": 2345,
+      "con_centroide": 2304,
+      "con_geom_wkt": 0,
+      "con_poblacion_2022": 2291,
+      "poblacion_oficial_directa": 2291,
+      "poblacion_oficial_procesada": 0,
+      "poblacion_estimada": 0,
+      "relaciones_padre": 2345,
+      "relaciones_huerfanas": 0
+    },
+    {
+      "tipo_entidad": "pais",
+      "entidades": 1,
+      "con_codigo_indec": 1,
+      "con_codigo_georef": 1,
+      "con_codigo_refeglo": 0,
+      "con_centroide": 0,
+      "con_geom_wkt": 0,
+      "con_poblacion_2022": 1,
+      "poblacion_oficial_directa": 1,
+      "poblacion_oficial_procesada": 0,
+      "poblacion_estimada": 0,
+      "relaciones_padre": 0,
+      "relaciones_huerfanas": 0
+    },
+    {
+      "tipo_entidad": "provincia",
+      "entidades": 24,
+      "con_codigo_indec": 24,
+      "con_codigo_georef": 24,
+      "con_codigo_refeglo": 0,
+      "con_centroide": 24,
+      "con_geom_wkt": 0,
+      "con_poblacion_2022": 24,
+      "poblacion_oficial_directa": 24,
+      "poblacion_oficial_procesada": 0,
+      "poblacion_estimada": 0,
+      "relaciones_padre": 24,
+      "relaciones_huerfanas": 0
+    }
+  ],
+  "population_controls": {
+    "poblacion_pais": 45892285,
+    "suma_provincias": 45892285,
+    "diferencia_pais_vs_provincias": 0,
+    "suma_gobiernos_locales": 45892285,
+    "nota_gobiernos_locales": "Control informativo: gobiernos locales no siempre son una partición simple equivalente a provincias/departamentos."
+  },
+  "gpkg": {
+    "existe": true,
+    "capas": [
+      {
+        "table_name": "entidades_mapa",
+        "data_type": "features",
+        "identifier": "entidades_mapa"
+      },
+      {
+        "table_name": "georef_aglomerados",
+        "data_type": "features",
+        "identifier": "georef_aglomerados"
+      },
+      {
+        "table_name": "georef_asentamientos",
+        "data_type": "features",
+        "identifier": "georef_asentamientos"
+      },
+      {
+        "table_name": "georef_departamentos",
+        "data_type": "features",
+        "identifier": "georef_departamentos"
+      },
+      {
+        "table_name": "georef_fracciones_censales",
+        "data_type": "features",
+        "identifier": "georef_fracciones_censales"
+      },
+      {
+        "table_name": "georef_gobiernos_locales",
+        "data_type": "features",
+        "identifier": "georef_gobiernos_locales"
+      },
+      {
+        "table_name": "georef_localidades",
+        "data_type": "features",
+        "identifier": "georef_localidades"
+      },
+      {
+        "table_name": "georef_municipios",
+        "data_type": "features",
+        "identifier": "georef_municipios"
+      },
+      {
+        "table_name": "georef_provincias",
+        "data_type": "features",
+        "identifier": "georef_provincias"
+      },
+      {
+        "table_name": "georef_radios_censales",
+        "data_type": "features",
+        "identifier": "georef_radios_censales"
+      }
+    ],
+    "conteos": [
+      {
+        "table_name": "entidades_mapa",
+        "registros": 94542
+      },
+      {
+        "table_name": "georef_aglomerados",
+        "registros": 119
+      },
+      {
+        "table_name": "georef_asentamientos",
+        "registros": 14466
+      },
+      {
+        "table_name": "georef_departamentos",
+        "registros": 529
+      },
+      {
+        "table_name": "georef_fracciones_censales",
+        "registros": 6571
+      },
+      {
+        "table_name": "georef_gobiernos_locales",
+        "registros": 2280
+      },
+      {
+        "table_name": "georef_localidades",
+        "registros": 4028
+      },
+      {
+        "table_name": "georef_municipios",
+        "registros": 10
+      },
+      {
+        "table_name": "georef_provincias",
+        "registros": 24
+      },
+      {
+        "table_name": "georef_radios_censales",
+        "registros": 66515
+      }
+    ]
+  },
+  "missing": [
+    {
+      "severidad": "alta",
+      "categoria": "fuente_no_materializada",
+      "entidad_tipo": "departamento_partido_comuna",
+      "id_entidad": null,
+      "descripcion": "La jerarquía departamento_partido_comuna no está materializada en la base semilla actual.",
+      "accion_recomendada": "Descargar Georef departamentos y vincular con Censo 2022 por departamento/partido/comuna.",
+      "fuente_sugerida": "Georef / INDEC / REDATAM / RENABAP / fuente municipal según corresponda"
+    },
+    {
+      "severidad": "media",
+      "categoria": "fuente_no_materializada",
+      "entidad_tipo": "municipio",
+      "id_entidad": null,
+      "descripcion": "La jerarquía municipio no está materializada en la base semilla actual.",
+      "accion_recomendada": "Descargar Georef municipios; cruzar con gobiernos locales cuando corresponda.",
+      "fuente_sugerida": "Georef / INDEC / REDATAM / RENABAP / fuente municipal según corresponda"
+    },
+    {
+      "severidad": "media",
+      "categoria": "fuente_no_materializada",
+      "entidad_tipo": "localidad",
+      "id_entidad": null,
+      "descripcion": "La jerarquía localidad no está materializada en la base semilla actual.",
+      "accion_recomendada": "Descargar Georef localidades; usar BAHRA/Georef y relación provincia/departamento/localidad.",
+      "fuente_sugerida": "Georef / INDEC / REDATAM / RENABAP / fuente municipal según corresponda"
+    },
+    {
+      "severidad": "alta",
+      "categoria": "fuente_no_materializada",
+      "entidad_tipo": "localidad_censal",
+      "id_entidad": null,
+      "descripcion": "La jerarquía localidad_censal no está materializada en la base semilla actual.",
+      "accion_recomendada": "Descargar Georef localidades_censales; importar población desde REDATAM/Codgeo exportado.",
+      "fuente_sugerida": "Georef / INDEC / REDATAM / RENABAP / fuente municipal según corresponda"
+    },
+    {
+      "severidad": "media",
+      "categoria": "fuente_no_materializada",
+      "entidad_tipo": "fraccion_censal",
+      "id_entidad": null,
+      "descripcion": "La jerarquía fraccion_censal no está materializada en la base semilla actual.",
+      "accion_recomendada": "Descargar o importar fracciones censales INDEC/Georef v2 si están disponibles.",
+      "fuente_sugerida": "Georef / INDEC / REDATAM / RENABAP / fuente municipal según corresponda"
+    },
+    {
+      "severidad": "media",
+      "categoria": "fuente_no_materializada",
+      "entidad_tipo": "radio_censal",
+      "id_entidad": null,
+      "descripcion": "La jerarquía radio_censal no está materializada en la base semilla actual.",
+      "accion_recomendada": "Descargar o importar radios censales INDEC/Georef v2 si están disponibles; necesario para estimar barrios.",
+      "fuente_sugerida": "Georef / INDEC / REDATAM / RENABAP / fuente municipal según corresponda"
+    },
+    {
+      "severidad": "informativa",
+      "categoria": "fuente_no_materializada",
+      "entidad_tipo": "barrio",
+      "id_entidad": null,
+      "descripcion": "La jerarquía barrio no está materializada en la base semilla actual.",
+      "accion_recomendada": "Incorporar capas oficiales municipales/provinciales o OSM como no oficial.",
+      "fuente_sugerida": "Georef / INDEC / REDATAM / RENABAP / fuente municipal según corresponda"
+    },
+    {
+      "severidad": "informativa",
+      "categoria": "fuente_no_materializada",
+      "entidad_tipo": "barrio_popular",
+      "id_entidad": null,
+      "descripcion": "La jerarquía barrio_popular no está materializada en la base semilla actual.",
+      "accion_recomendada": "Incorporar RENABAP como capa parcial de barrios populares.",
+      "fuente_sugerida": "Georef / INDEC / REDATAM / RENABAP / fuente municipal según corresponda"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:303196",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Antelo.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:302864",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Arroyo Corralito.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:302274",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Arroyo del Medio - El Gramiyal.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349035",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Banco Payaguá.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349049",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Bartolomé de las Casas.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:302334",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Chañar.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309435",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Colonia Oficial N° 13.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309655",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Colonia Reffino.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349056",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Colonia Sarmiento.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309325",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Costa San Antonio.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309335",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Costa Uruguay Sur.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309530",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Crucesitas Séptima.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309535",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Crucesitas Tercera.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:625007",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Cubanea.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309275",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Distrito Cuarto.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309285",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Distrito Quinto .",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309543",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Distrito Sauce.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:302920",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Eigenfeld Merou.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349126",
+      "descripcion": "Entidad sin población censal 2022 vinculada: El Potrillo.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349063",
+      "descripcion": "Entidad sin población censal 2022 vinculada: El Recreo.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309295",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Estación Lazo.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:302509",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Faustino M. Parera - Pastor Britos.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349070",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Fortin Sargento 1° Leyes.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:540199",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Fracrán.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309300",
+      "descripcion": "Entidad sin población censal 2022 vinculada: González Calderón.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:302224",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Gualeguaycito .",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:386164",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Jama.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349077",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Juan Gregorio Bazán.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:302035",
+      "descripcion": "Entidad sin población censal 2022 vinculada: La Clarita.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309235",
+      "descripcion": "Entidad sin población censal 2022 vinculada: La Esmeralda.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:302348",
+      "descripcion": "Entidad sin población censal 2022 vinculada: La Verbena.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349098",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Laguna Gallo.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309470",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Las Toscas.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:303168",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Libaros .",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309210",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Loma Limpia (El Gato).",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349014",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Mariano Boedo.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349021",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Mojón de Fierro.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309900",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Molino Doll.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309305",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Monte Redondo.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309905",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Montoya.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:302308",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Nueva Vizcaya.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349112",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Palma Sola.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309385",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Perdices.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349105",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Portón Negro.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349084",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Posta Cambio Zalazar.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349007",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Pozo del Mortero.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309310",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Punta del Monte.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349091",
+      "descripcion": "Entidad sin población censal 2022 vinculada: San Martín I.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309005",
+      "descripcion": "Entidad sin población censal 2022 vinculada: San Miguel .",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:302259",
+      "descripcion": "Entidad sin población censal 2022 vinculada: San Pedro.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309225",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Santa Lucía.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309830",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Sauce Sur.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:349042",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Tatané.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    },
+    {
+      "severidad": "media",
+      "categoria": "poblacion_2022",
+      "entidad_tipo": "gobierno_local",
+      "id_entidad": "gobierno_local:309410",
+      "descripcion": "Entidad sin población censal 2022 vinculada: Ñancay.",
+      "accion_recomendada": "Importar cuadro oficial si existe; si es barrio, estimar por overlay con radios censales y marcar como estimada.",
+      "fuente_sugerida": "INDEC Censo 2022 / REDATAM / radios censales / fuente municipal"
+    }
+  ]
+}

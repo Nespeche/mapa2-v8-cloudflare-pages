@@ -1,0 +1,46 @@
+V5.1 Windows Path Report
+
+Total files: 402
+Max relative path length: 114
+
+Top relative paths:
+114	public/data/provincias/provincia_94_tierra_del_fuego_antartida_e_islas_del_atlantico_sur/gobiernos_locales.geojson
+110	public/data/provincias/provincia_94_tierra_del_fuego_antartida_e_islas_del_atlantico_sur/departamentos.geojson
+107	public/data/provincias/provincia_94_tierra_del_fuego_antartida_e_islas_del_atlantico_sur/fracciones.geojson
+103	public/data/provincias/provincia_94_tierra_del_fuego_antartida_e_islas_del_atlantico_sur/radios.geojson
+103	public/data/provincias/provincia_94_tierra_del_fuego_antartida_e_islas_del_atlantico_sur/puntos.geojson
+93	public/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/gobiernos_locales.geojson
+89	public/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/departamentos.geojson
+87	public/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/aglomerados.geojson
+86	public/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/fracciones.geojson
+82	public/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson
+82	public/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/puntos.geojson
+81	public/data/provincias/provincia_86_santiago_del_estero/gobiernos_locales.geojson
+77	public/data/provincias/provincia_86_santiago_del_estero/departamentos.geojson
+75	public/data/provincias/provincia_86_santiago_del_estero/aglomerados.geojson
+74	public/data/provincias/provincia_86_santiago_del_estero/fracciones.geojson
+74	public/data/provincias/provincia_06_buenos_aires/gobiernos_locales.geojson
+72	public/data/provincias/provincia_78_santa_cruz/gobiernos_locales.geojson
+72	public/data/provincias/provincia_30_entre_rios/gobiernos_locales.geojson
+72	public/data/provincias/provincia_18_corrientes/gobiernos_locales.geojson
+71	public/data/provincias/provincia_62_rio_negro/gobiernos_locales.geojson
+71	public/data/provincias/provincia_10_catamarca/gobiernos_locales.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06882.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06875.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06868.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06861.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06854.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06847.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06840.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06833.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06826.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06819.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06812.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06805.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06798.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06791.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06784.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06778.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06770.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06763.geojson
+71	public/data/provincias/provincia_06_buenos_aires/radios/d_06760.geojson

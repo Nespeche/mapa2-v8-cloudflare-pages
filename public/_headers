@@ -1,0 +1,11 @@
+# Mapa 2 V8 — Cloudflare Pages Free
+# Headers estáticos básicos. Cloudflare ya agrega ETag, Content-Type,
+# Referrer-Policy y X-Content-Type-Options por defecto para Pages.
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+
+# Assets generados por Vite con hash de contenido.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

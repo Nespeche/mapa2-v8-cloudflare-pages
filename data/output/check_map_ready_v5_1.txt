@@ -1,0 +1,69 @@
+================================================================================
+CHECK MAP READY V5.1 — CLOUDFLARE FIX
+================================================================================
+Generado: 2026-07-05T16:14:20.813120+00:00
+Estado final: OK
+
+Capas fuente GPKG
+--------------------------------------------------------------------------------
+app_provincias: OK
+georef_departamentos: OK
+georef_gobiernos_locales: OK
+georef_municipios: OK
+georef_aglomerados: OK
+georef_fracciones_censales: OK
+georef_radios_censales: OK
+app_localidades_puntos: OK
+
+GeoJSON nacionales
+--------------------------------------------------------------------------------
+OK    | provincias | features=24 | size=0.241 MB | pop=45892285 | provincias.geojson
+OK    | departamentos | features=529 | size=1.73 MB | pop=45892285 | localidades_poligonos_departamentos.geojson
+OK    | gobiernos_locales | features=2280 | size=3.756 MB | pop=45560279 | localidades_poligonos_gobiernos_locales.geojson
+OK    | municipios | features=10 | size=0.051 MB | pop=6681774 | localidades_poligonos_municipios.geojson
+OK    | aglomerados | features=119 | size=0.254 MB | pop=34516748 | localidades_poligonos_aglomerados.geojson
+OK    | fracciones | features=6571 | size=10.611 MB | pop=45892285 | localidades_poligonos_fracciones.geojson
+OK    | radios | features=66515 | size=0 MB | pop=45892285 | None
+  INFO: Sin GeoJSON nacional por diseño; se valida mediante splits/indexación.
+OK    | localidades_puntos | features=18470 | size=0 MB | pop=91776372 | None
+  INFO: Sin GeoJSON nacional por diseño; se valida mediante splits/indexación.
+
+Splits por provincia
+--------------------------------------------------------------------------------
+Archivos split GeoJSON declarados: 144
+Splits provincia validados: 144
+Splits provincia faltantes: 0
+Splits provincia con error: 0
+
+Particiones especiales
+--------------------------------------------------------------------------------
+Particiones declaradas: 135
+Particiones validadas: 135
+Particiones con error: 0
+Buenos Aires radios: features=23901 | pop=17523996 | particiones=135 | max_file=2.424 MB
+
+Auditoría Cloudflare public/
+--------------------------------------------------------------------------------
+Archivos en public/: 294
+Archivo más pesado: data/localidades_poligonos_fracciones.geojson (10.611 MiB)
+Archivos >25 MiB: 0
+Archivos 20-25 MiB: 0
+Archivos 15-20 MiB: 0
+
+Auditoría rutas Windows
+--------------------------------------------------------------------------------
+Límite relativo preventivo: 180
+Ruta pública relativa más larga: 107 caracteres | data/provincias/provincia_94_tierra_del_fuego_antartida_e_islas_del_atlantico_sur/gobiernos_locales.geojson
+Rutas públicas > límite preventivo: 0
+
+Advertencias
+--------------------------------------------------------------------------------
+Sin advertencias.
+
+Errores
+--------------------------------------------------------------------------------
+Sin errores bloqueantes.
+
+Resultado
+--------------------------------------------------------------------------------
+OK: V5.1 Map Ready Cloudflare Fix validada. No se avanzó a V6.

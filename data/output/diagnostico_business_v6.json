@@ -1,0 +1,750 @@
+{
+  "project": "Mapa2",
+  "version": "v6_business_synthetic_autoparts",
+  "phase": "V6 — Base ficticia de clientes y ventas de autopartes",
+  "generated_at": "2026-07-05T16:44:42+00:00",
+  "seed": 20260705,
+  "synthetic_data_notice": "Clientes, productos y ventas son ficticios. No representan datos reales.",
+  "base_v5_1": {
+    "metadata_path": "public/data/metadata.json",
+    "provincias_index_path": "public/data/indexes/provincias_index.json",
+    "localidades_puntos_index_path": "public/data/indexes/localidades_puntos_index.json",
+    "census_logic_modified": false
+  },
+  "counts": {
+    "clientes": 2000,
+    "productos": 65,
+    "ventas_registros": 128998,
+    "meses": 24,
+    "periodo_desde": "2025-01",
+    "periodo_hasta": "2026-12",
+    "agregados_provincia_mes": 264,
+    "agregados_departamento_mes": 6432,
+    "agregados_producto_mes": 1560,
+    "agregados_cliente": 2000
+  },
+  "distribution": {
+    "clientes_por_provincia": {
+      "Buenos Aires": 1400,
+      "Ciudad Autónoma de Buenos Aires": 160,
+      "Córdoba": 130,
+      "Santa Fe": 120,
+      "Mendoza": 50,
+      "Entre Ríos": 40,
+      "Tucumán": 35,
+      "Neuquén": 20,
+      "Salta": 20,
+      "Río Negro": 15,
+      "San Luis": 10
+    },
+    "clientes_por_tipo": {
+      "Casa de repuestos": 613,
+      "Taller mecánico": 526,
+      "Lubricentro": 230,
+      "Distribuidor mayorista": 180,
+      "Concesionario": 166,
+      "Servicio técnico": 104,
+      "Flota comercial": 95,
+      "Rectificadora": 86
+    },
+    "clientes_por_segmento": {
+      "Mediano": 933,
+      "Pequeño": 776,
+      "Grande": 291
+    },
+    "buenos_aires_zona": {
+      "AMBA": 868,
+      "Interior bonaerense": 532
+    }
+  },
+  "sales_summary": {
+    "venta_neta_total": 156598296863.76,
+    "venta_neta_2025": 70214766538.47,
+    "venta_neta_2026": 86383530325.29,
+    "variacion_2026_vs_2025_pct": 23.03,
+    "top_provincias_por_ventas": [
+      {
+        "name": "Buenos Aires",
+        "value": 107045510343.13
+      },
+      {
+        "name": "Ciudad Autónoma de Buenos Aires",
+        "value": 13870353543.52
+      },
+      {
+        "name": "Córdoba",
+        "value": 11514733264.7
+      },
+      {
+        "name": "Santa Fe",
+        "value": 10141411985.58
+      },
+      {
+        "name": "Mendoza",
+        "value": 4526877262.24
+      },
+      {
+        "name": "Tucumán",
+        "value": 2615899155.72
+      },
+      {
+        "name": "Entre Ríos",
+        "value": 2550093567.38
+      },
+      {
+        "name": "Neuquén",
+        "value": 1571717501.57
+      },
+      {
+        "name": "Salta",
+        "value": 1497159349.2
+      },
+      {
+        "name": "Río Negro",
+        "value": 875891417.31
+      }
+    ],
+    "top_productos_por_ventas": [
+      {
+        "name": "Neumático utilitario R15",
+        "value": 9951780540.97
+      },
+      {
+        "name": "Neumático 195/55 R16",
+        "value": 8420398791.69
+      },
+      {
+        "name": "Neumático 175/65 R14",
+        "value": 7400864816.35
+      },
+      {
+        "name": "Batería utilitario 90Ah",
+        "value": 7185788205.02
+      },
+      {
+        "name": "Batería 12V 75Ah",
+        "value": 5489630222.89
+      },
+      {
+        "name": "Aceite sintético 5W30 4L",
+        "value": 5484257331.83
+      },
+      {
+        "name": "Aceite transmisión 75W90",
+        "value": 4853635872.38
+      },
+      {
+        "name": "Kit de filtros service",
+        "value": 4731169988.95
+      },
+      {
+        "name": "Batería 12V 55Ah",
+        "value": 4393848561.11
+      },
+      {
+        "name": "Parrilla de suspensión",
+        "value": 4363915580.8
+      }
+    ],
+    "top_tipos_cliente": [
+      {
+        "name": "Casa de repuestos",
+        "count": 613
+      },
+      {
+        "name": "Taller mecánico",
+        "count": 526
+      },
+      {
+        "name": "Lubricentro",
+        "count": 230
+      },
+      {
+        "name": "Distribuidor mayorista",
+        "count": 180
+      },
+      {
+        "name": "Concesionario",
+        "count": 166
+      },
+      {
+        "name": "Servicio técnico",
+        "count": 104
+      },
+      {
+        "name": "Flota comercial",
+        "count": 95
+      },
+      {
+        "name": "Rectificadora",
+        "count": 86
+      }
+    ]
+  },
+  "geocoding": {
+    "method": "Asignación de clientes ficticios a puntos/localidades existentes V5.1 con jitter sintético controlado.",
+    "metodo_geocodificacion": "punto_localidad_v5_1_con_jitter_sintetico",
+    "confianza_geocodificacion": 0.88,
+    "source_layers": [
+      "public/data/indexes/provincias_index.json",
+      "public/data/indexes/localidades_puntos_index.json",
+      "public/data/provincias/<provincia>/puntos.geojson",
+      "public/data/provincias/<provincia>/departamentos.geojson"
+    ]
+  },
+  "generated_files": {
+    "business_output": [
+      {
+        "relative_path": "output/business_v6/ventas_mensuales_v6.csv",
+        "size_bytes": 14680144,
+        "size_mib": 14.0
+      },
+      {
+        "relative_path": "output/business_v6/clientes_v6.geojson",
+        "size_bytes": 1949275,
+        "size_mib": 1.859
+      },
+      {
+        "relative_path": "output/business_v6/agregados_departamento_mes_v6.csv",
+        "size_bytes": 850366,
+        "size_mib": 0.811
+      },
+      {
+        "relative_path": "output/business_v6/clientes_v6.csv",
+        "size_bytes": 543514,
+        "size_mib": 0.518
+      },
+      {
+        "relative_path": "output/business_v6/agregados_cliente_v6.csv",
+        "size_bytes": 482339,
+        "size_mib": 0.46
+      },
+      {
+        "relative_path": "output/business_v6/agregados_producto_mes_v6.csv",
+        "size_bytes": 201817,
+        "size_mib": 0.192
+      },
+      {
+        "relative_path": "output/business_v6/agregados_provincia_mes_v6.csv",
+        "size_bytes": 30034,
+        "size_mib": 0.029
+      },
+      {
+        "relative_path": "output/business_v6/productos_v6.csv",
+        "size_bytes": 6357,
+        "size_mib": 0.006
+      },
+      {
+        "relative_path": "output/business_v6/calendario_v6.csv",
+        "size_bytes": 1249,
+        "size_mib": 0.001
+      }
+    ],
+    "business_public": [
+      {
+        "relative_path": "business/ventas_mensuales.csv",
+        "size_bytes": 14680144,
+        "size_mib": 14.0
+      },
+      {
+        "relative_path": "business/agregados/ventas_departamento_mes.json",
+        "size_bytes": 3339536,
+        "size_mib": 3.185
+      },
+      {
+        "relative_path": "business/agregados/heatmap_clientes_ventas.geojson",
+        "size_bytes": 2039878,
+        "size_mib": 1.945
+      },
+      {
+        "relative_path": "business/clientes.geojson",
+        "size_bytes": 1949275,
+        "size_mib": 1.859
+      },
+      {
+        "relative_path": "business/agregados/ventas_cliente_totales.json",
+        "size_bytes": 1530247,
+        "size_mib": 1.459
+      },
+      {
+        "relative_path": "business/agregados/ventas_producto_mes.json",
+        "size_bytes": 810196,
+        "size_mib": 0.773
+      },
+      {
+        "relative_path": "business/agregados/ventas_provincia_mes.json",
+        "size_bytes": 124020,
+        "size_mib": 0.118
+      },
+      {
+        "relative_path": "business/productos.json",
+        "size_bytes": 25746,
+        "size_mib": 0.025
+      },
+      {
+        "relative_path": "business/calendario.json",
+        "size_bytes": 6114,
+        "size_mib": 0.006
+      },
+      {
+        "relative_path": "business/metadata_business_v6.json",
+        "size_bytes": 5882,
+        "size_mib": 0.006
+      }
+    ],
+    "public_data_top_20": [
+      {
+        "relative_path": "business/ventas_mensuales.csv",
+        "size_bytes": 14680144,
+        "size_mib": 14.0
+      },
+      {
+        "relative_path": "localidades_poligonos_fracciones.geojson",
+        "size_bytes": 11126930,
+        "size_mib": 10.611
+      },
+      {
+        "relative_path": "provincias/provincia_14_cordoba/radios.geojson",
+        "size_bytes": 10414797,
+        "size_mib": 9.932
+      },
+      {
+        "relative_path": "provincias/provincia_82_santa_fe/radios.geojson",
+        "size_bytes": 8349606,
+        "size_mib": 7.963
+      },
+      {
+        "relative_path": "provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson",
+        "size_bytes": 5937870,
+        "size_mib": 5.663
+      },
+      {
+        "relative_path": "provincias/provincia_30_entre_rios/radios.geojson",
+        "size_bytes": 5125132,
+        "size_mib": 4.888
+      },
+      {
+        "relative_path": "provincias/provincia_06_buenos_aires/puntos.geojson",
+        "size_bytes": 4505899,
+        "size_mib": 4.297
+      },
+      {
+        "relative_path": "provincias/provincia_06_buenos_aires/fracciones.geojson",
+        "size_bytes": 4181471,
+        "size_mib": 3.988
+      },
+      {
+        "relative_path": "localidades_poligonos_gobiernos_locales.geojson",
+        "size_bytes": 3937937,
+        "size_mib": 3.756
+      },
+      {
+        "relative_path": "provincias/provincia_50_mendoza/radios.geojson",
+        "size_bytes": 3686937,
+        "size_mib": 3.516
+      },
+      {
+        "relative_path": "provincias/provincia_90_tucuman/radios.geojson",
+        "size_bytes": 3588837,
+        "size_mib": 3.423
+      },
+      {
+        "relative_path": "business/agregados/ventas_departamento_mes.json",
+        "size_bytes": 3339536,
+        "size_mib": 3.185
+      },
+      {
+        "relative_path": "provincias/provincia_18_corrientes/radios.geojson",
+        "size_bytes": 3159805,
+        "size_mib": 3.013
+      },
+      {
+        "relative_path": "provincias/provincia_54_misiones/radios.geojson",
+        "size_bytes": 3156477,
+        "size_mib": 3.01
+      },
+      {
+        "relative_path": "provincias/provincia_22_chaco/radios.geojson",
+        "size_bytes": 3030558,
+        "size_mib": 2.89
+      },
+      {
+        "relative_path": "provincias/provincia_66_salta/radios.geojson",
+        "size_bytes": 2904702,
+        "size_mib": 2.77
+      },
+      {
+        "relative_path": "provincias/provincia_14_cordoba/puntos.geojson",
+        "size_bytes": 2775101,
+        "size_mib": 2.647
+      },
+      {
+        "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06427.geojson",
+        "size_bytes": 2542223,
+        "size_mib": 2.424
+      },
+      {
+        "relative_path": "business/agregados/heatmap_clientes_ventas.geojson",
+        "size_bytes": 2039878,
+        "size_mib": 1.945
+      },
+      {
+        "relative_path": "business/clientes.geojson",
+        "size_bytes": 1949275,
+        "size_mib": 1.859
+      }
+    ]
+  },
+  "validation": {
+    "executed_at": "2026-07-05T16:48:35+00:00",
+    "status": "OK",
+    "items": [
+      {
+        "status": "OK",
+        "name": "Existe metadata.json V5.1",
+        "detail": "public/data/metadata.json"
+      },
+      {
+        "status": "OK",
+        "name": "Existe provincias_index.json",
+        "detail": "public/data/indexes/provincias_index.json"
+      },
+      {
+        "status": "OK",
+        "name": "Existe localidades_puntos_index.json",
+        "detail": "public/data/indexes/localidades_puntos_index.json"
+      },
+      {
+        "status": "OK",
+        "name": "Base V5.1 en estado OK",
+        "detail": "version=v5_1_map_ready_cloudflare_fix"
+      },
+      {
+        "status": "OK",
+        "name": "Provincias válidas cargadas",
+        "detail": "24 provincias"
+      },
+      {
+        "status": "OK",
+        "name": "Existe metadata_business_v6.json",
+        "detail": "public/data/business/metadata_business_v6.json"
+      },
+      {
+        "status": "OK",
+        "name": "Existe clientes.geojson",
+        "detail": "public/data/business/clientes.geojson"
+      },
+      {
+        "status": "OK",
+        "name": "Existe productos.json",
+        "detail": "public/data/business/productos.json"
+      },
+      {
+        "status": "OK",
+        "name": "Existe calendario.json",
+        "detail": "public/data/business/calendario.json"
+      },
+      {
+        "status": "OK",
+        "name": "Existe ventas_mensuales.csv",
+        "detail": "public/data/business/ventas_mensuales.csv"
+      },
+      {
+        "status": "OK",
+        "name": "Existe ventas_provincia_mes.json",
+        "detail": "public/data/business/agregados/ventas_provincia_mes.json"
+      },
+      {
+        "status": "OK",
+        "name": "Existe ventas_departamento_mes.json",
+        "detail": "public/data/business/agregados/ventas_departamento_mes.json"
+      },
+      {
+        "status": "OK",
+        "name": "Existe ventas_producto_mes.json",
+        "detail": "public/data/business/agregados/ventas_producto_mes.json"
+      },
+      {
+        "status": "OK",
+        "name": "Existe ventas_cliente_totales.json",
+        "detail": "public/data/business/agregados/ventas_cliente_totales.json"
+      },
+      {
+        "status": "OK",
+        "name": "Existe heatmap_clientes_ventas.geojson",
+        "detail": "public/data/business/agregados/heatmap_clientes_ventas.geojson"
+      },
+      {
+        "status": "OK",
+        "name": "Clientes generados exactamente",
+        "detail": "2000"
+      },
+      {
+        "status": "OK",
+        "name": "Todos los clientes tienen provincia válida",
+        "detail": "clientes=2000"
+      },
+      {
+        "status": "OK",
+        "name": "No existen clientes sin cliente_id ni duplicados",
+        "detail": ""
+      },
+      {
+        "status": "OK",
+        "name": "No existen clientes sin provincia_id/provincia_nombre",
+        "detail": ""
+      },
+      {
+        "status": "OK",
+        "name": "Todos los clientes tienen coordenadas válidas dentro de Argentina",
+        "detail": "bbox={'lon_min': -74.2, 'lon_max': -52.0, 'lat_min': -56.2, 'lat_max': -21.0}"
+      },
+      {
+        "status": "OK",
+        "name": "Todos los clientes tienen dato_sintetico=true",
+        "detail": ""
+      },
+      {
+        "status": "OK",
+        "name": "Mayoría de clientes en Buenos Aires según regla",
+        "detail": "1400 clientes (70.0%)"
+      },
+      {
+        "status": "OK",
+        "name": "Clientes CABA dentro de regla sugerida",
+        "detail": "160 clientes (8.0%)"
+      },
+      {
+        "status": "OK",
+        "name": "Catálogo de productos sin nulos críticos",
+        "detail": "productos=65"
+      },
+      {
+        "status": "OK",
+        "name": "Producto_id único y válido",
+        "detail": "productos=65"
+      },
+      {
+        "status": "OK",
+        "name": "Existen ventas para todos los meses 2025-01 a 2026-12",
+        "detail": "meses=24"
+      },
+      {
+        "status": "OK",
+        "name": "Ventas con valores positivos",
+        "detail": "registros=128998"
+      },
+      {
+        "status": "OK",
+        "name": "No existen ventas sin cliente válido",
+        "detail": ""
+      },
+      {
+        "status": "OK",
+        "name": "No existen ventas sin producto válido",
+        "detail": ""
+      },
+      {
+        "status": "OK",
+        "name": "Todos los clientes tienen al menos una venta",
+        "detail": ""
+      },
+      {
+        "status": "OK",
+        "name": "Heatmap tiene un punto por cliente",
+        "detail": "features=2000"
+      },
+      {
+        "status": "OK",
+        "name": "Agregado provincia_mes cierra contra ventas",
+        "detail": "records=264"
+      },
+      {
+        "status": "OK",
+        "name": "Agregado departamento_mes cierra contra ventas",
+        "detail": "records=6432"
+      },
+      {
+        "status": "OK",
+        "name": "Agregado producto_mes cierra contra ventas",
+        "detail": "records=1560"
+      },
+      {
+        "status": "OK",
+        "name": "Agregado cliente_totales cierra contra ventas",
+        "detail": "records=2000"
+      },
+      {
+        "status": "OK",
+        "name": "Agregados por provincia cierran contra ventas",
+        "detail": "156,598,296,863.76"
+      },
+      {
+        "status": "OK",
+        "name": "Archivos en public/data no superan 25 MiB",
+        "detail": "max=14.0 MiB"
+      },
+      {
+        "status": "OK",
+        "name": "No se crearon rutas públicas demasiado largas para Windows",
+        "detail": "max_len=107"
+      }
+    ],
+    "warnings": [],
+    "errors": [],
+    "public_file_audit": {
+      "file_count": 301,
+      "max_file": {
+        "relative_path": "data/business/ventas_mensuales.csv",
+        "size_bytes": 14680144,
+        "size_mib": 14.0,
+        "path_len": 34
+      },
+      "files_over_25_mib": [],
+      "files_between_20_and_25_mib": [],
+      "long_paths": [],
+      "max_path": {
+        "relative_path": "data/provincias/provincia_94_tierra_del_fuego_antartida_e_islas_del_atlantico_sur/gobiernos_locales.geojson",
+        "size_bytes": 5716,
+        "size_mib": 0.005,
+        "path_len": 107
+      },
+      "top_20_files": [
+        {
+          "relative_path": "data/business/ventas_mensuales.csv",
+          "size_bytes": 14680144,
+          "size_mib": 14.0,
+          "path_len": 34
+        },
+        {
+          "relative_path": "data/localidades_poligonos_fracciones.geojson",
+          "size_bytes": 11126930,
+          "size_mib": 10.611,
+          "path_len": 45
+        },
+        {
+          "relative_path": "data/provincias/provincia_14_cordoba/radios.geojson",
+          "size_bytes": 10414797,
+          "size_mib": 9.932,
+          "path_len": 51
+        },
+        {
+          "relative_path": "data/provincias/provincia_82_santa_fe/radios.geojson",
+          "size_bytes": 8349606,
+          "size_mib": 7.963,
+          "path_len": 52
+        },
+        {
+          "relative_path": "data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson",
+          "size_bytes": 5937870,
+          "size_mib": 5.663,
+          "path_len": 75
+        },
+        {
+          "relative_path": "data/provincias/provincia_30_entre_rios/radios.geojson",
+          "size_bytes": 5125132,
+          "size_mib": 4.888,
+          "path_len": 54
+        },
+        {
+          "relative_path": "data/provincias/provincia_06_buenos_aires/puntos.geojson",
+          "size_bytes": 4505899,
+          "size_mib": 4.297,
+          "path_len": 56
+        },
+        {
+          "relative_path": "data/provincias/provincia_06_buenos_aires/fracciones.geojson",
+          "size_bytes": 4181471,
+          "size_mib": 3.988,
+          "path_len": 60
+        },
+        {
+          "relative_path": "data/localidades_poligonos_gobiernos_locales.geojson",
+          "size_bytes": 3937937,
+          "size_mib": 3.756,
+          "path_len": 52
+        },
+        {
+          "relative_path": "data/provincias/provincia_50_mendoza/radios.geojson",
+          "size_bytes": 3686937,
+          "size_mib": 3.516,
+          "path_len": 51
+        },
+        {
+          "relative_path": "data/provincias/provincia_90_tucuman/radios.geojson",
+          "size_bytes": 3588837,
+          "size_mib": 3.423,
+          "path_len": 51
+        },
+        {
+          "relative_path": "data/business/agregados/ventas_departamento_mes.json",
+          "size_bytes": 3339536,
+          "size_mib": 3.185,
+          "path_len": 52
+        },
+        {
+          "relative_path": "data/provincias/provincia_18_corrientes/radios.geojson",
+          "size_bytes": 3159805,
+          "size_mib": 3.013,
+          "path_len": 54
+        },
+        {
+          "relative_path": "data/provincias/provincia_54_misiones/radios.geojson",
+          "size_bytes": 3156477,
+          "size_mib": 3.01,
+          "path_len": 52
+        },
+        {
+          "relative_path": "data/provincias/provincia_22_chaco/radios.geojson",
+          "size_bytes": 3030558,
+          "size_mib": 2.89,
+          "path_len": 49
+        },
+        {
+          "relative_path": "data/provincias/provincia_66_salta/radios.geojson",
+          "size_bytes": 2904702,
+          "size_mib": 2.77,
+          "path_len": 49
+        },
+        {
+          "relative_path": "data/provincias/provincia_14_cordoba/puntos.geojson",
+          "size_bytes": 2775101,
+          "size_mib": 2.647,
+          "path_len": 51
+        },
+        {
+          "relative_path": "data/provincias/provincia_06_buenos_aires/radios/d_06427.geojson",
+          "size_bytes": 2542223,
+          "size_mib": 2.424,
+          "path_len": 64
+        },
+        {
+          "relative_path": "data/business/agregados/heatmap_clientes_ventas.geojson",
+          "size_bytes": 2039878,
+          "size_mib": 1.945,
+          "path_len": 55
+        },
+        {
+          "relative_path": "data/business/clientes.geojson",
+          "size_bytes": 1949275,
+          "size_mib": 1.859,
+          "path_len": 30
+        }
+      ]
+    },
+    "summary": {
+      "clientes": 2000,
+      "productos": 65,
+      "ventas_registros": 128998,
+      "periodos_desde": "2025-01",
+      "periodos_hasta": "2026-12",
+      "venta_total": 156598296863.76,
+      "venta_2025": 70214766538.47,
+      "venta_2026": 86383530325.29,
+      "clientes_ba": 1400,
+      "clientes_ba_pct": 70.0
+    }
+  },
+  "no_phase_advance": "No se avanzó a V7; no se creó frontend completo ni deploy.",
+  "status": "OK"
+}

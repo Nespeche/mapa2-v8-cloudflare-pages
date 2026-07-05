@@ -1,0 +1,71 @@
+Mapa 2 — Validación local V8
+Fecha: 2026-07-05
+Entorno: Linux sandbox / Node.js v22.16.0 / npm 10.9.2
+
+1) Integridad ZIP base V7.1
+- Archivo: mapa2_v7_1_frontend_runtime_fix.zip
+- testzip: OK, sin archivos corruptos
+- files: 465
+
+2) npm install
+Comando:
+  npm install
+Resultado:
+  added 51 packages, and audited 52 packages
+  found 0 vulnerabilities
+Estado: OK
+
+3) npm run dev
+Comando:
+  npm run dev -- --port 5173
+Resultado:
+  VITE v8.1.3 ready
+  Local: http://127.0.0.1:5173/
+Smoke HTTP:
+  / -> 200 text/html
+  /data/metadata.json -> 200 application/json
+  /favicon.svg -> 200 image/svg+xml
+Estado: OK
+
+4) npm run build
+Comando:
+  npm run build
+Resultado:
+  tsc -b: OK
+  vite build: OK
+  scripts/check_cloudflare_dist.mjs: OK
+  dist/index.html generado
+  dist/assets/index-BKV4Qja-.css generado
+  dist/assets/index-BIKUpF6p.js generado
+Estado: OK
+
+5) Auditoría Cloudflare dist
+Resultado:
+  Archivos en dist: 309
+  Tamaño total dist: 182.73 MiB
+  Mayor asset: data/business/ventas_mensuales.csv (14.00 MiB)
+  Archivos >25 MiB: 0
+  Archivos .gpkg/.sqlite/.db/.zip en dist: 0
+  _headers en dist: sí
+  _redirects en dist: no, decisión documentada
+Estado: OK
+
+6) npm run preview
+Comando:
+  npm run preview -- --port 4173
+Smoke HTTP:
+  / -> 200 text/html
+  /data/metadata.json -> 200 application/json
+  /data/business/metadata_business_v6.json -> 200 application/json
+  /favicon.svg -> 200 image/svg+xml
+  /assets/index-BIKUpF6p.js -> 200 text/javascript
+Estado: OK
+
+7) Escaneo básico de secretos
+Resultado:
+  Sin secretos detectados. Un único match corresponde a nombres de patrones internos en src/check_frontend_v7.py, no a credenciales reales.
+Estado: OK
+
+Conclusión:
+  La V8 queda lista para deploy en Cloudflare Pages Free vía GitHub.
+  La aprobación final requiere URL de Cloudflare, build log y capturas de consola/network.

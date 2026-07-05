@@ -1,0 +1,435 @@
+{
+  "project": "Mapa2",
+  "version": "v7_1_frontend_runtime_fix",
+  "phase": "V7.1 — Frontend runtime fix dentro de V7",
+  "generated_at": "2026-07-05T19:46:30+00:00",
+  "status": "WARN",
+  "items": [
+    {
+      "status": "OK",
+      "name": "Base V5.1 preservada en estado OK",
+      "detail": "version=v5_1_map_ready_cloudflare_fix"
+    },
+    {
+      "status": "OK",
+      "name": "Base comercial V6 preservada en estado OK",
+      "detail": "clientes=2000 productos=65 ventas=128998"
+    },
+    {
+      "status": "OK",
+      "name": "Existe insumo inicial public/data/metadata.json",
+      "detail": "143818 bytes"
+    },
+    {
+      "status": "OK",
+      "name": "Existe insumo inicial public/data/provincias.geojson",
+      "detail": "252719 bytes"
+    },
+    {
+      "status": "OK",
+      "name": "Existe insumo inicial public/data/indexes/provincias_index.json",
+      "detail": "37150 bytes"
+    },
+    {
+      "status": "OK",
+      "name": "Existe insumo inicial public/data/business/metadata_business_v6.json",
+      "detail": "5979 bytes"
+    },
+    {
+      "status": "OK",
+      "name": "Existe insumo inicial public/data/business/agregados/ventas_provincia_mes.json",
+      "detail": "124020 bytes"
+    },
+    {
+      "status": "OK",
+      "name": "Existe insumo inicial public/data/business/agregados/ventas_cliente_totales.json",
+      "detail": "1530247 bytes"
+    },
+    {
+      "status": "OK",
+      "name": "Existe insumo inicial public/data/business/clientes.geojson",
+      "detail": "1949275 bytes"
+    },
+    {
+      "status": "OK",
+      "name": "Existe insumo inicial public/data/business/productos.json",
+      "detail": "25746 bytes"
+    },
+    {
+      "status": "OK",
+      "name": "Existe insumo inicial public/data/business/calendario.json",
+      "detail": "6114 bytes"
+    },
+    {
+      "status": "OK",
+      "name": "Existe insumo bajo demanda public/data/provincias",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe insumo bajo demanda public/data/business/agregados/ventas_departamento_mes.json",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe insumo bajo demanda public/data/business/agregados/ventas_producto_mes.json",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe insumo bajo demanda public/data/business/ventas_mensuales.csv",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe frontend package.json",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe frontend vite.config.ts",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe frontend tsconfig.json",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe frontend tsconfig.app.json",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe frontend index.html",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe frontend src/app/App.tsx",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe frontend src/app/main.tsx",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe frontend src/app/styles.css",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe frontend src/components/MapView.tsx",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe frontend src/data/dataClient.ts",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe frontend src/data/dataPaths.ts",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe frontend .npmrc",
+      "detail": ""
+    },
+    {
+      "status": "OK",
+      "name": "Existe frontend public/favicon.svg",
+      "detail": ""
+    },
+    {
+      "status": "WARN",
+      "name": "Build no ejecutado",
+      "detail": "--skip-build"
+    },
+    {
+      "status": "OK",
+      "name": "Referencias literales a public/data válidas",
+      "detail": "refs=12"
+    },
+    {
+      "status": "OK",
+      "name": "Registry npm público configurado",
+      "detail": ".npmrc"
+    },
+    {
+      "status": "OK",
+      "name": "Carga CSV bajo demanda compatible con React StrictMode",
+      "detail": "sin guarda loading bloqueante"
+    },
+    {
+      "status": "OK",
+      "name": "Carga detallada no bloquea el mapa",
+      "detail": "estado flotante no central"
+    },
+    {
+      "status": "OK",
+      "name": "MapLibre sin dependencia de glyphs demo",
+      "detail": "sin symbol text layer"
+    },
+    {
+      "status": "OK",
+      "name": "No se detectaron claves privadas ni tokens hardcodeados",
+      "detail": "scan frontend"
+    },
+    {
+      "status": "OK",
+      "name": "Archivos public/data dentro de 25 MiB",
+      "detail": "max=data/business/ventas_mensuales.csv 14.0 MiB"
+    },
+    {
+      "status": "OK",
+      "name": "Rutas públicas compatibles con Windows",
+      "detail": "umbral=180"
+    },
+    {
+      "status": "OK",
+      "name": "Carga inicial sin radios nacionales",
+      "detail": "INITIAL_DATA_PATHS"
+    },
+    {
+      "status": "OK",
+      "name": "Frontend sin referencia literal a radios.geojson",
+      "detail": "src/app/components/data/map/utils"
+    },
+    {
+      "status": "OK",
+      "name": "Documentación de datos sintéticos visible",
+      "detail": "README.md, docs/RUNBOOK_V7.md, docs/CHANGELOG_V7.md"
+    }
+  ],
+  "warnings": [
+    "Build omitido por parámetro --skip-build."
+  ],
+  "errors": [],
+  "build": {
+    "executed": false,
+    "ok": false,
+    "output_tail": "Build omitido."
+  },
+  "data_reference_audit": {
+    "literal_refs": [
+      "data/business/agregados/ventas_cliente_totales.json",
+      "data/business/agregados/ventas_departamento_mes.json",
+      "data/business/agregados/ventas_producto_mes.json",
+      "data/business/agregados/ventas_provincia_mes.json",
+      "data/business/calendario.json",
+      "data/business/clientes.geojson",
+      "data/business/metadata_business_v6.json",
+      "data/business/productos.json",
+      "data/business/ventas_mensuales.csv",
+      "data/indexes/provincias_index.json",
+      "data/metadata.json",
+      "data/provincias.geojson"
+    ],
+    "broken_refs": []
+  },
+  "public_file_audit": {
+    "file_count": 301,
+    "max_file": {
+      "relative_path": "data/business/ventas_mensuales.csv",
+      "size_bytes": 14680144,
+      "size_mib": 14.0,
+      "path_len": 34
+    },
+    "files_over_25_mib": [],
+    "long_paths": [],
+    "top_30_files": [
+      {
+        "relative_path": "data/business/ventas_mensuales.csv",
+        "size_bytes": 14680144,
+        "size_mib": 14.0,
+        "path_len": 34
+      },
+      {
+        "relative_path": "data/localidades_poligonos_fracciones.geojson",
+        "size_bytes": 11126930,
+        "size_mib": 10.611,
+        "path_len": 45
+      },
+      {
+        "relative_path": "data/provincias/provincia_14_cordoba/radios.geojson",
+        "size_bytes": 10414797,
+        "size_mib": 9.932,
+        "path_len": 51
+      },
+      {
+        "relative_path": "data/provincias/provincia_82_santa_fe/radios.geojson",
+        "size_bytes": 8349606,
+        "size_mib": 7.963,
+        "path_len": 52
+      },
+      {
+        "relative_path": "data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson",
+        "size_bytes": 5937870,
+        "size_mib": 5.663,
+        "path_len": 75
+      },
+      {
+        "relative_path": "data/provincias/provincia_30_entre_rios/radios.geojson",
+        "size_bytes": 5125132,
+        "size_mib": 4.888,
+        "path_len": 54
+      },
+      {
+        "relative_path": "data/provincias/provincia_06_buenos_aires/puntos.geojson",
+        "size_bytes": 4505899,
+        "size_mib": 4.297,
+        "path_len": 56
+      },
+      {
+        "relative_path": "data/provincias/provincia_06_buenos_aires/fracciones.geojson",
+        "size_bytes": 4181471,
+        "size_mib": 3.988,
+        "path_len": 60
+      },
+      {
+        "relative_path": "data/localidades_poligonos_gobiernos_locales.geojson",
+        "size_bytes": 3937937,
+        "size_mib": 3.756,
+        "path_len": 52
+      },
+      {
+        "relative_path": "data/provincias/provincia_50_mendoza/radios.geojson",
+        "size_bytes": 3686937,
+        "size_mib": 3.516,
+        "path_len": 51
+      },
+      {
+        "relative_path": "data/provincias/provincia_90_tucuman/radios.geojson",
+        "size_bytes": 3588837,
+        "size_mib": 3.423,
+        "path_len": 51
+      },
+      {
+        "relative_path": "data/business/agregados/ventas_departamento_mes.json",
+        "size_bytes": 3339536,
+        "size_mib": 3.185,
+        "path_len": 52
+      },
+      {
+        "relative_path": "data/provincias/provincia_18_corrientes/radios.geojson",
+        "size_bytes": 3159805,
+        "size_mib": 3.013,
+        "path_len": 54
+      },
+      {
+        "relative_path": "data/provincias/provincia_54_misiones/radios.geojson",
+        "size_bytes": 3156477,
+        "size_mib": 3.01,
+        "path_len": 52
+      },
+      {
+        "relative_path": "data/provincias/provincia_22_chaco/radios.geojson",
+        "size_bytes": 3030558,
+        "size_mib": 2.89,
+        "path_len": 49
+      },
+      {
+        "relative_path": "data/provincias/provincia_66_salta/radios.geojson",
+        "size_bytes": 2904702,
+        "size_mib": 2.77,
+        "path_len": 49
+      },
+      {
+        "relative_path": "data/provincias/provincia_14_cordoba/puntos.geojson",
+        "size_bytes": 2775101,
+        "size_mib": 2.647,
+        "path_len": 51
+      },
+      {
+        "relative_path": "data/provincias/provincia_06_buenos_aires/radios/d_06427.geojson",
+        "size_bytes": 2542223,
+        "size_mib": 2.424,
+        "path_len": 64
+      },
+      {
+        "relative_path": "data/business/agregados/heatmap_clientes_ventas.geojson",
+        "size_bytes": 2039878,
+        "size_mib": 1.945,
+        "path_len": 55
+      },
+      {
+        "relative_path": "data/business/clientes.geojson",
+        "size_bytes": 1949275,
+        "size_mib": 1.859,
+        "path_len": 30
+      },
+      {
+        "relative_path": "data/provincias/provincia_62_rio_negro/radios.geojson",
+        "size_bytes": 1923444,
+        "size_mib": 1.834,
+        "path_len": 53
+      },
+      {
+        "relative_path": "data/provincias/provincia_82_santa_fe/puntos.geojson",
+        "size_bytes": 1879056,
+        "size_mib": 1.792,
+        "path_len": 52
+      },
+      {
+        "relative_path": "data/provincias/provincia_86_santiago_del_estero/puntos.geojson",
+        "size_bytes": 1870863,
+        "size_mib": 1.784,
+        "path_len": 63
+      },
+      {
+        "relative_path": "data/localidades_poligonos_departamentos.geojson",
+        "size_bytes": 1813573,
+        "size_mib": 1.73,
+        "path_len": 48
+      },
+      {
+        "relative_path": "data/provincias/provincia_86_santiago_del_estero/radios.geojson",
+        "size_bytes": 1785308,
+        "size_mib": 1.703,
+        "path_len": 63
+      },
+      {
+        "relative_path": "data/provincias/provincia_58_neuquen/radios.geojson",
+        "size_bytes": 1713136,
+        "size_mib": 1.634,
+        "path_len": 51
+      },
+      {
+        "relative_path": "data/provincias/provincia_06_buenos_aires/radios/d_06357.geojson",
+        "size_bytes": 1683036,
+        "size_mib": 1.605,
+        "path_len": 64
+      },
+      {
+        "relative_path": "data/provincias/provincia_26_chubut/radios.geojson",
+        "size_bytes": 1662666,
+        "size_mib": 1.586,
+        "path_len": 50
+      },
+      {
+        "relative_path": "data/provincias/provincia_06_buenos_aires/radios/d_06441.geojson",
+        "size_bytes": 1616582,
+        "size_mib": 1.542,
+        "path_len": 64
+      },
+      {
+        "relative_path": "data/provincias/provincia_38_jujuy/radios.geojson",
+        "size_bytes": 1599749,
+        "size_mib": 1.526,
+        "path_len": 49
+      }
+    ]
+  },
+  "rules": {
+    "no_v8": true,
+    "deploy_executed": false,
+    "census_logic_modified": false,
+    "business_v6_regenerated": false,
+    "initial_load_without_national_radios": true
+  }
+}

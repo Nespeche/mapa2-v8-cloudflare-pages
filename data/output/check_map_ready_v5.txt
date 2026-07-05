@@ -1,0 +1,47 @@
+================================================================================
+CHECK MAP READY V5
+================================================================================
+Generado: 2026-07-05T03:20:34.122045+00:00
+Estado final: WARN
+
+Capas fuente GPKG
+--------------------------------------------------------------------------------
+app_provincias: OK
+georef_departamentos: OK
+georef_gobiernos_locales: OK
+georef_municipios: OK
+georef_aglomerados: OK
+georef_fracciones_censales: OK
+georef_radios_censales: OK
+app_localidades_puntos: OK
+
+GeoJSON nacionales
+--------------------------------------------------------------------------------
+OK    | provincias | features=24 | size=0.241 MB | pop=45892285 | provincias.geojson
+OK    | departamentos | features=529 | size=1.73 MB | pop=45892285 | localidades_poligonos_departamentos.geojson
+OK    | gobiernos_locales | features=2280 | size=3.756 MB | pop=45560279 | localidades_poligonos_gobiernos_locales.geojson
+OK    | municipios | features=10 | size=0.051 MB | pop=6681774 | localidades_poligonos_municipios.geojson
+OK    | aglomerados | features=119 | size=0.254 MB | pop=34516748 | localidades_poligonos_aglomerados.geojson
+OK    | fracciones | features=6571 | size=10.611 MB | pop=45892285 | localidades_poligonos_fracciones.geojson
+OK    | radios | features=66515 | size=0 MB | pop=45892285 | None
+  WARN: Sin GeoJSON nacional por diseño; validación de existencia aplicada a splits por provincia.
+OK    | localidades_puntos | features=18470 | size=24.762 MB | pop=91776372 | localidades_puntos.geojson
+
+Splits por provincia
+--------------------------------------------------------------------------------
+Archivos split declarados: 145
+Splits validados: 145
+Splits faltantes: 0
+Splits con error: 0
+
+Advertencias
+--------------------------------------------------------------------------------
+WARN: radios: Sin GeoJSON nacional por diseño; validación de existencia aplicada a splits por provincia.
+
+Errores
+--------------------------------------------------------------------------------
+Sin errores bloqueantes.
+
+Resultado
+--------------------------------------------------------------------------------
+WARN: V5 Map Ready usable con advertencias no bloqueantes.

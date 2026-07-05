@@ -1,0 +1,85 @@
+{
+  "project": "Mapa 2",
+  "phase": "V8 — Deploy profesional en Cloudflare Pages Free",
+  "validated_at": "2026-07-05",
+  "node_version": "v22.16.0",
+  "npm_version": "10.9.2",
+  "dist_exists": true,
+  "dist_file_count": 309,
+  "dist_total_bytes": 191605975,
+  "dist_total_mib": 182.7297,
+  "max_file": {
+    "path": "data/business/ventas_mensuales.csv",
+    "bytes": 14680144,
+    "mib": 14.0001
+  },
+  "files_over_25_mib": [],
+  "suspicious_extensions_in_dist": [],
+  "has_headers": true,
+  "has_redirects": false,
+  "has_top_level_404": false,
+  "largest_10": [
+    {
+      "path": "data/business/ventas_mensuales.csv",
+      "bytes": 14680144,
+      "mib": 14.0001
+    },
+    {
+      "path": "data/localidades_poligonos_fracciones.geojson",
+      "bytes": 11126930,
+      "mib": 10.6115
+    },
+    {
+      "path": "data/provincias/provincia_14_cordoba/radios.geojson",
+      "bytes": 10414797,
+      "mib": 9.9323
+    },
+    {
+      "path": "data/provincias/provincia_82_santa_fe/radios.geojson",
+      "bytes": 8349606,
+      "mib": 7.9628
+    },
+    {
+      "path": "data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson",
+      "bytes": 5937870,
+      "mib": 5.6628
+    },
+    {
+      "path": "data/provincias/provincia_30_entre_rios/radios.geojson",
+      "bytes": 5125132,
+      "mib": 4.8877
+    },
+    {
+      "path": "data/provincias/provincia_06_buenos_aires/puntos.geojson",
+      "bytes": 4505899,
+      "mib": 4.2972
+    },
+    {
+      "path": "data/provincias/provincia_06_buenos_aires/fracciones.geojson",
+      "bytes": 4181471,
+      "mib": 3.9878
+    },
+    {
+      "path": "data/localidades_poligonos_gobiernos_locales.geojson",
+      "bytes": 3937937,
+      "mib": 3.7555
+    },
+    {
+      "path": "data/provincias/provincia_50_mendoza/radios.geojson",
+      "bytes": 3686937,
+      "mib": 3.5161
+    }
+  ],
+  "cloudflare_pages_free_limits_checked": {
+    "max_files_free_plan": 20000,
+    "max_single_asset_mib": 25,
+    "direct_upload_drag_drop_file_limit": 1000,
+    "direct_upload_wrangler_file_limit": 20000
+  },
+  "validation_results": {
+    "npm_install": "OK — added 51 packages, audited 52 packages, 0 vulnerabilities",
+    "npm_run_dev": "OK — Vite ready on http://127.0.0.1:5173/; /, /data/metadata.json y /favicon.svg respondieron 200",
+    "npm_run_build": "OK — tsc -b, vite build y scripts/check_cloudflare_dist.mjs sin errores bloqueantes",
+    "npm_preview": "OK — /, /data/metadata.json, /data/business/metadata_business_v6.json, /favicon.svg y asset JS respondieron 200"
+  }
+}

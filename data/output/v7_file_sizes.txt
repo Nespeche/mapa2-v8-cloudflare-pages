@@ -1,0 +1,33 @@
+Mapa2 V7 — tamaños public/data
+Generado: 2026-07-05T19:46:30+00:00
+
+  14.000 MiB |     14680144 bytes | data/business/ventas_mensuales.csv
+  10.611 MiB |     11126930 bytes | data/localidades_poligonos_fracciones.geojson
+   9.932 MiB |     10414797 bytes | data/provincias/provincia_14_cordoba/radios.geojson
+   7.963 MiB |      8349606 bytes | data/provincias/provincia_82_santa_fe/radios.geojson
+   5.663 MiB |      5937870 bytes | data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson
+   4.888 MiB |      5125132 bytes | data/provincias/provincia_30_entre_rios/radios.geojson
+   4.297 MiB |      4505899 bytes | data/provincias/provincia_06_buenos_aires/puntos.geojson
+   3.988 MiB |      4181471 bytes | data/provincias/provincia_06_buenos_aires/fracciones.geojson
+   3.756 MiB |      3937937 bytes | data/localidades_poligonos_gobiernos_locales.geojson
+   3.516 MiB |      3686937 bytes | data/provincias/provincia_50_mendoza/radios.geojson
+   3.423 MiB |      3588837 bytes | data/provincias/provincia_90_tucuman/radios.geojson
+   3.185 MiB |      3339536 bytes | data/business/agregados/ventas_departamento_mes.json
+   3.013 MiB |      3159805 bytes | data/provincias/provincia_18_corrientes/radios.geojson
+   3.010 MiB |      3156477 bytes | data/provincias/provincia_54_misiones/radios.geojson
+   2.890 MiB |      3030558 bytes | data/provincias/provincia_22_chaco/radios.geojson
+   2.770 MiB |      2904702 bytes | data/provincias/provincia_66_salta/radios.geojson
+   2.647 MiB |      2775101 bytes | data/provincias/provincia_14_cordoba/puntos.geojson
+   2.424 MiB |      2542223 bytes | data/provincias/provincia_06_buenos_aires/radios/d_06427.geojson
+   1.945 MiB |      2039878 bytes | data/business/agregados/heatmap_clientes_ventas.geojson
+   1.859 MiB |      1949275 bytes | data/business/clientes.geojson
+   1.834 MiB |      1923444 bytes | data/provincias/provincia_62_rio_negro/radios.geojson
+   1.792 MiB |      1879056 bytes | data/provincias/provincia_82_santa_fe/puntos.geojson
+   1.784 MiB |      1870863 bytes | data/provincias/provincia_86_santiago_del_estero/puntos.geojson
+   1.730 MiB |      1813573 bytes | data/localidades_poligonos_departamentos.geojson
+   1.703 MiB |      1785308 bytes | data/provincias/provincia_86_santiago_del_estero/radios.geojson
+   1.634 MiB |      1713136 bytes | data/provincias/provincia_58_neuquen/radios.geojson
+   1.605 MiB |      1683036 bytes | data/provincias/provincia_06_buenos_aires/radios/d_06357.geojson
+   1.586 MiB |      1662666 bytes | data/provincias/provincia_26_chubut/radios.geojson
+   1.542 MiB |      1616582 bytes | data/provincias/provincia_06_buenos_aires/radios/d_06441.geojson
+   1.526 MiB |      1599749 bytes | data/provincias/provincia_38_jujuy/radios.geojson

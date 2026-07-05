@@ -1,0 +1,458 @@
+{
+  "generated_at": "2026-07-04T23:41:13.017077+00:00",
+  "input": "data/output/arg_geo_censo_full.gpkg",
+  "output": "data/output/arg_geo_censo_census_ready_v4.gpkg",
+  "diagnostics": [
+    {
+      "layer": "georef_provincias",
+      "records": 24,
+      "geometry_types": {
+        "MultiPolygon": 24
+      },
+      "invalid_before": 1,
+      "invalid_after": 0,
+      "empty": 0,
+      "missing_population": 0,
+      "population_sum": 45892285.0,
+      "population_methods": {
+        "cuadro_resumen_indec": 24
+      },
+      "excluded_from_web": 0
+    },
+    {
+      "layer": "georef_departamentos",
+      "records": 529,
+      "geometry_types": {
+        "MultiPolygon": 529
+      },
+      "invalid_before": 0,
+      "invalid_after": 0,
+      "empty": 0,
+      "missing_population": 0,
+      "population_sum": 45892285.0,
+      "population_methods": {
+        "oficial_gobiernos_locales_overlay_departamental+residual_provincial_area": 379,
+        "oficial_gobiernos_locales_directo_codigo": 150
+      },
+      "excluded_from_web": 0
+    },
+    {
+      "layer": "georef_municipios",
+      "records": 10,
+      "geometry_types": {
+        "MultiPolygon": 10
+      },
+      "invalid_before": 0,
+      "invalid_after": 0,
+      "empty": 0,
+      "missing_population": 0,
+      "population_sum": 6681774.0,
+      "population_methods": {
+        "estimacion_overlay_municipio_sobre_gobierno_local": 10
+      },
+      "excluded_from_web": 0
+    },
+    {
+      "layer": "georef_gobiernos_locales",
+      "records": 2280,
+      "geometry_types": {
+        "MultiPolygon": 2265,
+        "Polygon": 15
+      },
+      "invalid_before": 22,
+      "invalid_after": 0,
+      "empty": 0,
+      "missing_population": 0,
+      "population_sum": 45560279.0,
+      "population_methods": {
+        "cuadro_gobierno_local_indec": 2280
+      },
+      "excluded_from_web": 0
+    },
+    {
+      "layer": "georef_aglomerados",
+      "records": 119,
+      "geometry_types": {
+        "MultiPolygon": 116,
+        "Polygon": 3
+      },
+      "invalid_before": 7,
+      "invalid_after": 0,
+      "empty": 0,
+      "missing_population": 0,
+      "population_sum": 34516748.0,
+      "population_methods": {
+        "estimacion_overlay_aglomerado_sobre_departamento": 119
+      },
+      "excluded_from_web": 0
+    },
+    {
+      "layer": "georef_fracciones_censales",
+      "records": 6571,
+      "geometry_types": {
+        "MultiPolygon": 6571
+      },
+      "invalid_before": 9,
+      "invalid_after": 0,
+      "empty": 0,
+      "missing_population": 0,
+      "population_sum": 45892285.0,
+      "population_methods": {
+        "estimacion_area_fraccion_sobre_departamento": 6571
+      },
+      "excluded_from_web": 0
+    },
+    {
+      "layer": "georef_radios_censales",
+      "records": 66515,
+      "geometry_types": {
+        "MultiPolygon": 66515
+      },
+      "invalid_before": 8,
+      "invalid_after": 0,
+      "empty": 0,
+      "missing_population": 0,
+      "population_sum": 45892285.0,
+      "population_methods": {
+        "estimacion_area_radio_sobre_departamento": 66515
+      },
+      "excluded_from_web": 0
+    },
+    {
+      "layer": "georef_localidades",
+      "records": 4028,
+      "geometry_types": {
+        "Point": 4028
+      },
+      "invalid_before": 0,
+      "invalid_after": 0,
+      "empty": 0,
+      "missing_population": 0,
+      "population_sum": 45885279.0,
+      "population_methods": {
+        "estimacion_prorrateo_localidades_en_departamento": 4028
+      },
+      "excluded_from_web": 0
+    },
+    {
+      "layer": "georef_asentamientos",
+      "records": 14466,
+      "geometry_types": {
+        "Point": 14466
+      },
+      "invalid_before": 0,
+      "invalid_after": 0,
+      "empty": 0,
+      "missing_population": 0,
+      "population_sum": 45892285.0,
+      "population_methods": {
+        "estimacion_prorrateo_asentamientos_en_departamento": 14466
+      },
+      "excluded_from_web": 0
+    },
+    {
+      "layer": "app_provincias",
+      "records": 24,
+      "geometry_types": {
+        "MultiPolygon": 24
+      },
+      "invalid_before": 1,
+      "invalid_after": 0,
+      "empty": 0,
+      "missing_population": 0,
+      "population_sum": 45892285.0,
+      "population_methods": {
+        "cuadro_resumen_indec": 24
+      },
+      "excluded_from_web": 0
+    },
+    {
+      "layer": "app_localidades_poligonos",
+      "records": 76018,
+      "geometry_types": {
+        "MultiPolygon": 76000,
+        "Polygon": 18
+      },
+      "invalid_before": 0,
+      "invalid_after": 0,
+      "empty": 0,
+      "missing_population": 0,
+      "population_sum": 224432134.0,
+      "population_methods": {
+        "estimacion_area_radio_sobre_departamento": 66513,
+        "estimacion_area_fraccion_sobre_departamento": 6569,
+        "cuadro_gobierno_local_indec": 2280,
+        "oficial_gobiernos_locales_overlay_departamental+residual_provincial_area": 377,
+        "oficial_gobiernos_locales_directo_codigo": 150,
+        "estimacion_overlay_aglomerado_sobre_departamento": 119,
+        "estimacion_overlay_municipio_sobre_gobierno_local": 10
+      },
+      "excluded_from_web": 6
+    },
+    {
+      "layer": "app_localidades_puntos",
+      "records": 18470,
+      "geometry_types": {
+        "Point": 18470
+      },
+      "invalid_before": 0,
+      "invalid_after": 0,
+      "empty": 0,
+      "missing_population": 0,
+      "population_sum": 91776372.0,
+      "population_methods": {
+        "estimacion_prorrateo_asentamientos_en_departamento": 14443,
+        "estimacion_prorrateo_localidades_en_departamento": 4027
+      },
+      "excluded_from_web": 24
+    },
+    {
+      "layer": "entidades_mapa_enriquecidas",
+      "records": 94542,
+      "geometry_types": {
+        "MultiPolygon": 76030,
+        "Point": 18494,
+        "Polygon": 18
+      },
+      "invalid_before": 0,
+      "invalid_after": 0,
+      "empty": 0,
+      "missing_population": 0,
+      "population_sum": 362105505.0,
+      "population_methods": {
+        "estimacion_area_radio_sobre_departamento": 66515,
+        "estimacion_prorrateo_asentamientos_en_departamento": 14466,
+        "estimacion_area_fraccion_sobre_departamento": 6571,
+        "estimacion_prorrateo_localidades_en_departamento": 4028,
+        "cuadro_gobierno_local_indec": 2280,
+        "oficial_gobiernos_locales_overlay_departamental+residual_provincial_area": 379,
+        "oficial_gobiernos_locales_directo_codigo": 150,
+        "estimacion_overlay_aglomerado_sobre_departamento": 119,
+        "cuadro_resumen_indec": 24,
+        "estimacion_overlay_municipio_sobre_gobierno_local": 10
+      },
+      "excluded_from_web": 0
+    }
+  ],
+  "controls": [
+    {
+      "provincia_id": "provincia:02",
+      "provincia": "Ciudad Autónoma de Buenos Aires",
+      "poblacion_provincia": 3121707,
+      "suma_departamentos": 3121707,
+      "diferencia": 0,
+      "departamentos": 15
+    },
+    {
+      "provincia_id": "provincia:58",
+      "provincia": "Neuquén",
+      "poblacion_provincia": 710814,
+      "suma_departamentos": 710814,
+      "diferencia": 0,
+      "departamentos": 16
+    },
+    {
+      "provincia_id": "provincia:74",
+      "provincia": "San Luis",
+      "poblacion_provincia": 542069,
+      "suma_departamentos": 542069,
+      "diferencia": 0,
+      "departamentos": 9
+    },
+    {
+      "provincia_id": "provincia:82",
+      "provincia": "Santa Fe",
+      "poblacion_provincia": 3544908,
+      "suma_departamentos": 3544908,
+      "diferencia": 0,
+      "departamentos": 19
+    },
+    {
+      "provincia_id": "provincia:46",
+      "provincia": "La Rioja",
+      "poblacion_provincia": 383865,
+      "suma_departamentos": 383865,
+      "diferencia": 0,
+      "departamentos": 18
+    },
+    {
+      "provincia_id": "provincia:10",
+      "provincia": "Catamarca",
+      "poblacion_provincia": 429562,
+      "suma_departamentos": 429562,
+      "diferencia": 0,
+      "departamentos": 16
+    },
+    {
+      "provincia_id": "provincia:90",
+      "provincia": "Tucumán",
+      "poblacion_provincia": 1731820,
+      "suma_departamentos": 1731820,
+      "diferencia": 0,
+      "departamentos": 17
+    },
+    {
+      "provincia_id": "provincia:22",
+      "provincia": "Chaco",
+      "poblacion_provincia": 1129606,
+      "suma_departamentos": 1129606,
+      "diferencia": 0,
+      "departamentos": 25
+    },
+    {
+      "provincia_id": "provincia:34",
+      "provincia": "Formosa",
+      "poblacion_provincia": 607419,
+      "suma_departamentos": 607419,
+      "diferencia": 0,
+      "departamentos": 9
+    },
+    {
+      "provincia_id": "provincia:78",
+      "provincia": "Santa Cruz",
+      "poblacion_provincia": 337226,
+      "suma_departamentos": 337226,
+      "diferencia": 0,
+      "departamentos": 7
+    },
+    {
+      "provincia_id": "provincia:26",
+      "provincia": "Chubut",
+      "poblacion_provincia": 592621,
+      "suma_departamentos": 592621,
+      "diferencia": 0,
+      "departamentos": 15
+    },
+    {
+      "provincia_id": "provincia:50",
+      "provincia": "Mendoza",
+      "poblacion_provincia": 2043540,
+      "suma_departamentos": 2043540,
+      "diferencia": 0,
+      "departamentos": 18
+    },
+    {
+      "provincia_id": "provincia:30",
+      "provincia": "Entre Ríos",
+      "poblacion_provincia": 1425578,
+      "suma_departamentos": 1425578,
+      "diferencia": 0,
+      "departamentos": 17
+    },
+    {
+      "provincia_id": "provincia:70",
+      "provincia": "San Juan",
+      "poblacion_provincia": 822853,
+      "suma_departamentos": 822853,
+      "diferencia": 0,
+      "departamentos": 19
+    },
+    {
+      "provincia_id": "provincia:38",
+      "provincia": "Jujuy",
+      "poblacion_provincia": 811611,
+      "suma_departamentos": 811611,
+      "diferencia": 0,
+      "departamentos": 16
+    },
+    {
+      "provincia_id": "provincia:86",
+      "provincia": "Santiago del Estero",
+      "poblacion_provincia": 1060906,
+      "suma_departamentos": 1060906,
+      "diferencia": 0,
+      "departamentos": 27
+    },
+    {
+      "provincia_id": "provincia:62",
+      "provincia": "Río Negro",
+      "poblacion_provincia": 750768,
+      "suma_departamentos": 750768,
+      "diferencia": 0,
+      "departamentos": 13
+    },
+    {
+      "provincia_id": "provincia:18",
+      "provincia": "Corrientes",
+      "poblacion_provincia": 1212696,
+      "suma_departamentos": 1212696,
+      "diferencia": 0,
+      "departamentos": 25
+    },
+    {
+      "provincia_id": "provincia:54",
+      "provincia": "Misiones",
+      "poblacion_provincia": 1278873,
+      "suma_departamentos": 1278873,
+      "diferencia": 0,
+      "departamentos": 17
+    },
+    {
+      "provincia_id": "provincia:66",
+      "provincia": "Salta",
+      "poblacion_provincia": 1441351,
+      "suma_departamentos": 1441351,
+      "diferencia": 0,
+      "departamentos": 23
+    },
+    {
+      "provincia_id": "provincia:14",
+      "provincia": "Córdoba",
+      "poblacion_provincia": 3840905,
+      "suma_departamentos": 3840905,
+      "diferencia": 0,
+      "departamentos": 26
+    },
+    {
+      "provincia_id": "provincia:06",
+      "provincia": "Buenos Aires",
+      "poblacion_provincia": 17523996,
+      "suma_departamentos": 17523996,
+      "diferencia": 0,
+      "departamentos": 135
+    },
+    {
+      "provincia_id": "provincia:42",
+      "provincia": "La Pampa",
+      "poblacion_provincia": 361859,
+      "suma_departamentos": 361859,
+      "diferencia": 0,
+      "departamentos": 22
+    },
+    {
+      "provincia_id": "provincia:94",
+      "provincia": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+      "poblacion_provincia": 185732,
+      "suma_departamentos": 185732,
+      "diferencia": 0,
+      "departamentos": 5
+    }
+  ],
+  "source_notes": [
+    {
+      "fuente": "INDEC Censo 2022 resumen/provincias",
+      "uso": "Población oficial directa de país y provincias.",
+      "estado": "incluida_en_zip"
+    },
+    {
+      "fuente": "INDEC Censo 2022 gobiernos locales",
+      "uso": "Población oficial directa de gobiernos locales; base para agregación departamental.",
+      "estado": "incluida_en_zip"
+    },
+    {
+      "fuente": "Georef / IGN / BAHRA / INDEC cartografía",
+      "uso": "Geometrías y códigos oficiales de provincias, departamentos, localidades, radios/fracciones y otras entidades.",
+      "estado": "incluida_en_zip"
+    },
+    {
+      "fuente": "Estimación por overlay/área/prorrateo",
+      "uso": "Completar población en capas sin dato censal directo para habilitar tooltips y modos de mapa.",
+      "estado": "calculada_en_pipeline"
+    }
+  ],
+  "app_layers": {
+    "app_provincias": 24,
+    "app_localidades_poligonos": 76018,
+    "app_localidades_puntos": 18470
+  }
+}

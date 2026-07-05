@@ -1,0 +1,123 @@
+{
+  "version": "v5_1_map_ready_cloudflare_fix",
+  "generated_at": "2026-07-05T15:49:40.332653+00:00",
+  "cloudflare_single_asset_limit_mib": 25.0,
+  "layers": [
+    {
+      "layer_id": "provincias",
+      "relative_path": "provincias.geojson",
+      "national_export": true,
+      "partitioned": false,
+      "partitioning": null,
+      "aditiva": true,
+      "no_aditiva": false,
+      "feature_count": 24,
+      "size_mb": 0.241,
+      "usage": "Vista nacional, coroplético provincial e inicio del drill-down.",
+      "loading_strategy": "Cargar al iniciar la app."
+    },
+    {
+      "layer_id": "departamentos",
+      "relative_path": "localidades_poligonos_departamentos.geojson",
+      "national_export": true,
+      "partitioned": false,
+      "partitioning": null,
+      "aditiva": true,
+      "no_aditiva": false,
+      "feature_count": 529,
+      "size_mb": 1.73,
+      "usage": "Click en provincia; coroplético por departamentos, partidos y comunas. Es la jerarquía poligonal aditiva recomendada para drill-down inicial.",
+      "loading_strategy": "Cargar el archivo nacional si el frontend lo tolera; preferir archivo por provincia luego del click."
+    },
+    {
+      "layer_id": "gobiernos_locales",
+      "relative_path": "localidades_poligonos_gobiernos_locales.geojson",
+      "national_export": true,
+      "partitioned": false,
+      "partitioning": null,
+      "aditiva": false,
+      "no_aditiva": true,
+      "feature_count": 2280,
+      "size_mb": 3.756,
+      "usage": "Zoom intermedio y lectura administrativa local cuando exista cobertura. No usar para suma nacional.",
+      "loading_strategy": "Cargar por provincia bajo demanda."
+    },
+    {
+      "layer_id": "municipios",
+      "relative_path": "localidades_poligonos_municipios.geojson",
+      "national_export": true,
+      "partitioned": false,
+      "partitioning": null,
+      "aditiva": false,
+      "no_aditiva": true,
+      "feature_count": 10,
+      "size_mb": 0.051,
+      "usage": "Overlay administrativo cuando la geometría municipal existe. No usar para suma nacional.",
+      "loading_strategy": "Cargar por provincia bajo demanda."
+    },
+    {
+      "layer_id": "aglomerados",
+      "relative_path": "localidades_poligonos_aglomerados.geojson",
+      "national_export": true,
+      "partitioned": false,
+      "partitioning": null,
+      "aditiva": false,
+      "no_aditiva": true,
+      "feature_count": 119,
+      "size_mb": 0.254,
+      "usage": "Overlay urbano/metropolitano. No usar para suma nacional porque puede cruzar jurisdicciones y superponerse.",
+      "loading_strategy": "Cargar bajo demanda; preferir por provincia representante."
+    },
+    {
+      "layer_id": "fracciones",
+      "relative_path": "localidades_poligonos_fracciones.geojson",
+      "national_export": true,
+      "partitioned": false,
+      "partitioning": null,
+      "aditiva": true,
+      "no_aditiva": false,
+      "feature_count": 6571,
+      "size_mb": 10.611,
+      "usage": "Zoom alto y coroplético de mayor detalle. Es aditiva si se usa como única jerarquía.",
+      "loading_strategy": "No cargar nacional por defecto; cargar por provincia o por bounding box."
+    },
+    {
+      "layer_id": "radios",
+      "relative_path": null,
+      "national_export": false,
+      "partitioned": true,
+      "partitioning": {
+        "enabled": true,
+        "province:06": {
+          "strategy": "departamento_partido",
+          "index_relative_path": "provincias/provincia_06_buenos_aires/radios/index.json",
+          "partition_count": 135,
+          "max_partition_size_mb": 2.424
+        }
+      },
+      "aditiva": true,
+      "no_aditiva": false,
+      "feature_count": 66515,
+      "size_mb": 0,
+      "usage": "Máximo detalle censal. Es aditiva si se usa como única jerarquía, pero no debe cargarse nacionalmente en el navegador.",
+      "loading_strategy": "Cargar por provincia bajo demanda. Para Buenos Aires, cargar radios por departamento/partido desde provincias/provincia_06_buenos_aires/radios/index.json."
+    },
+    {
+      "layer_id": "localidades_puntos",
+      "relative_path": null,
+      "national_export": false,
+      "partitioned": true,
+      "partitioning": {
+        "enabled": true,
+        "strategy": "provincia",
+        "index_relative_path": "indexes/localidades_puntos_index.json"
+      },
+      "aditiva": false,
+      "no_aditiva": true,
+      "feature_count": 18470,
+      "size_mb": 0,
+      "usage": "Puntos para tooltips, clusters y heatmap. No sumar población porque contiene localidades y asentamientos superpuestos.",
+      "loading_strategy": "No publicar/cargar archivo nacional. Usar indexes/localidades_puntos_index.json y puntos.geojson por provincia."
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "version": "v6_business_synthetic_autoparts",
+  "generated_at": "2026-07-05T16:44:41+00:00",
+  "dato_sintetico": true,
+  "records": [
+    {
+      "periodo": "2025-01",
+      "anio": 2025,
+      "mes": 1,
+      "fecha_mes": "2025-01-01",
+      "mes_nombre": "Enero",
+      "trimestre": "T1",
+      "semestre": "S1",
+      "orden_periodo": 1,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2025-02",
+      "anio": 2025,
+      "mes": 2,
+      "fecha_mes": "2025-02-01",
+      "mes_nombre": "Febrero",
+      "trimestre": "T1",
+      "semestre": "S1",
+      "orden_periodo": 2,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2025-03",
+      "anio": 2025,
+      "mes": 3,
+      "fecha_mes": "2025-03-01",
+      "mes_nombre": "Marzo",
+      "trimestre": "T1",
+      "semestre": "S1",
+      "orden_periodo": 3,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2025-04",
+      "anio": 2025,
+      "mes": 4,
+      "fecha_mes": "2025-04-01",
+      "mes_nombre": "Abril",
+      "trimestre": "T2",
+      "semestre": "S1",
+      "orden_periodo": 4,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2025-05",
+      "anio": 2025,
+      "mes": 5,
+      "fecha_mes": "2025-05-01",
+      "mes_nombre": "Mayo",
+      "trimestre": "T2",
+      "semestre": "S1",
+      "orden_periodo": 5,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2025-06",
+      "anio": 2025,
+      "mes": 6,
+      "fecha_mes": "2025-06-01",
+      "mes_nombre": "Junio",
+      "trimestre": "T2",
+      "semestre": "S1",
+      "orden_periodo": 6,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2025-07",
+      "anio": 2025,
+      "mes": 7,
+      "fecha_mes": "2025-07-01",
+      "mes_nombre": "Julio",
+      "trimestre": "T3",
+      "semestre": "S2",
+      "orden_periodo": 7,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2025-08",
+      "anio": 2025,
+      "mes": 8,
+      "fecha_mes": "2025-08-01",
+      "mes_nombre": "Agosto",
+      "trimestre": "T3",
+      "semestre": "S2",
+      "orden_periodo": 8,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2025-09",
+      "anio": 2025,
+      "mes": 9,
+      "fecha_mes": "2025-09-01",
+      "mes_nombre": "Septiembre",
+      "trimestre": "T3",
+      "semestre": "S2",
+      "orden_periodo": 9,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2025-10",
+      "anio": 2025,
+      "mes": 10,
+      "fecha_mes": "2025-10-01",
+      "mes_nombre": "Octubre",
+      "trimestre": "T4",
+      "semestre": "S2",
+      "orden_periodo": 10,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2025-11",
+      "anio": 2025,
+      "mes": 11,
+      "fecha_mes": "2025-11-01",
+      "mes_nombre": "Noviembre",
+      "trimestre": "T4",
+      "semestre": "S2",
+      "orden_periodo": 11,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2025-12",
+      "anio": 2025,
+      "mes": 12,
+      "fecha_mes": "2025-12-01",
+      "mes_nombre": "Diciembre",
+      "trimestre": "T4",
+      "semestre": "S2",
+      "orden_periodo": 12,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2026-01",
+      "anio": 2026,
+      "mes": 1,
+      "fecha_mes": "2026-01-01",
+      "mes_nombre": "Enero",
+      "trimestre": "T1",
+      "semestre": "S1",
+      "orden_periodo": 13,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2026-02",
+      "anio": 2026,
+      "mes": 2,
+      "fecha_mes": "2026-02-01",
+      "mes_nombre": "Febrero",
+      "trimestre": "T1",
+      "semestre": "S1",
+      "orden_periodo": 14,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2026-03",
+      "anio": 2026,
+      "mes": 3,
+      "fecha_mes": "2026-03-01",
+      "mes_nombre": "Marzo",
+      "trimestre": "T1",
+      "semestre": "S1",
+      "orden_periodo": 15,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2026-04",
+      "anio": 2026,
+      "mes": 4,
+      "fecha_mes": "2026-04-01",
+      "mes_nombre": "Abril",
+      "trimestre": "T2",
+      "semestre": "S1",
+      "orden_periodo": 16,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2026-05",
+      "anio": 2026,
+      "mes": 5,
+      "fecha_mes": "2026-05-01",
+      "mes_nombre": "Mayo",
+      "trimestre": "T2",
+      "semestre": "S1",
+      "orden_periodo": 17,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2026-06",
+      "anio": 2026,
+      "mes": 6,
+      "fecha_mes": "2026-06-01",
+      "mes_nombre": "Junio",
+      "trimestre": "T2",
+      "semestre": "S1",
+      "orden_periodo": 18,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2026-07",
+      "anio": 2026,
+      "mes": 7,
+      "fecha_mes": "2026-07-01",
+      "mes_nombre": "Julio",
+      "trimestre": "T3",
+      "semestre": "S2",
+      "orden_periodo": 19,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2026-08",
+      "anio": 2026,
+      "mes": 8,
+      "fecha_mes": "2026-08-01",
+      "mes_nombre": "Agosto",
+      "trimestre": "T3",
+      "semestre": "S2",
+      "orden_periodo": 20,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2026-09",
+      "anio": 2026,
+      "mes": 9,
+      "fecha_mes": "2026-09-01",
+      "mes_nombre": "Septiembre",
+      "trimestre": "T3",
+      "semestre": "S2",
+      "orden_periodo": 21,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2026-10",
+      "anio": 2026,
+      "mes": 10,
+      "fecha_mes": "2026-10-01",
+      "mes_nombre": "Octubre",
+      "trimestre": "T4",
+      "semestre": "S2",
+      "orden_periodo": 22,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2026-11",
+      "anio": 2026,
+      "mes": 11,
+      "fecha_mes": "2026-11-01",
+      "mes_nombre": "Noviembre",
+      "trimestre": "T4",
+      "semestre": "S2",
+      "orden_periodo": 23,
+      "dato_sintetico": true
+    },
+    {
+      "periodo": "2026-12",
+      "anio": 2026,
+      "mes": 12,
+      "fecha_mes": "2026-12-01",
+      "mes_nombre": "Diciembre",
+      "trimestre": "T4",
+      "semestre": "S2",
+      "orden_periodo": 24,
+      "dato_sintetico": true
+    }
+  ],
+  "metadata": {
+    "periodo_desde": "2025-01",
+    "periodo_hasta": "2026-12"
+  }
+}

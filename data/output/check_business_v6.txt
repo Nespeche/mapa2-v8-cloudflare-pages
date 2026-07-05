@@ -1,0 +1,71 @@
+================================================================================
+CHECK BUSINESS V6 — CLIENTES Y VENTAS SINTÉTICAS AUTOPARTES
+================================================================================
+Generado: 2026-07-05T16:48:35+00:00
+Estado final: OK
+
+Resumen
+--------------------------------------------------------------------------------
+Clientes: 2000
+Productos: 65
+Registros de ventas: 128998
+Períodos: 2025-01 a 2026-12
+Venta total: 156,598,296,863.76
+Venta 2025: 70,214,766,538.47
+Venta 2026: 86,383,530,325.29
+Clientes Buenos Aires: 1400 (70.0%)
+
+Validaciones
+--------------------------------------------------------------------------------
+OK    | Existe metadata.json V5.1 | public/data/metadata.json
+OK    | Existe provincias_index.json | public/data/indexes/provincias_index.json
+OK    | Existe localidades_puntos_index.json | public/data/indexes/localidades_puntos_index.json
+OK    | Base V5.1 en estado OK | version=v5_1_map_ready_cloudflare_fix
+OK    | Provincias válidas cargadas | 24 provincias
+OK    | Existe metadata_business_v6.json | public/data/business/metadata_business_v6.json
+OK    | Existe clientes.geojson | public/data/business/clientes.geojson
+OK    | Existe productos.json | public/data/business/productos.json
+OK    | Existe calendario.json | public/data/business/calendario.json
+OK    | Existe ventas_mensuales.csv | public/data/business/ventas_mensuales.csv
+OK    | Existe ventas_provincia_mes.json | public/data/business/agregados/ventas_provincia_mes.json
+OK    | Existe ventas_departamento_mes.json | public/data/business/agregados/ventas_departamento_mes.json
+OK    | Existe ventas_producto_mes.json | public/data/business/agregados/ventas_producto_mes.json
+OK    | Existe ventas_cliente_totales.json | public/data/business/agregados/ventas_cliente_totales.json
+OK    | Existe heatmap_clientes_ventas.geojson | public/data/business/agregados/heatmap_clientes_ventas.geojson
+OK    | Clientes generados exactamente | 2000
+OK    | Todos los clientes tienen provincia válida | clientes=2000
+OK    | No existen clientes sin cliente_id ni duplicados
+OK    | No existen clientes sin provincia_id/provincia_nombre
+OK    | Todos los clientes tienen coordenadas válidas dentro de Argentina | bbox={'lon_min': -74.2, 'lon_max': -52.0, 'lat_min': -56.2, 'lat_max': -21.0}
+OK    | Todos los clientes tienen dato_sintetico=true
+OK    | Mayoría de clientes en Buenos Aires según regla | 1400 clientes (70.0%)
+OK    | Clientes CABA dentro de regla sugerida | 160 clientes (8.0%)
+OK    | Catálogo de productos sin nulos críticos | productos=65
+OK    | Producto_id único y válido | productos=65
+OK    | Existen ventas para todos los meses 2025-01 a 2026-12 | meses=24
+OK    | Ventas con valores positivos | registros=128998
+OK    | No existen ventas sin cliente válido
+OK    | No existen ventas sin producto válido
+OK    | Todos los clientes tienen al menos una venta
+OK    | Heatmap tiene un punto por cliente | features=2000
+OK    | Agregado provincia_mes cierra contra ventas | records=264
+OK    | Agregado departamento_mes cierra contra ventas | records=6432
+OK    | Agregado producto_mes cierra contra ventas | records=1560
+OK    | Agregado cliente_totales cierra contra ventas | records=2000
+OK    | Agregados por provincia cierran contra ventas | 156,598,296,863.76
+OK    | Archivos en public/data no superan 25 MiB | max=14.0 MiB
+OK    | No se crearon rutas públicas demasiado largas para Windows | max_len=107
+
+Auditoría public/data
+--------------------------------------------------------------------------------
+Archivos en public/data: 301
+Archivo más pesado: data/business/ventas_mensuales.csv (14.0 MiB)
+Archivos >25 MiB: 0
+Archivos 20-25 MiB: 0
+Ruta más larga: data/provincias/provincia_94_tierra_del_fuego_antartida_e_islas_del_atlantico_sur/gobiernos_locales.geojson (107 caracteres)
+Rutas > límite preventivo 180: 0
+
+Resultado final
+--------------------------------------------------------------------------------
+Estado final: OK
+No se avanzó a V7. No se creó frontend completo. No se hizo deploy.

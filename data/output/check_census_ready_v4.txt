@@ -1,0 +1,69 @@
+
+================================================================================
+Capas, población y geometrías
+================================================================================
+                      layer  registros                       geom  sin_pop  invalidas  vacias  poblacion_sum
+          georef_provincias         24               MultiPolygon        0          0       0       45892285
+       georef_departamentos        529               MultiPolygon        0          0       0       45892285
+          georef_municipios         10               MultiPolygon        0          0       0        6681774
+   georef_gobiernos_locales       2280               MultiPolygon        0          0       0       45560279
+         georef_aglomerados        119               MultiPolygon        0          0       0       34516748
+ georef_fracciones_censales       6571               MultiPolygon        0          0       0       45892285
+     georef_radios_censales      66515               MultiPolygon        0          0       0       45892285
+         georef_localidades       4028                      Point        0          0       0       45885279
+       georef_asentamientos      14466                      Point        0          0       0       45892285
+             app_provincias         24               MultiPolygon        0          0       0       45892285
+  app_localidades_poligonos      76018               MultiPolygon        0          0       0      224432134
+     app_localidades_puntos      18470                      Point        0          0       0       91776372
+entidades_mapa_enriquecidas      94542 MultiPolygon,Point,Polygon        0          0       0      362105505
+
+================================================================================
+Control provincia -> departamentos
+================================================================================
+provincia_id                                             provincia  poblacion_provincia  suma_departamentos  diferencia  departamentos
+provincia:02                       Ciudad Autónoma de Buenos Aires              3121707             3121707           0             15
+provincia:58                                               Neuquén               710814              710814           0             16
+provincia:74                                              San Luis               542069              542069           0              9
+provincia:82                                              Santa Fe              3544908             3544908           0             19
+provincia:46                                              La Rioja               383865              383865           0             18
+provincia:10                                             Catamarca               429562              429562           0             16
+provincia:90                                               Tucumán              1731820             1731820           0             17
+provincia:22                                                 Chaco              1129606             1129606           0             25
+provincia:34                                               Formosa               607419              607419           0              9
+provincia:78                                            Santa Cruz               337226              337226           0              7
+provincia:26                                                Chubut               592621              592621           0             15
+provincia:50                                               Mendoza              2043540             2043540           0             18
+provincia:30                                            Entre Ríos              1425578             1425578           0             17
+provincia:70                                              San Juan               822853              822853           0             19
+provincia:38                                                 Jujuy               811611              811611           0             16
+provincia:86                                   Santiago del Estero              1060906             1060906           0             27
+provincia:62                                             Río Negro               750768              750768           0             13
+provincia:18                                            Corrientes              1212696             1212696           0             25
+provincia:54                                              Misiones              1278873             1278873           0             17
+provincia:66                                                 Salta              1441351             1441351           0             23
+provincia:14                                               Córdoba              3840905             3840905           0             26
+provincia:06                                          Buenos Aires             17523996            17523996           0            135
+provincia:42                                              La Pampa               361859              361859           0             22
+provincia:94 Tierra del Fuego, Antártida e Islas del Atlántico Sur               185732              185732           0              5
+
+================================================================================
+Métodos censales usados
+================================================================================
+             capa_original clasificacion_censo confianza_censo                                                              metodo_dato  registros
+        georef_aglomerados            estimada            baja                         estimacion_overlay_aglomerado_sobre_departamento        119
+      georef_asentamientos            estimada            baja                       estimacion_prorrateo_asentamientos_en_departamento      14466
+      georef_departamentos   oficial_procesada           media oficial_gobiernos_locales_overlay_departamental+residual_provincial_area        379
+      georef_departamentos   oficial_procesada            alta                                 oficial_gobiernos_locales_directo_codigo        150
+georef_fracciones_censales            estimada           media                              estimacion_area_fraccion_sobre_departamento       6571
+  georef_gobiernos_locales     oficial_directa            alta                                              cuadro_gobierno_local_indec       2280
+        georef_localidades            estimada            baja                         estimacion_prorrateo_localidades_en_departamento       4028
+         georef_municipios            estimada           media                        estimacion_overlay_municipio_sobre_gobierno_local         10
+         georef_provincias     oficial_directa            alta                                                     cuadro_resumen_indec         24
+    georef_radios_censales            estimada           media                                 estimacion_area_radio_sobre_departamento      66515
+
+================================================================================
+Resultado
+================================================================================
+WARN: Hay 18613 entidades con población estimada de confianza baja; son puntos/agregados sin dato censal directo.
+WARN: No hay capa nacional de barrios en el ZIP; el modelo está preparado para importarla, pero no fue inventada.
+OK: base censal/geográfica lista para la fase de tiles y frontend.

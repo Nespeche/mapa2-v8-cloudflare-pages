@@ -1,0 +1,144 @@
+version: 2
+crs_storage: EPSG:4326
+crs_area: EPSG:6933
+
+georef:
+  base_v2: https://apis.datos.gob.ar/georef/api/v2.0
+  preferred_formats: [geojson, ndjson, shp]
+  resources:
+    provincias:
+      tipo_entidad: provincia
+      clasificacion_fuente: oficial_directa
+      nivel_confianza: alta
+      source_priority: 10
+    departamentos:
+      tipo_entidad: departamento_partido_comuna
+      clasificacion_fuente: oficial_directa
+      nivel_confianza: alta
+      source_priority: 10
+    municipios:
+      tipo_entidad: municipio
+      clasificacion_fuente: oficial_directa
+      nivel_confianza: alta
+      source_priority: 9
+    gobiernos-locales:
+      tipo_entidad: gobierno_local
+      clasificacion_fuente: oficial_directa
+      nivel_confianza: alta
+      source_priority: 10
+    localidades:
+      tipo_entidad: localidad
+      clasificacion_fuente: oficial_directa
+      nivel_confianza: alta
+      source_priority: 8
+    localidades_censales:
+      tipo_entidad: localidad_censal
+      clasificacion_fuente: oficial_directa
+      nivel_confianza: alta
+      source_priority: 9
+    asentamientos:
+      tipo_entidad: asentamiento
+      clasificacion_fuente: oficial_parcial
+      nivel_confianza: media
+      source_priority: 6
+  # Recursos agregados o en despliegue en Georef v2. El downloader los prueba como opcionales
+  # porque algunos endpoints/capas pueden variar según disponibilidad pública.
+  optional_resources:
+    aglomerados:
+      candidates: [aglomerados]
+      tipo_entidad: aglomerado
+      clasificacion_fuente: oficial_directa
+      nivel_confianza: alta
+      source_priority: 7
+    fracciones_censales:
+      candidates: [fracciones-censales, fracciones_censales, fracciones]
+      tipo_entidad: fraccion_censal
+      clasificacion_fuente: oficial_directa
+      nivel_confianza: alta
+      source_priority: 8
+    radios_censales:
+      candidates: [radios-censales, radios_censales, radios]
+      tipo_entidad: radio_censal
+      clasificacion_fuente: oficial_directa
+      nivel_confianza: alta
+      source_priority: 8
+
+indec:
+  censo_2022:
+    portal: https://www.indec.gob.ar/indec/web/Nivel4-Tema-2-41-165
+    redatam_portal: https://redatam.indec.gob.ar/binarg/RpWebEngine.exe/Portal?BASE=CPV2022&lang=ESP
+    codgeo_2022_index: https://redatam.indec.gob.ar/redarg/CENSOS/CPV2022/Docs/codcart.htm
+    resumen_pais_provincias:
+      url: https://www.indec.gob.ar/ftp/cuadros/poblacion/c2022_tp_c_resumen.xlsx
+      filename: indec/c2022_tp_c_resumen.xlsx
+      clasificacion_fuente: oficial_directa
+    gobiernos_locales:
+      url: https://www.indec.gob.ar/ftp/cuadros/poblacion/c2022_tp_gobierno_local_c1.xlsx
+      filename: indec/c2022_tp_gobierno_local_c1.xlsx
+      clasificacion_fuente: oficial_directa
+    # El downloader prueba variantes habituales; si INDEC cambia nombres, usar el portal y colocar XLSX en raw/indec/departamentos.
+    departamentos_pattern:
+      base: https://www.indec.gob.ar/ftp/cuadros/poblacion/c2022_{slug}_est_c2_{n}.xlsx
+      n_values: [1, 2, 3, 4, 5]
+      slugs:
+        '02': [caba, ciudad]
+        '06': [bsas, buenosaires, buenos_aires]
+        '10': [catamarca]
+        '22': [chaco]
+        '26': [chubut]
+        '14': [cordoba]
+        '18': [corrientes]
+        '30': [entrerios, entre_rios]
+        '34': [formosa]
+        '38': [jujuy]
+        '42': [lapampa, la_pampa]
+        '46': [larioja, la_rioja]
+        '50': [mendoza]
+        '54': [misiones]
+        '58': [neuquen]
+        '62': [rionegro, rio_negro]
+        '66': [salta]
+        '70': [sanjuan, san_juan]
+        '74': [sanluis, san_luis]
+        '78': [santacruz, santa_cruz]
+        '82': [santafe, santa_fe]
+        '86': [santiago, santiago_del_estero, santiagodelestero]
+        '94': [tdf, tierradelfuego, tierra_del_fuego]
+        '90': [tucuman]
+  geoestadistica:
+    portal_geoestadistico: https://portalgeoestadistico.indec.gob.ar/
+    geonode_fracciones: https://geonode.indec.gob.ar/layers/geonode_data%3Ageonode%3Afracciones_censales
+    codgeo: https://www.indec.gob.ar/indec/web/Institucional-Indec-Codgeo
+    codgeo_2022_index: https://redatam.indec.gob.ar/redarg/CENSOS/CPV2022/Docs/codcart.htm
+    nota_radios: El INDEC publica radios/fracciones en Geoportal/GeoNode y en algunos casos por provincia; usar como fuente oficial estadística.
+
+refeglo:
+  url: https://infra.datos.gob.ar/catalog/otros/dataset/14/distribution/14.1/download/datos-refeglo_25-09-2023.csv
+  dataset_url: https://datos.gob.ar/dataset/otros-refeglo---registro-federal-gobiernos-locales
+  filename: mininterior/datos-refeglo_25-09-2023.csv
+  clasificacion_fuente: oficial_directa
+
+barrios:
+  caba:
+    dataset_url: https://data.buenosaires.gob.ar/dataset/barrios
+    clasificacion_fuente: oficial_parcial
+    nota: Polígonos oficiales de barrios CABA; población publicada por barrio se identifica como Censo 2010 salvo actualización explícita.
+  renabap:
+    dataset_url: https://www.argentina.gob.ar/obras-publicas/sisu/renabap
+    clasificacion_fuente: oficial_parcial
+    nota: Barrios populares registrados; no equivale a todos los barrios ni a población censal directa.
+  osm_geofabrik:
+    dataset_url: https://download.geofabrik.de/south-america/argentina.html
+    clasificacion_fuente: no_oficial
+    nota: Complemento para barrios/neighbourhoods cuando falte fuente oficial. Requiere validación y nunca debe pisar fuentes oficiales.
+
+codigos_postales:
+  correo_argentino_cpa_info: https://www.correoargentino.com.ar/servicios/postales/web-service-de-normalizacion-de-base-de-datos-0
+  clasificacion_fuente: auxiliar_no_geografica
+  nota: El CPA ayuda a inferir provincia/localidad si viene en una fuente externa, pero no debe reemplazar códigos INDEC/Georef. Correo informa que no emite listados públicos de códigos postales/localidades; usar CPA como señal de respaldo, no como fuente maestra.
+
+manual_inputs:
+  localidades_redatam_csv: data/manual/localidades_redatam/localidades_censo_2022.csv
+  barrios_dir: data/manual/barrios
+  radios_poblacion_csv: data/manual/radios_poblacion_2022.csv
+  radios_geom: data/manual/radios_censales_2022.geojson

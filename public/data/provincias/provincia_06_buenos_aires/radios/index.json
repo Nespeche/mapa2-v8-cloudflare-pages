@@ -1,0 +1,1377 @@
+{
+  "version": "v5_1_map_ready_cloudflare_fix",
+  "generated_at": "2026-07-05T15:49:44.028251+00:00",
+  "layer_id": "radios",
+  "provincia_id": "provincia:06",
+  "provincia_codigo": "06",
+  "provincia_nombre": "Buenos Aires",
+  "partition_strategy": "departamento_partido",
+  "original_monolithic_relative_path": "provincias/provincia_06_buenos_aires/radios.geojson",
+  "original_monolithic_size_mb": 35.166,
+  "monolithic_file_removed_from_public": true,
+  "total_features": 23901,
+  "total_population": 17523996,
+  "partition_count": 135,
+  "max_partition_size_mb": 2.424,
+  "max_partition_relative_path": "provincias/provincia_06_buenos_aires/radios/d_06427.geojson",
+  "files": [
+    {
+      "departamento_id": "departamento:06007",
+      "departamento_codigo": "06007",
+      "departamento_nombre": "Adolfo Alsina",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06007.geojson",
+      "feature_count": 130,
+      "population_sum": 17552,
+      "size_bytes": 206602,
+      "size_mb": 0.197
+    },
+    {
+      "departamento_id": "departamento:06014",
+      "departamento_codigo": "06014",
+      "departamento_nombre": "Adolfo Gonzales Chaves",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06014.geojson",
+      "feature_count": 38,
+      "population_sum": 12914,
+      "size_bytes": 61009,
+      "size_mb": 0.058
+    },
+    {
+      "departamento_id": "departamento:06021",
+      "departamento_codigo": "06021",
+      "departamento_nombre": "Alberti",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06021.geojson",
+      "feature_count": 49,
+      "population_sum": 12982,
+      "size_bytes": 77909,
+      "size_mb": 0.074
+    },
+    {
+      "departamento_id": "departamento:06028",
+      "departamento_codigo": "06028",
+      "departamento_nombre": "Almirante Brown",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06028.geojson",
+      "feature_count": 534,
+      "population_sum": 584827,
+      "size_bytes": 827131,
+      "size_mb": 0.789
+    },
+    {
+      "departamento_id": "departamento:06035",
+      "departamento_codigo": "06035",
+      "departamento_nombre": "Avellaneda",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06035.geojson",
+      "feature_count": 429,
+      "population_sum": 367554,
+      "size_bytes": 662296,
+      "size_mb": 0.632
+    },
+    {
+      "departamento_id": "departamento:06042",
+      "departamento_codigo": "06042",
+      "departamento_nombre": "Ayacucho",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06042.geojson",
+      "feature_count": 49,
+      "population_sum": 21977,
+      "size_bytes": 79588,
+      "size_mb": 0.076
+    },
+    {
+      "departamento_id": "departamento:06049",
+      "departamento_codigo": "06049",
+      "departamento_nombre": "Azul",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06049.geojson",
+      "feature_count": 128,
+      "population_sum": 75905,
+      "size_bytes": 201695,
+      "size_mb": 0.192
+    },
+    {
+      "departamento_id": "departamento:06056",
+      "departamento_codigo": "06056",
+      "departamento_nombre": "Bahía Blanca",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06056.geojson",
+      "feature_count": 488,
+      "population_sum": 336557,
+      "size_bytes": 756210,
+      "size_mb": 0.721
+    },
+    {
+      "departamento_id": "departamento:06063",
+      "departamento_codigo": "06063",
+      "departamento_nombre": "Balcarce",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06063.geojson",
+      "feature_count": 107,
+      "population_sum": 48982,
+      "size_bytes": 168653,
+      "size_mb": 0.161
+    },
+    {
+      "departamento_id": "departamento:06070",
+      "departamento_codigo": "06070",
+      "departamento_nombre": "Baradero",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06070.geojson",
+      "feature_count": 78,
+      "population_sum": 40002,
+      "size_bytes": 122427,
+      "size_mb": 0.117
+    },
+    {
+      "departamento_id": "departamento:06077",
+      "departamento_codigo": "06077",
+      "departamento_nombre": "Arrecifes",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06077.geojson",
+      "feature_count": 70,
+      "population_sum": 32215,
+      "size_bytes": 110308,
+      "size_mb": 0.105
+    },
+    {
+      "departamento_id": "departamento:06084",
+      "departamento_codigo": "06084",
+      "departamento_nombre": "Benito Juárez",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06084.geojson",
+      "feature_count": 61,
+      "population_sum": 22292,
+      "size_bytes": 98307,
+      "size_mb": 0.094
+    },
+    {
+      "departamento_id": "departamento:06091",
+      "departamento_codigo": "06091",
+      "departamento_nombre": "Berazategui",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06091.geojson",
+      "feature_count": 344,
+      "population_sum": 358712,
+      "size_bytes": 531246,
+      "size_mb": 0.507
+    },
+    {
+      "departamento_id": "departamento:06098",
+      "departamento_codigo": "06098",
+      "departamento_nombre": "Berisso",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06098.geojson",
+      "feature_count": 114,
+      "population_sum": 100930,
+      "size_bytes": 176033,
+      "size_mb": 0.168
+    },
+    {
+      "departamento_id": "departamento:06105",
+      "departamento_codigo": "06105",
+      "departamento_nombre": "Bolívar",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06105.geojson",
+      "feature_count": 77,
+      "population_sum": 37594,
+      "size_bytes": 120947,
+      "size_mb": 0.115
+    },
+    {
+      "departamento_id": "departamento:06112",
+      "departamento_codigo": "06112",
+      "departamento_nombre": "Bragado",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06112.geojson",
+      "feature_count": 123,
+      "population_sum": 46504,
+      "size_bytes": 191431,
+      "size_mb": 0.183
+    },
+    {
+      "departamento_id": "departamento:06119",
+      "departamento_codigo": "06119",
+      "departamento_nombre": "Brandsen",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06119.geojson",
+      "feature_count": 90,
+      "population_sum": 32448,
+      "size_bytes": 140969,
+      "size_mb": 0.134
+    },
+    {
+      "departamento_id": "departamento:06126",
+      "departamento_codigo": "06126",
+      "departamento_nombre": "Campana",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06126.geojson",
+      "feature_count": 148,
+      "population_sum": 110566,
+      "size_bytes": 229368,
+      "size_mb": 0.219
+    },
+    {
+      "departamento_id": "departamento:06134",
+      "departamento_codigo": "06134",
+      "departamento_nombre": "Cañuelas",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06134.geojson",
+      "feature_count": 119,
+      "population_sum": 70684,
+      "size_bytes": 185349,
+      "size_mb": 0.177
+    },
+    {
+      "departamento_id": "departamento:06140",
+      "departamento_codigo": "06140",
+      "departamento_nombre": "Capitán Sarmiento",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06140.geojson",
+      "feature_count": 37,
+      "population_sum": 15965,
+      "size_bytes": 58064,
+      "size_mb": 0.055
+    },
+    {
+      "departamento_id": "departamento:06147",
+      "departamento_codigo": "06147",
+      "departamento_nombre": "Carlos Casares",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06147.geojson",
+      "feature_count": 81,
+      "population_sum": 23100,
+      "size_bytes": 127235,
+      "size_mb": 0.121
+    },
+    {
+      "departamento_id": "departamento:06154",
+      "departamento_codigo": "06154",
+      "departamento_nombre": "Carlos Tejedor",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06154.geojson",
+      "feature_count": 49,
+      "population_sum": 14079,
+      "size_bytes": 78989,
+      "size_mb": 0.075
+    },
+    {
+      "departamento_id": "departamento:06161",
+      "departamento_codigo": "06161",
+      "departamento_nombre": "Carmen de Areco",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06161.geojson",
+      "feature_count": 53,
+      "population_sum": 17499,
+      "size_bytes": 83436,
+      "size_mb": 0.08
+    },
+    {
+      "departamento_id": "departamento:06168",
+      "departamento_codigo": "06168",
+      "departamento_nombre": "Castelli",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06168.geojson",
+      "feature_count": 50,
+      "population_sum": 9594,
+      "size_bytes": 79757,
+      "size_mb": 0.076
+    },
+    {
+      "departamento_id": "departamento:06175",
+      "departamento_codigo": "06175",
+      "departamento_nombre": "Colón",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06175.geojson",
+      "feature_count": 56,
+      "population_sum": 27504,
+      "size_bytes": 87476,
+      "size_mb": 0.083
+    },
+    {
+      "departamento_id": "departamento:06182",
+      "departamento_codigo": "06182",
+      "departamento_nombre": "Coronel de Marina Leonardo Rosales",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06182.geojson",
+      "feature_count": 106,
+      "population_sum": 67503,
+      "size_bytes": 168062,
+      "size_mb": 0.16
+    },
+    {
+      "departamento_id": "departamento:06189",
+      "departamento_codigo": "06189",
+      "departamento_nombre": "Coronel Dorrego",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06189.geojson",
+      "feature_count": 116,
+      "population_sum": 15968,
+      "size_bytes": 186370,
+      "size_mb": 0.178
+    },
+    {
+      "departamento_id": "departamento:06196",
+      "departamento_codigo": "06196",
+      "departamento_nombre": "Coronel Pringles",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06196.geojson",
+      "feature_count": 111,
+      "population_sum": 24420,
+      "size_bytes": 176656,
+      "size_mb": 0.168
+    },
+    {
+      "departamento_id": "departamento:06203",
+      "departamento_codigo": "06203",
+      "departamento_nombre": "Coronel Suárez",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06203.geojson",
+      "feature_count": 148,
+      "population_sum": 42110,
+      "size_bytes": 235100,
+      "size_mb": 0.224
+    },
+    {
+      "departamento_id": "departamento:06210",
+      "departamento_codigo": "06210",
+      "departamento_nombre": "Chacabuco",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06210.geojson",
+      "feature_count": 106,
+      "population_sum": 52729,
+      "size_bytes": 166052,
+      "size_mb": 0.158
+    },
+    {
+      "departamento_id": "departamento:06218",
+      "departamento_codigo": "06218",
+      "departamento_nombre": "Chascomús",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06218.geojson",
+      "feature_count": 108,
+      "population_sum": 42452,
+      "size_bytes": 172496,
+      "size_mb": 0.165
+    },
+    {
+      "departamento_id": "departamento:06224",
+      "departamento_codigo": "06224",
+      "departamento_nombre": "Chivilcoy",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06224.geojson",
+      "feature_count": 163,
+      "population_sum": 70839,
+      "size_bytes": 254886,
+      "size_mb": 0.243
+    },
+    {
+      "departamento_id": "departamento:06231",
+      "departamento_codigo": "06231",
+      "departamento_nombre": "Daireaux",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06231.geojson",
+      "feature_count": 73,
+      "population_sum": 18422,
+      "size_bytes": 116209,
+      "size_mb": 0.111
+    },
+    {
+      "departamento_id": "departamento:06238",
+      "departamento_codigo": "06238",
+      "departamento_nombre": "Dolores",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06238.geojson",
+      "feature_count": 64,
+      "population_sum": 32032,
+      "size_bytes": 99903,
+      "size_mb": 0.095
+    },
+    {
+      "departamento_id": "departamento:06245",
+      "departamento_codigo": "06245",
+      "departamento_nombre": "Ensenada",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06245.geojson",
+      "feature_count": 78,
+      "population_sum": 63997,
+      "size_bytes": 120356,
+      "size_mb": 0.115
+    },
+    {
+      "departamento_id": "departamento:06252",
+      "departamento_codigo": "06252",
+      "departamento_nombre": "Escobar",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06252.geojson",
+      "feature_count": 304,
+      "population_sum": 256268,
+      "size_bytes": 468694,
+      "size_mb": 0.447
+    },
+    {
+      "departamento_id": "departamento:06260",
+      "departamento_codigo": "06260",
+      "departamento_nombre": "Esteban Echeverría",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06260.geojson",
+      "feature_count": 315,
+      "population_sum": 338480,
+      "size_bytes": 489443,
+      "size_mb": 0.467
+    },
+    {
+      "departamento_id": "departamento:06266",
+      "departamento_codigo": "06266",
+      "departamento_nombre": "Exaltación de la Cruz",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06266.geojson",
+      "feature_count": 95,
+      "population_sum": 40159,
+      "size_bytes": 149505,
+      "size_mb": 0.143
+    },
+    {
+      "departamento_id": "departamento:06270",
+      "departamento_codigo": "06270",
+      "departamento_nombre": "Ezeiza",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06270.geojson",
+      "feature_count": 187,
+      "population_sum": 201511,
+      "size_bytes": 288479,
+      "size_mb": 0.275
+    },
+    {
+      "departamento_id": "departamento:06274",
+      "departamento_codigo": "06274",
+      "departamento_nombre": "Florencio Varela",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06274.geojson",
+      "feature_count": 429,
+      "population_sum": 496433,
+      "size_bytes": 664797,
+      "size_mb": 0.634
+    },
+    {
+      "departamento_id": "departamento:06277",
+      "departamento_codigo": "06277",
+      "departamento_nombre": "Florentino Ameghino",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06277.geojson",
+      "feature_count": 25,
+      "population_sum": 10790,
+      "size_bytes": 39796,
+      "size_mb": 0.038
+    },
+    {
+      "departamento_id": "departamento:06280",
+      "departamento_codigo": "06280",
+      "departamento_nombre": "General Alvarado",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06280.geojson",
+      "feature_count": 165,
+      "population_sum": 45526,
+      "size_bytes": 259497,
+      "size_mb": 0.247
+    },
+    {
+      "departamento_id": "departamento:06287",
+      "departamento_codigo": "06287",
+      "departamento_nombre": "General Alvear",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06287.geojson",
+      "feature_count": 29,
+      "population_sum": 12631,
+      "size_bytes": 47028,
+      "size_mb": 0.045
+    },
+    {
+      "departamento_id": "departamento:06294",
+      "departamento_codigo": "06294",
+      "departamento_nombre": "General Arenales",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06294.geojson",
+      "feature_count": 68,
+      "population_sum": 16350,
+      "size_bytes": 107557,
+      "size_mb": 0.103
+    },
+    {
+      "departamento_id": "departamento:06301",
+      "departamento_codigo": "06301",
+      "departamento_nombre": "General Belgrano",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06301.geojson",
+      "feature_count": 45,
+      "population_sum": 20791,
+      "size_bytes": 72046,
+      "size_mb": 0.069
+    },
+    {
+      "departamento_id": "departamento:06308",
+      "departamento_codigo": "06308",
+      "departamento_nombre": "General Guido",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06308.geojson",
+      "feature_count": 17,
+      "population_sum": 3174,
+      "size_bytes": 28455,
+      "size_mb": 0.027
+    },
+    {
+      "departamento_id": "departamento:06315",
+      "departamento_codigo": "06315",
+      "departamento_nombre": "General Juan Madariaga",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06315.geojson",
+      "feature_count": 34,
+      "population_sum": 22624,
+      "size_bytes": 54732,
+      "size_mb": 0.052
+    },
+    {
+      "departamento_id": "departamento:06322",
+      "departamento_codigo": "06322",
+      "departamento_nombre": "General La Madrid",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06322.geojson",
+      "feature_count": 73,
+      "population_sum": 11618,
+      "size_bytes": 117526,
+      "size_mb": 0.112
+    },
+    {
+      "departamento_id": "departamento:06329",
+      "departamento_codigo": "06329",
+      "departamento_nombre": "General Las Heras",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06329.geojson",
+      "feature_count": 39,
+      "population_sum": 18022,
+      "size_bytes": 61352,
+      "size_mb": 0.059
+    },
+    {
+      "departamento_id": "departamento:06336",
+      "departamento_codigo": "06336",
+      "departamento_nombre": "General Lavalle",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06336.geojson",
+      "feature_count": 19,
+      "population_sum": 4870,
+      "size_bytes": 32321,
+      "size_mb": 0.031
+    },
+    {
+      "departamento_id": "departamento:06343",
+      "departamento_codigo": "06343",
+      "departamento_nombre": "General Paz",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06343.geojson",
+      "feature_count": 39,
+      "population_sum": 14207,
+      "size_bytes": 62495,
+      "size_mb": 0.06
+    },
+    {
+      "departamento_id": "departamento:06351",
+      "departamento_codigo": "06351",
+      "departamento_nombre": "General Pinto",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06351.geojson",
+      "feature_count": 49,
+      "population_sum": 12941,
+      "size_bytes": 76896,
+      "size_mb": 0.073
+    },
+    {
+      "departamento_id": "departamento:06357",
+      "departamento_codigo": "06357",
+      "departamento_nombre": "General Pueyrredón",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06357.geojson",
+      "feature_count": 1084,
+      "population_sum": 667082,
+      "size_bytes": 1683036,
+      "size_mb": 1.605
+    },
+    {
+      "departamento_id": "departamento:06364",
+      "departamento_codigo": "06364",
+      "departamento_nombre": "General Rodríguez",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06364.geojson",
+      "feature_count": 189,
+      "population_sum": 142709,
+      "size_bytes": 293665,
+      "size_mb": 0.28
+    },
+    {
+      "departamento_id": "departamento:06371",
+      "departamento_codigo": "06371",
+      "departamento_nombre": "General San Martín",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06371.geojson",
+      "feature_count": 524,
+      "population_sum": 450518,
+      "size_bytes": 813724,
+      "size_mb": 0.776
+    },
+    {
+      "departamento_id": "departamento:06385",
+      "departamento_codigo": "06385",
+      "departamento_nombre": "General Viamonte",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06385.geojson",
+      "feature_count": 51,
+      "population_sum": 22649,
+      "size_bytes": 79919,
+      "size_mb": 0.076
+    },
+    {
+      "departamento_id": "departamento:06392",
+      "departamento_codigo": "06392",
+      "departamento_nombre": "General Villegas",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06392.geojson",
+      "feature_count": 107,
+      "population_sum": 35251,
+      "size_bytes": 170236,
+      "size_mb": 0.162
+    },
+    {
+      "departamento_id": "departamento:06399",
+      "departamento_codigo": "06399",
+      "departamento_nombre": "Guaminí",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06399.geojson",
+      "feature_count": 43,
+      "population_sum": 11801,
+      "size_bytes": 69883,
+      "size_mb": 0.067
+    },
+    {
+      "departamento_id": "departamento:06406",
+      "departamento_codigo": "06406",
+      "departamento_nombre": "Hipólito Yrigoyen",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06406.geojson",
+      "feature_count": 35,
+      "population_sum": 10661,
+      "size_bytes": 56068,
+      "size_mb": 0.053
+    },
+    {
+      "departamento_id": "departamento:06408",
+      "departamento_codigo": "06408",
+      "departamento_nombre": "Hurlingham",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06408.geojson",
+      "feature_count": 194,
+      "population_sum": 185641,
+      "size_bytes": 299545,
+      "size_mb": 0.286
+    },
+    {
+      "departamento_id": "departamento:06410",
+      "departamento_codigo": "06410",
+      "departamento_nombre": "Ituzaingó",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06410.geojson",
+      "feature_count": 189,
+      "population_sum": 180232,
+      "size_bytes": 291831,
+      "size_mb": 0.278
+    },
+    {
+      "departamento_id": "departamento:06412",
+      "departamento_codigo": "06412",
+      "departamento_nombre": "José C. Paz",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06412.geojson",
+      "feature_count": 278,
+      "population_sum": 326992,
+      "size_bytes": 429838,
+      "size_mb": 0.41
+    },
+    {
+      "departamento_id": "departamento:06413",
+      "departamento_codigo": "06413",
+      "departamento_nombre": "Junín",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06413.geojson",
+      "feature_count": 192,
+      "population_sum": 103787,
+      "size_bytes": 298275,
+      "size_mb": 0.284
+    },
+    {
+      "departamento_id": "departamento:06420",
+      "departamento_codigo": "06420",
+      "departamento_nombre": "La Costa",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06420.geojson",
+      "feature_count": 416,
+      "population_sum": 100689,
+      "size_bytes": 641051,
+      "size_mb": 0.611
+    },
+    {
+      "departamento_id": "departamento:06427",
+      "departamento_codigo": "06427",
+      "departamento_nombre": "La Matanza",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06427.geojson",
+      "feature_count": 1647,
+      "population_sum": 1841247,
+      "size_bytes": 2542223,
+      "size_mb": 2.424
+    },
+    {
+      "departamento_id": "departamento:06434",
+      "departamento_codigo": "06434",
+      "departamento_nombre": "Lanús",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06434.geojson",
+      "feature_count": 552,
+      "population_sum": 461267,
+      "size_bytes": 850183,
+      "size_mb": 0.811
+    },
+    {
+      "departamento_id": "departamento:06441",
+      "departamento_codigo": "06441",
+      "departamento_nombre": "La Plata",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06441.geojson",
+      "feature_count": 1049,
+      "population_sum": 768547,
+      "size_bytes": 1616582,
+      "size_mb": 1.542
+    },
+    {
+      "departamento_id": "departamento:06448",
+      "departamento_codigo": "06448",
+      "departamento_nombre": "Laprida",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06448.geojson",
+      "feature_count": 58,
+      "population_sum": 11646,
+      "size_bytes": 91620,
+      "size_mb": 0.087
+    },
+    {
+      "departamento_id": "departamento:06455",
+      "departamento_codigo": "06455",
+      "departamento_nombre": "Las Flores",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06455.geojson",
+      "feature_count": 57,
+      "population_sum": 27239,
+      "size_bytes": 90417,
+      "size_mb": 0.086
+    },
+    {
+      "departamento_id": "departamento:06462",
+      "departamento_codigo": "06462",
+      "departamento_nombre": "Leandro N. Alem",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06462.geojson",
+      "feature_count": 55,
+      "population_sum": 17266,
+      "size_bytes": 86083,
+      "size_mb": 0.082
+    },
+    {
+      "departamento_id": "departamento:06466",
+      "departamento_codigo": "06466",
+      "departamento_nombre": "Lezama",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06466.geojson",
+      "feature_count": 27,
+      "population_sum": 6221,
+      "size_bytes": 45019,
+      "size_mb": 0.043
+    },
+    {
+      "departamento_id": "departamento:06469",
+      "departamento_codigo": "06469",
+      "departamento_nombre": "Lincoln",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06469.geojson",
+      "feature_count": 137,
+      "population_sum": 45506,
+      "size_bytes": 214139,
+      "size_mb": 0.204
+    },
+    {
+      "departamento_id": "departamento:06476",
+      "departamento_codigo": "06476",
+      "departamento_nombre": "Lobería",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06476.geojson",
+      "feature_count": 76,
+      "population_sum": 18243,
+      "size_bytes": 125192,
+      "size_mb": 0.119
+    },
+    {
+      "departamento_id": "departamento:06483",
+      "departamento_codigo": "06483",
+      "departamento_nombre": "Lobos",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06483.geojson",
+      "feature_count": 92,
+      "population_sum": 41760,
+      "size_bytes": 145234,
+      "size_mb": 0.139
+    },
+    {
+      "departamento_id": "departamento:06490",
+      "departamento_codigo": "06490",
+      "departamento_nombre": "Lomas de Zamora",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06490.geojson",
+      "feature_count": 705,
+      "population_sum": 690480,
+      "size_bytes": 1092131,
+      "size_mb": 1.042
+    },
+    {
+      "departamento_id": "departamento:06497",
+      "departamento_codigo": "06497",
+      "departamento_nombre": "Luján",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06497.geojson",
+      "feature_count": 203,
+      "population_sum": 111251,
+      "size_bytes": 314240,
+      "size_mb": 0.3
+    },
+    {
+      "departamento_id": "departamento:06505",
+      "departamento_codigo": "06505",
+      "departamento_nombre": "Magdalena",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06505.geojson",
+      "feature_count": 55,
+      "population_sum": 26613,
+      "size_bytes": 87562,
+      "size_mb": 0.084
+    },
+    {
+      "departamento_id": "departamento:06511",
+      "departamento_codigo": "06511",
+      "departamento_nombre": "Maipú",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06511.geojson",
+      "feature_count": 30,
+      "population_sum": 11323,
+      "size_bytes": 48391,
+      "size_mb": 0.046
+    },
+    {
+      "departamento_id": "departamento:06515",
+      "departamento_codigo": "06515",
+      "departamento_nombre": "Malvinas Argentinas",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06515.geojson",
+      "feature_count": 320,
+      "population_sum": 350674,
+      "size_bytes": 497108,
+      "size_mb": 0.474
+    },
+    {
+      "departamento_id": "departamento:06518",
+      "departamento_codigo": "06518",
+      "departamento_nombre": "Mar Chiquita",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06518.geojson",
+      "feature_count": 123,
+      "population_sum": 33110,
+      "size_bytes": 192513,
+      "size_mb": 0.184
+    },
+    {
+      "departamento_id": "departamento:06525",
+      "departamento_codigo": "06525",
+      "departamento_nombre": "Marcos Paz",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06525.geojson",
+      "feature_count": 87,
+      "population_sum": 67011,
+      "size_bytes": 135037,
+      "size_mb": 0.129
+    },
+    {
+      "departamento_id": "departamento:06532",
+      "departamento_codigo": "06532",
+      "departamento_nombre": "Mercedes",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06532.geojson",
+      "feature_count": 126,
+      "population_sum": 72980,
+      "size_bytes": 195511,
+      "size_mb": 0.186
+    },
+    {
+      "departamento_id": "departamento:06539",
+      "departamento_codigo": "06539",
+      "departamento_nombre": "Merlo",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06539.geojson",
+      "feature_count": 534,
+      "population_sum": 582486,
+      "size_bytes": 821841,
+      "size_mb": 0.784
+    },
+    {
+      "departamento_id": "departamento:06547",
+      "departamento_codigo": "06547",
+      "departamento_nombre": "Monte",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06547.geojson",
+      "feature_count": 59,
+      "population_sum": 24868,
+      "size_bytes": 94144,
+      "size_mb": 0.09
+    },
+    {
+      "departamento_id": "departamento:06553",
+      "departamento_codigo": "06553",
+      "departamento_nombre": "Monte Hermoso",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06553.geojson",
+      "feature_count": 38,
+      "population_sum": 8465,
+      "size_bytes": 59098,
+      "size_mb": 0.056
+    },
+    {
+      "departamento_id": "departamento:06560",
+      "departamento_codigo": "06560",
+      "departamento_nombre": "Moreno",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06560.geojson",
+      "feature_count": 548,
+      "population_sum": 576632,
+      "size_bytes": 844008,
+      "size_mb": 0.805
+    },
+    {
+      "departamento_id": "departamento:06568",
+      "departamento_codigo": "06568",
+      "departamento_nombre": "Morón",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06568.geojson",
+      "feature_count": 412,
+      "population_sum": 331183,
+      "size_bytes": 634462,
+      "size_mb": 0.605
+    },
+    {
+      "departamento_id": "departamento:06574",
+      "departamento_codigo": "06574",
+      "departamento_nombre": "Navarro",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06574.geojson",
+      "feature_count": 50,
+      "population_sum": 19899,
+      "size_bytes": 79871,
+      "size_mb": 0.076
+    },
+    {
+      "departamento_id": "departamento:06581",
+      "departamento_codigo": "06581",
+      "departamento_nombre": "Necochea",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06581.geojson",
+      "feature_count": 229,
+      "population_sum": 102110,
+      "size_bytes": 358544,
+      "size_mb": 0.342
+    },
+    {
+      "departamento_id": "departamento:06588",
+      "departamento_codigo": "06588",
+      "departamento_nombre": "9 de Julio",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06588.geojson",
+      "feature_count": 122,
+      "population_sum": 52607,
+      "size_bytes": 191667,
+      "size_mb": 0.183
+    },
+    {
+      "departamento_id": "departamento:06595",
+      "departamento_codigo": "06595",
+      "departamento_nombre": "Olavarría",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06595.geojson",
+      "feature_count": 200,
+      "population_sum": 125751,
+      "size_bytes": 312601,
+      "size_mb": 0.298
+    },
+    {
+      "departamento_id": "departamento:06602",
+      "departamento_codigo": "06602",
+      "departamento_nombre": "Patagones",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06602.geojson",
+      "feature_count": 87,
+      "population_sum": 37646,
+      "size_bytes": 140618,
+      "size_mb": 0.134
+    },
+    {
+      "departamento_id": "departamento:06609",
+      "departamento_codigo": "06609",
+      "departamento_nombre": "Pehuajó",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06609.geojson",
+      "feature_count": 132,
+      "population_sum": 44783,
+      "size_bytes": 205578,
+      "size_mb": 0.196
+    },
+    {
+      "departamento_id": "departamento:06616",
+      "departamento_codigo": "06616",
+      "departamento_nombre": "Pellegrini",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06616.geojson",
+      "feature_count": 23,
+      "population_sum": 7143,
+      "size_bytes": 36482,
+      "size_mb": 0.035
+    },
+    {
+      "departamento_id": "departamento:06623",
+      "departamento_codigo": "06623",
+      "departamento_nombre": "Pergamino",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06623.geojson",
+      "feature_count": 212,
+      "population_sum": 115340,
+      "size_bytes": 330601,
+      "size_mb": 0.315
+    },
+    {
+      "departamento_id": "departamento:06630",
+      "departamento_codigo": "06630",
+      "departamento_nombre": "Pila",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06630.geojson",
+      "feature_count": 12,
+      "population_sum": 4642,
+      "size_bytes": 20761,
+      "size_mb": 0.02
+    },
+    {
+      "departamento_id": "departamento:06638",
+      "departamento_codigo": "06638",
+      "departamento_nombre": "Pilar",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06638.geojson",
+      "feature_count": 423,
+      "population_sum": 394754,
+      "size_bytes": 651197,
+      "size_mb": 0.621
+    },
+    {
+      "departamento_id": "departamento:06644",
+      "departamento_codigo": "06644",
+      "departamento_nombre": "Pinamar",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06644.geojson",
+      "feature_count": 106,
+      "population_sum": 39449,
+      "size_bytes": 163435,
+      "size_mb": 0.156
+    },
+    {
+      "departamento_id": "departamento:06648",
+      "departamento_codigo": "06648",
+      "departamento_nombre": "Presidente Perón",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06648.geojson",
+      "feature_count": 101,
+      "population_sum": 102106,
+      "size_bytes": 156996,
+      "size_mb": 0.15
+    },
+    {
+      "departamento_id": "departamento:06651",
+      "departamento_codigo": "06651",
+      "departamento_nombre": "Puán",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06651.geojson",
+      "feature_count": 109,
+      "population_sum": 16613,
+      "size_bytes": 171352,
+      "size_mb": 0.163
+    },
+    {
+      "departamento_id": "departamento:06655",
+      "departamento_codigo": "06655",
+      "departamento_nombre": "Punta Indio",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06655.geojson",
+      "feature_count": 37,
+      "population_sum": 12297,
+      "size_bytes": 59384,
+      "size_mb": 0.057
+    },
+    {
+      "departamento_id": "departamento:06658",
+      "departamento_codigo": "06658",
+      "departamento_nombre": "Quilmes",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06658.geojson",
+      "feature_count": 652,
+      "population_sum": 633391,
+      "size_bytes": 1004721,
+      "size_mb": 0.958
+    },
+    {
+      "departamento_id": "departamento:06665",
+      "departamento_codigo": "06665",
+      "departamento_nombre": "Ramallo",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06665.geojson",
+      "feature_count": 73,
+      "population_sum": 39730,
+      "size_bytes": 114058,
+      "size_mb": 0.109
+    },
+    {
+      "departamento_id": "departamento:06672",
+      "departamento_codigo": "06672",
+      "departamento_nombre": "Rauch",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06672.geojson",
+      "feature_count": 66,
+      "population_sum": 16635,
+      "size_bytes": 105933,
+      "size_mb": 0.101
+    },
+    {
+      "departamento_id": "departamento:06679",
+      "departamento_codigo": "06679",
+      "departamento_nombre": "Rivadavia",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06679.geojson",
+      "feature_count": 62,
+      "population_sum": 19849,
+      "size_bytes": 98606,
+      "size_mb": 0.094
+    },
+    {
+      "departamento_id": "departamento:06686",
+      "departamento_codigo": "06686",
+      "departamento_nombre": "Rojas",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06686.geojson",
+      "feature_count": 88,
+      "population_sum": 25627,
+      "size_bytes": 138551,
+      "size_mb": 0.132
+    },
+    {
+      "departamento_id": "departamento:06693",
+      "departamento_codigo": "06693",
+      "departamento_nombre": "Roque Pérez",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06693.geojson",
+      "feature_count": 41,
+      "population_sum": 13977,
+      "size_bytes": 66168,
+      "size_mb": 0.063
+    },
+    {
+      "departamento_id": "departamento:06700",
+      "departamento_codigo": "06700",
+      "departamento_nombre": "Saavedra",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06700.geojson",
+      "feature_count": 92,
+      "population_sum": 22347,
+      "size_bytes": 145851,
+      "size_mb": 0.139
+    },
+    {
+      "departamento_id": "departamento:06707",
+      "departamento_codigo": "06707",
+      "departamento_nombre": "Saladillo",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06707.geojson",
+      "feature_count": 77,
+      "population_sum": 35656,
+      "size_bytes": 121452,
+      "size_mb": 0.116
+    },
+    {
+      "departamento_id": "departamento:06714",
+      "departamento_codigo": "06714",
+      "departamento_nombre": "Salto",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06714.geojson",
+      "feature_count": 84,
+      "population_sum": 39425,
+      "size_bytes": 131685,
+      "size_mb": 0.126
+    },
+    {
+      "departamento_id": "departamento:06721",
+      "departamento_codigo": "06721",
+      "departamento_nombre": "Salliqueló",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06721.geojson",
+      "feature_count": 23,
+      "population_sum": 9427,
+      "size_bytes": 36004,
+      "size_mb": 0.034
+    },
+    {
+      "departamento_id": "departamento:06728",
+      "departamento_codigo": "06728",
+      "departamento_nombre": "San Andrés de Giles",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06728.geojson",
+      "feature_count": 91,
+      "population_sum": 26510,
+      "size_bytes": 143017,
+      "size_mb": 0.136
+    },
+    {
+      "departamento_id": "departamento:06735",
+      "departamento_codigo": "06735",
+      "departamento_nombre": "San Antonio de Areco",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06735.geojson",
+      "feature_count": 55,
+      "population_sum": 26897,
+      "size_bytes": 87122,
+      "size_mb": 0.083
+    },
+    {
+      "departamento_id": "departamento:06742",
+      "departamento_codigo": "06742",
+      "departamento_nombre": "San Cayetano",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06742.geojson",
+      "feature_count": 28,
+      "population_sum": 8994,
+      "size_bytes": 45414,
+      "size_mb": 0.043
+    },
+    {
+      "departamento_id": "departamento:06749",
+      "departamento_codigo": "06749",
+      "departamento_nombre": "San Fernando",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06749.geojson",
+      "feature_count": 200,
+      "population_sum": 171616,
+      "size_bytes": 314009,
+      "size_mb": 0.299
+    },
+    {
+      "departamento_id": "departamento:06756",
+      "departamento_codigo": "06756",
+      "departamento_nombre": "San Isidro",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06756.geojson",
+      "feature_count": 360,
+      "population_sum": 297282,
+      "size_bytes": 555844,
+      "size_mb": 0.53
+    },
+    {
+      "departamento_id": "departamento:06760",
+      "departamento_codigo": "06760",
+      "departamento_nombre": "San Miguel",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06760.geojson",
+      "feature_count": 328,
+      "population_sum": 328835,
+      "size_bytes": 506566,
+      "size_mb": 0.483
+    },
+    {
+      "departamento_id": "departamento:06763",
+      "departamento_codigo": "06763",
+      "departamento_nombre": "San Nicolás",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06763.geojson",
+      "feature_count": 213,
+      "population_sum": 168041,
+      "size_bytes": 329971,
+      "size_mb": 0.315
+    },
+    {
+      "departamento_id": "departamento:06770",
+      "departamento_codigo": "06770",
+      "departamento_nombre": "San Pedro",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06770.geojson",
+      "feature_count": 168,
+      "population_sum": 68613,
+      "size_bytes": 261335,
+      "size_mb": 0.249
+    },
+    {
+      "departamento_id": "departamento:06778",
+      "departamento_codigo": "06778",
+      "departamento_nombre": "San Vicente",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06778.geojson",
+      "feature_count": 152,
+      "population_sum": 98215,
+      "size_bytes": 235914,
+      "size_mb": 0.225
+    },
+    {
+      "departamento_id": "departamento:06784",
+      "departamento_codigo": "06784",
+      "departamento_nombre": "Suipacha",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06784.geojson",
+      "feature_count": 52,
+      "population_sum": 11786,
+      "size_bytes": 82166,
+      "size_mb": 0.078
+    },
+    {
+      "departamento_id": "departamento:06791",
+      "departamento_codigo": "06791",
+      "departamento_nombre": "Tandil",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06791.geojson",
+      "feature_count": 251,
+      "population_sum": 145575,
+      "size_bytes": 389728,
+      "size_mb": 0.372
+    },
+    {
+      "departamento_id": "departamento:06798",
+      "departamento_codigo": "06798",
+      "departamento_nombre": "Tapalqué",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06798.geojson",
+      "feature_count": 46,
+      "population_sum": 10783,
+      "size_bytes": 73972,
+      "size_mb": 0.071
+    },
+    {
+      "departamento_id": "departamento:06805",
+      "departamento_codigo": "06805",
+      "departamento_nombre": "Tigre",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06805.geojson",
+      "feature_count": 447,
+      "population_sum": 446949,
+      "size_bytes": 689467,
+      "size_mb": 0.658
+    },
+    {
+      "departamento_id": "departamento:06812",
+      "departamento_codigo": "06812",
+      "departamento_nombre": "Tordillo",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06812.geojson",
+      "feature_count": 17,
+      "population_sum": 2542,
+      "size_bytes": 27351,
+      "size_mb": 0.026
+    },
+    {
+      "departamento_id": "departamento:06819",
+      "departamento_codigo": "06819",
+      "departamento_nombre": "Tornquist",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06819.geojson",
+      "feature_count": 49,
+      "population_sum": 14810,
+      "size_bytes": 80289,
+      "size_mb": 0.077
+    },
+    {
+      "departamento_id": "departamento:06826",
+      "departamento_codigo": "06826",
+      "departamento_nombre": "Trenque Lauquen",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06826.geojson",
+      "feature_count": 121,
+      "population_sum": 49499,
+      "size_bytes": 190672,
+      "size_mb": 0.182
+    },
+    {
+      "departamento_id": "departamento:06833",
+      "departamento_codigo": "06833",
+      "departamento_nombre": "Tres Arroyos",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06833.geojson",
+      "feature_count": 166,
+      "population_sum": 62426,
+      "size_bytes": 261797,
+      "size_mb": 0.25
+    },
+    {
+      "departamento_id": "departamento:06840",
+      "departamento_codigo": "06840",
+      "departamento_nombre": "Tres de Febrero",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06840.geojson",
+      "feature_count": 432,
+      "population_sum": 364176,
+      "size_bytes": 668905,
+      "size_mb": 0.638
+    },
+    {
+      "departamento_id": "departamento:06847",
+      "departamento_codigo": "06847",
+      "departamento_nombre": "Tres Lomas",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06847.geojson",
+      "feature_count": 23,
+      "population_sum": 9164,
+      "size_bytes": 36017,
+      "size_mb": 0.034
+    },
+    {
+      "departamento_id": "departamento:06854",
+      "departamento_codigo": "06854",
+      "departamento_nombre": "25 de Mayo",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06854.geojson",
+      "feature_count": 84,
+      "population_sum": 35563,
+      "size_bytes": 135201,
+      "size_mb": 0.129
+    },
+    {
+      "departamento_id": "departamento:06861",
+      "departamento_codigo": "06861",
+      "departamento_nombre": "Vicente López",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06861.geojson",
+      "feature_count": 363,
+      "population_sum": 282280,
+      "size_bytes": 561895,
+      "size_mb": 0.536
+    },
+    {
+      "departamento_id": "departamento:06868",
+      "departamento_codigo": "06868",
+      "departamento_nombre": "Villa Gesell",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06868.geojson",
+      "feature_count": 114,
+      "population_sum": 37463,
+      "size_bytes": 176471,
+      "size_mb": 0.168
+    },
+    {
+      "departamento_id": "departamento:06875",
+      "departamento_codigo": "06875",
+      "departamento_nombre": "Villarino",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06875.geojson",
+      "feature_count": 74,
+      "population_sum": 32717,
+      "size_bytes": 126427,
+      "size_mb": 0.121
+    },
+    {
+      "departamento_id": "departamento:06882",
+      "departamento_codigo": "06882",
+      "departamento_nombre": "Zárate",
+      "relative_path": "provincias/provincia_06_buenos_aires/radios/d_06882.geojson",
+      "feature_count": 167,
+      "population_sum": 132221,
+      "size_bytes": 259210,
+      "size_mb": 0.247
+    }
+  ],
+  "usage_frontend": "Después de seleccionar Buenos Aires y un departamento/partido, cargar el GeoJSON correspondiente desde este índice.",
+  "cloudflare_note": "Ningún partido queda como asset monolítico provincial mayor a 25 MiB.",
+  "windows_path_fix": {
+    "enabled": true,
+    "reason": "Se acortaron los nombres de particiones de radios para evitar error 0x80010135 en Windows durante la extracción.",
+    "filename_pattern": "d_<departamento_codigo>.geojson",
+    "long_filenames_removed": 135
+  }
+}
