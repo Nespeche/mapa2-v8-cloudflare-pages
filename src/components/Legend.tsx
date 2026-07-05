@@ -6,12 +6,14 @@ export function Legend({ mode, maxValue, selectedProvince }: { mode: ViewMode; m
   return (
     <section className="legend-card" aria-label="Leyenda dinámica">
       <div className="legend-title">
-        <strong>Leyenda</strong>
-        <span>{selectedProvince || 'Argentina'}</span>
+        <div>
+          <strong>Leyenda</strong>
+          <span>{selectedProvince || 'Argentina'}</span>
+        </div>
       </div>
       {isChoropleth ? (
         <>
-          <div className="legend-ramp" />
+          <div className="legend-ramp" aria-hidden="true" />
           <div className="legend-scale">
             <span>$0</span>
             <span>{formatCompactCurrency(maxValue)}</span>

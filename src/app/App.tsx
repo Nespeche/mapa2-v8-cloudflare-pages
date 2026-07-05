@@ -15,7 +15,7 @@ import {
   loadProvinceLayer,
   type InitialDataBundle,
 } from '../data/dataClient';
-import type { DepartmentMonthSale, DetailedSaleRow, ProductMonthSale } from '../types/business';
+import type { DepartmentMonthSale, DetailedSaleRow, ProductMonthSale, ViewMode } from '../types/business';
 import type { GeoJsonFeatureCollection } from '../types/geo';
 import {
   DEFAULT_FILTERS,
@@ -29,7 +29,17 @@ import {
   getTopSalesValue,
   shouldLoadDetailedSales,
 } from '../utils/aggregations';
-import { formatCompactCurrency, normalizeText } from '../utils/formatters';
+import { formatCompactCurrency } from '../utils/formatters';
+
+const VIEW_MODE_LABELS: Record<ViewMode, string> = {
+  base: 'Territorial base',
+  clientes: 'Clientes',
+  clusters: 'Clusters',
+  heatmap: 'Heatmap',
+  'choropleth-provincia': 'Coroplético provincia',
+  'choropleth-departamento': 'Coroplético departamento',
+  localidades: 'Puntos localidades',
+};
 
 function emptyFeatureCollection(): GeoJsonFeatureCollection {
   return { type: 'FeatureCollection', features: [] };
@@ -51,6 +61,23 @@ function selectedProvinceName(data: InitialDataBundle | null, provinciaId: strin
   if (!data || !provinciaId) return '';
   const entry = data.provinciasIndex.provinces[provinciaId];
   return entry?.provincia_nombre ?? '';
+}
+
+function countActiveFilters(filters: typeof DEFAULT_FILTERS): number {
+  return [
+    filters.provinciaId,
+    filters.departamentoId,
+    filters.tipoCliente,
+    filters.segmentoCliente,
+    filters.clienteQuery,
+    filters.localidadQuery,
+    filters.categoriaProducto,
+    filters.productoId,
+    filters.anio,
+    filters.mes,
+    filters.periodoDesde,
+    filters.periodoHasta,
+  ].filter(Boolean).length;
 }
 
 export default function App() {
@@ -273,11 +300,11 @@ export default function App() {
   const maxDepartmentSales = getTopSalesValue(departmentSalesMap);
 
   if (initialError) {
-    return <ErrorState title="No se pudo iniciar Mapa2 V7" message={initialError} />;
+    return <ErrorState title="No se pudo iniciar Mapa 2 · V9" message={initialError} />;
   }
 
   if (!data || !computed) {
-    return <LoadingState />;
+    return <LoadingState label="Preparando Mapa 2 · V9…" />;
   }
 
   const syntheticNotice = String(data.businessMetadata.synthetic_data_notice ?? 'Clientes, productos y ventas son ficticios.');
@@ -287,16 +314,24 @@ export default function App() {
   const productSummary = productMonthSales && (filters.productoId || filters.categoriaProducto)
     ? `${productMonthSales.length.toLocaleString('es-AR')} agregados producto/mes disponibles`
     : 'Producto/mes se carga bajo demanda';
+  const activeFilterCount = countActiveFilters(filters);
+  const hasNoCommercialResults = computed.metrics.clientesVisibles === 0 && detailedStatus !== 'loading';
 
   return (
     <div className="app-shell">
-      <aside className="sidebar" aria-label="Panel de control Mapa2 V7">
+      <aside className="sidebar" aria-label="Panel de control Mapa 2 V9">
         <header className="brand-header">
-          <div>
-            <span className="eyebrow">Mapa2 · V7</span>
-            <h1>Mapa comercial y censal</h1>
+          <div className="brand-topline">
+            <span className="eyebrow">MAPA 2 · V9</span>
+            <span className="release-pill">Cloudflare Pages</span>
           </div>
+          <h1>Mapa territorial comercial</h1>
           <p>{syntheticNotice}</p>
+          <div className="brand-meta" aria-label="Estado de datos preservados">
+            <span>Censo V5.1</span>
+            <span>Ventas sintéticas V6</span>
+            <span>Frontend V8 preservado</span>
+          </div>
         </header>
 
         <KpiCards metrics={computed.metrics} />
@@ -314,24 +349,26 @@ export default function App() {
           calendario={data.calendario}
           detailedStatus={detailedStatus}
           lazyStatus={lazyStatus}
+          activeFilterCount={activeFilterCount}
           onChange={patchFilters}
           onReset={resetFilters}
         />
 
-        <div className="data-note">
+        <div className="data-note" aria-label="Estrategia de carga de datos">
           <strong>Carga optimizada</strong>
-          <p>Inicio: provincias, clientes, productos, calendario y agregados provincia/cliente. Bajo demanda: departamentos, localidades, producto/mes y CSV detallado.</p>
+          <p>Inicio: provincias, clientes, productos, calendario y agregados provincia/cliente.</p>
+          <p>Bajo demanda: departamentos, localidades, producto/mes y CSV detallado.</p>
           <p>{productSummary}{filteredProductName ? ` · ${filteredProductName}` : ''}</p>
         </div>
       </aside>
 
-      <main className="map-stage">
+      <main className="map-stage" aria-label="Mapa interactivo y análisis visual">
         <div className="topbar glass-card">
           <div>
             <span>{selectedProvince || 'Argentina'}</span>
-            <strong>{filters.viewMode.replace(/-/g, ' ')}</strong>
+            <strong>{VIEW_MODE_LABELS[filters.viewMode]}</strong>
           </div>
-          <div className="topbar-metrics">
+          <div className="topbar-metrics" aria-live="polite">
             <span>{formatCompactCurrency(computed.metrics.ventaNeta)}</span>
             <small>{computed.metrics.fuente === 'detalle-csv' ? 'detalle CSV bajo demanda' : 'agregados iniciales'}</small>
           </div>
@@ -357,6 +394,13 @@ export default function App() {
           <Legend mode={filters.viewMode} maxValue={filters.viewMode === 'choropleth-departamento' ? maxDepartmentSales : maxProvinceSales} selectedProvince={selectedProvince} />
           <TooltipPanel info={selectedInfo ?? hoverInfo} />
         </div>
+
+        {hasNoCommercialResults && (
+          <div className="empty-results-card" role="status" aria-live="polite">
+            <strong>Sin resultados comerciales</strong>
+            <span>Los filtros actuales no encuentran clientes o ventas. Probá limpiar filtros o ampliar el período.</span>
+          </div>
+        )}
 
         {detailedStatus === 'loading' && (
           <div className="lazy-status-card" role="status" aria-live="polite">

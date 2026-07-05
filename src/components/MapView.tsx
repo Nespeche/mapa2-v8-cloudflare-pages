@@ -260,8 +260,12 @@ export function MapView({
         if (!feature?.properties) return;
         const departmentId = String(feature.properties.id_entidad ?? feature.properties.departamento_id ?? '');
         onHoverInfo(tooltipFromDepartment(feature.properties, salesRefsRef.current.departmentSales.get(departmentId)));
+        map.getCanvas().style.cursor = 'pointer';
       });
-      map.on('mouseleave', 'departamentos-fill', () => onHoverInfo(null));
+      map.on('mouseleave', 'departamentos-fill', () => {
+        onHoverInfo(null);
+        map.getCanvas().style.cursor = '';
+      });
 
       map.on('mousemove', 'clusters-circle', (event) => {
         const feature = event.features?.[0];
@@ -361,5 +365,13 @@ export function MapView({
     if (bounds) map.fitBounds(bounds, { padding: 62, duration: 700, maxZoom: 7.4 });
   }, [selectedProvinceId, provinciasGeo, isReady]);
 
-  return <div ref={mapContainerRef} className="map-canvas" aria-label="Mapa interactivo de Argentina" />;
+  return (
+    <div
+      ref={mapContainerRef}
+      className="map-canvas"
+      role="region"
+      tabIndex={0}
+      aria-label="Mapa interactivo de Argentina. Use mouse, trackpad o controles de zoom para navegar."
+    />
+  );
 }

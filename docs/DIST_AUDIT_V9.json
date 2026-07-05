@@ -1,0 +1,84 @@
+{
+  "phase": "V9 — UI/UX final estilo Apple",
+  "date": "2026-07-05",
+  "base": "V8 — Deploy profesional en Cloudflare Pages Free validado",
+  "dist_exists": true,
+  "file_count": 309,
+  "total_size_bytes": 191613935,
+  "total_size_mib": 182.7373,
+  "largest_asset": {
+    "path": "data/business/ventas_mensuales.csv",
+    "size_bytes": 14680144,
+    "size_mib": 14.0001
+  },
+  "top_10_largest": [
+    {
+      "path": "data/business/ventas_mensuales.csv",
+      "size_bytes": 14680144,
+      "size_mib": 14.0001
+    },
+    {
+      "path": "data/localidades_poligonos_fracciones.geojson",
+      "size_bytes": 11126930,
+      "size_mib": 10.6115
+    },
+    {
+      "path": "data/provincias/provincia_14_cordoba/radios.geojson",
+      "size_bytes": 10414797,
+      "size_mib": 9.9323
+    },
+    {
+      "path": "data/provincias/provincia_82_santa_fe/radios.geojson",
+      "size_bytes": 8349606,
+      "size_mib": 7.9628
+    },
+    {
+      "path": "data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson",
+      "size_bytes": 5937870,
+      "size_mib": 5.6628
+    },
+    {
+      "path": "data/provincias/provincia_30_entre_rios/radios.geojson",
+      "size_bytes": 5125132,
+      "size_mib": 4.8877
+    },
+    {
+      "path": "data/provincias/provincia_06_buenos_aires/puntos.geojson",
+      "size_bytes": 4505899,
+      "size_mib": 4.2972
+    },
+    {
+      "path": "data/provincias/provincia_06_buenos_aires/fracciones.geojson",
+      "size_bytes": 4181471,
+      "size_mib": 3.9878
+    },
+    {
+      "path": "data/localidades_poligonos_gobiernos_locales.geojson",
+      "size_bytes": 3937937,
+      "size_mib": 3.7555
+    },
+    {
+      "path": "data/provincias/provincia_50_mendoza/radios.geojson",
+      "size_bytes": 3686937,
+      "size_mib": 3.5161
+    }
+  ],
+  "files_over_25_mib": [],
+  "suspicious_dist_files": [],
+  "has_index_html": true,
+  "has_headers": true,
+  "has_redirects": false,
+  "has_404_html": false,
+  "cloudflare_build_command": "npm run build",
+  "cloudflare_output_directory": "dist",
+  "violations": [],
+  "blocking_errors": 0,
+  "validation": {
+    "npm_install": "OK — audited 52 packages, 0 vulnerabilities",
+    "npm_run_build": "OK — tsc, vite build y check_cloudflare_dist sin errores bloqueantes",
+    "npm_run_dev": "OK — /, /data/metadata.json y /favicon.svg respondieron 200 en smoke test local",
+    "npm_run_preview": "OK — /, /data/metadata.json, /data/business/metadata_business_v6.json y /favicon.svg respondieron 200",
+    "visual_version_label": "OK — runtime actualizado a MAPA 2 · V9",
+    "form_accessibility": "OK — inputs/selects principales tienen id/name y labels asociados"
+  }
+}

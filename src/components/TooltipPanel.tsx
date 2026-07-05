@@ -9,15 +9,16 @@ export interface TooltipInfo {
 export function TooltipPanel({ info }: { info: TooltipInfo | null }) {
   if (!info) {
     return (
-      <aside className="detail-panel detail-panel--empty">
-        <span>Detalle</span>
+      <aside className="detail-panel detail-panel--empty" aria-label="Detalle contextual vacío">
+        <span>Detalle contextual</span>
+        <strong>Explorá el mapa</strong>
         <p>Pasá el cursor por una provincia, departamento o cliente para ver información contextual. Hacé click para fijar filtros o abrir ficha.</p>
       </aside>
     );
   }
 
   return (
-    <aside className="detail-panel">
+    <aside className="detail-panel" aria-label="Detalle contextual seleccionado">
       <span>{info.subtitle || 'Detalle'}</span>
       <strong>{info.title}</strong>
       <dl>

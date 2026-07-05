@@ -12,21 +12,25 @@ const modes: Array<{ id: ViewMode; label: string; help: string }> = [
 
 export function LayerControls({ filters, onChange }: { filters: FilterState; onChange: (patch: Partial<FilterState>) => void }) {
   return (
-    <section className="control-section">
-      <div className="section-title">
-        <span>Capas</span>
-        <small>Modo de visualización</small>
+    <section className="control-section" aria-labelledby="layers-title">
+      <div className="section-title section-title--stacked">
+        <div>
+          <span id="layers-title">Capas</span>
+          <small>Modo de visualización</small>
+        </div>
       </div>
-      <div className="layer-grid">
+      <div className="layer-grid" role="group" aria-label="Seleccionar modo de visualización del mapa">
         {modes.map((mode) => (
           <button
             className={`layer-button ${filters.viewMode === mode.id ? 'is-active' : ''}`}
             key={mode.id}
             type="button"
             title={mode.help}
+            aria-pressed={filters.viewMode === mode.id}
             onClick={() => onChange({ viewMode: mode.id })}
           >
-            {mode.label}
+            <span>{mode.label}</span>
+            <small>{mode.help}</small>
           </button>
         ))}
       </div>

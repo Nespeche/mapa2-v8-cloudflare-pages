@@ -1,317 +1,136 @@
-# Mapa2 V7 — Frontend interactivo del mapa comercial y censal
+# Mapa 2 V9 — UI/UX final para Cloudflare Pages
 
-**Estado de fase:** V7 implementada.  
-**No se avanzó a V8. No se hizo deploy.**
+**Estado de fase:** V9 implementada sobre V8 validada.  
+**Deploy objetivo:** Cloudflare Pages Free.  
+**Build command:** `npm run build`  
+**Build output directory:** `dist`
 
-Mapa2 V7 agrega una aplicación web estática con **Vite + React + TypeScript + MapLibre GL JS** para explorar datos geográficos/censales aprobados en V5.1 y datos comerciales sintéticos de autopartes aprobados en V6.
+Mapa 2 V9 refina la experiencia visual y de uso de la app geoespacial publicada en V8. Mantiene la arquitectura estática con **Vite + React + TypeScript + MapLibre**, preserva la base censal V5.1, la base comercial sintética V6, el fix runtime V7.1 y la configuración de deploy V8.
 
-La app está preparada para ejecución local y futura publicación en **Cloudflare Pages Free**, sin backend obligatorio y sin claves privadas.
+> Los clientes, productos y ventas son datos sintéticos. No representan clientes reales ni operaciones reales.
+
+---
+
+## Qué cambia en V9
+
+- Corrección visible de versión: la UI y metadata ya no muestran “V7”; ahora muestran `MAPA 2 · V9`.
+- UI más profesional: panel lateral refinado, KPIs con mayor jerarquía, tarjetas glass moderadas, mejor espaciado y contraste.
+- Navegación más clara: capas con ayuda contextual, filtros con conteo de activos y estados de carga más visibles.
+- Responsive mejorado: se elimina el ancho mínimo rígido y se adapta mejor a notebooks y pantallas medianas.
+- Accesibilidad básica: inputs/selects con `id` y `name`, labels asociados, foco visible y estados con `aria-live`.
+- Estados visuales: loading inicial, carga bajo demanda, estado sin resultados y error inicial más claros.
+- Microinteracciones: hover/focus states, transiciones sutiles y soporte de `prefers-reduced-motion`.
 
 ---
 
 ## Estado preservado
 
-### V5.1 — Base geográfica/censal aprobada
-
-Se preserva la lógica censal validada. La V7 **no modifica ni regenera** la base censal.
-
-Resultado aprobado preservado:
+V9 no regenera ni modifica datos censales o comerciales. Se preserva:
 
 ```text
-Estado final: OK
-Población nacional provincias:     45.892.285
-Población nacional departamentos:  45.892.285
-Población nacional fracciones:     45.892.285
-Población nacional radios:         45.892.285
-Buenos Aires departamentos:        135
-Archivos public/data >25 MiB:      0
-Rutas públicas largas Windows:     0
-```
-
-### V6 — Base comercial sintética aprobada
-
-Se preserva la base comercial sintética. La V7 **no regenera ni altera** clientes, productos ni ventas.
-
-Resultado aprobado preservado:
-
-```text
-Estado final: OK
-Errores: 0
-Advertencias: 0
-Clientes: 2.000
-Productos: 65
-Registros de ventas: 128.998
-Período: 2025-01 a 2026-12
-Meses: 24
-Seed: 20260705
-Archivo más pesado en public/data: business/ventas_mensuales.csv — 14.0 MiB
-Archivos public/data >25 MiB: 0
-Rutas largas Windows: 0
-```
-
-> Los datos comerciales son **sintéticos**. No representan clientes reales, ventas reales ni precios reales.
-
----
-
-## Qué implementa V7
-
-- App frontend estática con Vite, React y TypeScript.
-- Mapa interactivo con MapLibre GL JS.
-- Visualización base de Argentina por provincias.
-- Selección de provincia con carga bajo demanda de departamentos/partidos.
-- Visualización de clientes ficticios como puntos.
-- Clusters de clientes.
-- Heatmap de clientes/ventas.
-- Coroplético por ventas agregadas por provincia.
-- Coroplético por ventas agregadas por departamento/partido.
-- Puntos de localidades V5.1 bajo demanda por provincia.
-- Panel lateral con filtros, KPIs, leyenda dinámica y ficha de detalle.
-- Tooltips por provincia, departamento y cliente.
-- Aviso visible de datos comerciales sintéticos.
-- Validación reproducible con `src/check_frontend_v7.py`.
-
----
-
-## Carga de datos
-
-### Carga inicial optimizada
-
-La app carga al inicio solo:
-
-```text
-public/data/metadata.json
-public/data/provincias.geojson
-public/data/indexes/provincias_index.json
-public/data/business/metadata_business_v6.json
-public/data/business/agregados/ventas_provincia_mes.json
-public/data/business/agregados/ventas_cliente_totales.json
-public/data/business/clientes.geojson
-public/data/business/productos.json
-public/data/business/calendario.json
-```
-
-### Carga bajo demanda
-
-Se carga solo cuando el usuario filtra o cambia de modo:
-
-```text
-public/data/provincias/<provincia>/departamentos.geojson
-public/data/provincias/<provincia>/puntos.geojson
-public/data/business/agregados/ventas_departamento_mes.json
-public/data/business/agregados/ventas_producto_mes.json
-public/data/business/ventas_mensuales.csv
-```
-
-No se cargan radios nacionales ni radios provinciales en el inicio del frontend.
-
----
-
-## KPIs visibles
-
-La V7 muestra:
-
-```text
-Clientes visibles
-Venta neta total
-Unidades vendidas
-Margen bruto estimado
-Volumen kg
-Ticket promedio aproximado
-Provincia líder por ventas
-Producto/categoría líder por ventas
-```
-
-Los KPIs usan agregados iniciales cuando es suficiente. Cuando se aplican filtros detallados, como producto, categoría, cliente, tipo, segmento o departamento, se carga `ventas_mensuales.csv` bajo demanda para recomputar con mayor precisión.
-
----
-
-## Filtros implementados
-
-```text
-Provincia
-Localidad / departamento / partido
-Cliente
-Tipo de cliente
-Segmento cliente
-Categoría de producto
-Producto
-Año
-Mes
-Rango calendario desde/hasta
-Modo de visualización
-```
-
-Las listas se derivan de los datos existentes en el ZIP, no de listas inventadas manualmente.
-
----
-
-## Capas implementadas
-
-```text
-Vista territorial base
-Clientes como puntos
-Clusters de clientes
-Heatmap de clientes/ventas
-Coroplético por ventas provincia
-Coroplético por ventas departamento/partido
-Puntos de localidades V5.1 bajo demanda
+V5.1 — base censal y geográfica validada
+V6   — base comercial sintética de autopartes
+V7.1 — fix runtime de frontend
+V8   — deploy profesional en Cloudflare Pages Free
 ```
 
 ---
 
-## Paso a paso Windows PowerShell / VSCode
+## Instalación local en Windows / PowerShell
 
-Abrí la carpeta del proyecto en VSCode y ejecutá:
+Extraé el ZIP en una ruta corta, por ejemplo:
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install -r requirements.txt
+C:\Mapa2\mapa2_v9_ui_ux_final
+```
 
+Entrá a la carpeta:
+
+```powershell
+cd C:\Mapa2\mapa2_v9_ui_ux_final
+```
+
+Instalá dependencias:
+
+```powershell
 npm install
+```
+
+Corré local:
+
+```powershell
 npm run dev
+```
+
+Abrí:
+
+```text
+http://127.0.0.1:5173/
+```
+
+Build de producción:
+
+```powershell
 npm run build
+```
+
+Preview del build:
+
+```powershell
 npm run preview
-
-python src\check_frontend_v7.py --project-root . --out data\output\check_frontend_v7.txt
-
-Get-ChildItem public\data -Recurse -File | Select-Object FullName,Length | Sort-Object Length -Descending | Out-File data\output\v7_file_sizes.txt
 ```
 
-Para abrir diagnósticos:
+Abrí:
 
-```powershell
-code data\output\diagnostico_frontend_v7.md
-code data\output\diagnostico_frontend_v7.json
-code data\output\check_frontend_v7.txt
-code data\output\v7_file_sizes.txt
+```text
+http://127.0.0.1:4173/
 ```
 
 ---
 
-## Scripts importantes
+## Validación mínima
 
-```text
-src/check_frontend_v7.py
-```
+Validar localmente:
 
-Valida:
-
-1. Base V5.1 OK.
-2. Base V6 OK.
-3. Archivos principales del frontend.
-4. Build `npm run build`.
-5. Referencias a `public/data`.
-6. Ausencia de secretos hardcodeados.
-7. Límite de 25 MiB en `public/data`.
-8. Rutas compatibles con Windows.
-9. Carga inicial sin radios nacionales.
-10. Documentación visible de datos sintéticos.
+- `npm install` funciona.
+- `npm run dev` abre la app.
+- `npm run build` genera `dist`.
+- El mapa renderiza.
+- Los KPIs funcionan.
+- Los filtros funcionan.
+- El detalle comercial bajo demanda funciona.
+- La UI muestra `MAPA 2 · V9`.
+- No aparece nuevamente un mensaje fijo de carga bajo demanda.
+- No hay errores bloqueantes en consola.
+- En Network, filtrar `404` y confirmar que no haya assets propios faltantes.
 
 ---
 
-## Salidas esperadas
+## Deploy Cloudflare Pages
+
+Usar GitHub integration con la misma configuración validada en V8:
 
 ```text
-data/output/diagnostico_frontend_v7.md
-data/output/diagnostico_frontend_v7.json
-data/output/check_frontend_v7.txt
-data/output/v7_file_sizes.txt
-```
-
----
-
-## Compatibilidad Cloudflare Pages Free
-
-La V7 es compatible con Cloudflare Pages Free como app estática.
-
-Configuración futura sugerida para V8, todavía no ejecutada:
-
-```text
+Framework preset: React (Vite) o None
+Production branch: main
 Build command: npm run build
 Build output directory: dist
-```
-
-No se hizo deploy en V7.
-
----
-
-## Pendientes no bloqueantes
-
-- Agregar virtualización avanzada de listas si el catálogo comercial crece mucho.
-- Evaluar compresión `.br`/`.gz` prebuild para assets públicos en V8.
-- Evaluar code-splitting de MapLibre si se desea reducir el bundle inicial.
-- Agregar pruebas visuales automatizadas en una fase posterior.
-
----
-
-## Regla de fase
-
-No avanzar a V8 hasta que la V7 sea ejecutada, revisada y aprobada explícitamente por el usuario.
-
-### Nota V7 npm registry fix
-
-Este ZIP incluye `.npmrc` con `registry=https://registry.npmjs.org/` y `package-lock.json` con URLs públicas de npm. Si una instalación anterior quedó cortada, borrar `node_modules` y reinstalar antes de ejecutar `npm run dev`.
-
----
-
-## V7.1 — Fix runtime local
-
-Esta entrega corrige problemas detectados durante `npm run dev`:
-
-- Spinner `Cargando detalle comercial bajo demanda…` persistente en modo desarrollo.
-- Warnings 404 de glyphs MapLibre contra `demotiles.maplibre.org`.
-- 404 de favicon.
-
-La corrección no altera la base censal V5.1 ni la base comercial sintética V6. No se hizo deploy ni se avanzó a V8.
-
-Comandos recomendados para validar la V7.1:
-
-```powershell
-npm install
-npm run dev
-npm run build
-python src\check_frontend_v7.py --project-root . --out data\output\check_frontend_v7.txt
-```
-
-
-
----
-
-## V8 — Deploy profesional en Cloudflare Pages Free
-
-Esta entrega prepara Mapa 2 para deploy estático en Cloudflare Pages Free desde GitHub.
-
-Configuración Cloudflare Pages:
-
-```text
-Build command: npm run build
-Build output directory: dist
+Root directory: /
 Node version: 22.16.0
 ```
 
-Comandos principales:
+No se requiere backend, Workers, Pages Functions, D1, R2 ni KV para V9.
 
-```powershell
-npm install
-npm run dev
-npm run build
-npm run check:cloudflare
-npm run preview
+---
+
+## Documentación V9
+
+Ver:
+
+```text
+docs/RUNBOOK_V9_UI_UX_FINAL.md
+docs/CHANGELOG_V9.md
+docs/DIST_AUDIT_V9.md
+docs/DIST_AUDIT_V9.json
+docs/VALIDATION_LOG_V9.txt
 ```
-
-Documentación específica:
-
-- `docs/RUNBOOK_V8_CLOUDFLARE_PAGES.md`
-- `docs/CHANGELOG_V8.md`
-- `docs/DIST_AUDIT_V8.md`
-- `docs/DIST_AUDIT_V8.json`
-
-Decisiones V8:
-
-- No se implementó backend.
-- No se regeneraron datos censales ni comerciales.
-- Se agregó `public/_headers`.
-- No se agregó `_redirects` porque Cloudflare Pages maneja SPA fallback automáticamente cuando no existe `404.html` de raíz.
-- `.gitignore` excluye artefactos pesados no requeridos para el deploy GitHub → Cloudflare Pages.
