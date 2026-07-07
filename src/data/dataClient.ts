@@ -1,4 +1,12 @@
 import { INITIAL_DATA_PATHS, LAZY_DATA_PATHS, assetUrl } from './dataPaths';
+import {
+  validateClientesGeo,
+  validateDepartmentMonthSales,
+  validateDetailedSales,
+  validateInitialDataBundle,
+  validateProductMonthSales,
+  validateProvinceLayer,
+} from './dataValidators';
 import type {
   CalendarRecord,
   ClientTotalSale,
@@ -17,25 +25,55 @@ export interface InitialDataBundle {
   businessMetadata: Record<string, any>;
   ventasProvinciaMes: ProvinceMonthSale[];
   ventasClienteTotales: ClientTotalSale[];
-  clientesGeo: GeoJsonFeatureCollection;
   productos: ProductRecord[];
   calendario: CalendarRecord[];
 }
 
+const jsonCache = new Map<string, Promise<unknown>>();
+const textCache = new Map<string, Promise<string>>();
+
 async function fetchJson<T>(relativePath: string): Promise<T> {
-  const response = await fetch(assetUrl(relativePath));
-  if (!response.ok) {
-    throw new Error(`No se pudo cargar ${relativePath}: HTTP ${response.status}`);
-  }
-  return response.json() as Promise<T>;
+  const url = assetUrl(relativePath);
+  const cacheKey = `json:${url}`;
+  const cached = jsonCache.get(cacheKey) as Promise<T> | undefined;
+  if (cached) return cached;
+
+  const request = fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`No se pudo cargar ${relativePath}: HTTP ${response.status}`);
+      }
+      return response.json() as Promise<T>;
+    })
+    .catch((error) => {
+      jsonCache.delete(cacheKey);
+      throw error;
+    });
+
+  jsonCache.set(cacheKey, request as Promise<unknown>);
+  return request;
 }
 
 async function fetchText(relativePath: string): Promise<string> {
-  const response = await fetch(assetUrl(relativePath));
-  if (!response.ok) {
-    throw new Error(`No se pudo cargar ${relativePath}: HTTP ${response.status}`);
-  }
-  return response.text();
+  const url = assetUrl(relativePath);
+  const cacheKey = `text:${url}`;
+  const cached = textCache.get(cacheKey);
+  if (cached) return cached;
+
+  const request = fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`No se pudo cargar ${relativePath}: HTTP ${response.status}`);
+      }
+      return response.text();
+    })
+    .catch((error) => {
+      textCache.delete(cacheKey);
+      throw error;
+    });
+
+  textCache.set(cacheKey, request);
+  return request;
 }
 
 function recordsOf<T>(payload: { records?: T[] } | T[]): T[] {
@@ -107,49 +145,64 @@ export async function loadInitialData(): Promise<InitialDataBundle> {
     businessMetadata,
     ventasProvinciaPayload,
     ventasClientePayload,
-    clientesGeo,
     productosPayload,
     calendarioPayload,
   ] = await Promise.all([
-    fetchJson<Record<string, unknown>>(INITIAL_DATA_PATHS[0]),
-    fetchJson<GeoJsonFeatureCollection>(INITIAL_DATA_PATHS[1]),
-    fetchJson<ProvincesIndex>(INITIAL_DATA_PATHS[2]),
-    fetchJson<Record<string, any>>(INITIAL_DATA_PATHS[3]),
-    fetchJson<{ records: ProvinceMonthSale[] }>(INITIAL_DATA_PATHS[4]),
-    fetchJson<{ records: ClientTotalSale[] }>(INITIAL_DATA_PATHS[5]),
-    fetchJson<GeoJsonFeatureCollection>(INITIAL_DATA_PATHS[6]),
-    fetchJson<{ records: ProductRecord[] }>(INITIAL_DATA_PATHS[7]),
-    fetchJson<{ records: CalendarRecord[] }>(INITIAL_DATA_PATHS[8]),
+    fetchJson<Record<string, unknown>>(INITIAL_DATA_PATHS.metadata),
+    fetchJson<GeoJsonFeatureCollection>(INITIAL_DATA_PATHS.provinciasGeo),
+    fetchJson<ProvincesIndex>(INITIAL_DATA_PATHS.provinciasIndex),
+    fetchJson<Record<string, any>>(INITIAL_DATA_PATHS.businessMetadata),
+    fetchJson<{ records: ProvinceMonthSale[] }>(INITIAL_DATA_PATHS.ventasProvinciaMes),
+    fetchJson<{ records: ClientTotalSale[] }>(INITIAL_DATA_PATHS.ventasClienteTotales),
+    fetchJson<{ records: ProductRecord[] }>(INITIAL_DATA_PATHS.productos),
+    fetchJson<{ records: CalendarRecord[] }>(INITIAL_DATA_PATHS.calendario),
   ]);
 
-  return {
+  const bundle = {
     metadata,
     provinciasGeo,
     provinciasIndex,
     businessMetadata,
     ventasProvinciaMes: recordsOf(ventasProvinciaPayload),
     ventasClienteTotales: recordsOf(ventasClientePayload),
-    clientesGeo,
     productos: recordsOf(productosPayload),
     calendario: recordsOf(calendarioPayload),
   };
+
+  validateInitialDataBundle(bundle);
+  return bundle;
+}
+
+export async function loadClientesGeo(): Promise<GeoJsonFeatureCollection> {
+  const payload = await fetchJson<GeoJsonFeatureCollection>(LAZY_DATA_PATHS.clientesGeo);
+  validateClientesGeo(payload);
+  return payload;
 }
 
 export async function loadDepartmentMonthSales(): Promise<DepartmentMonthSale[]> {
   const payload = await fetchJson<{ records: DepartmentMonthSale[] }>(LAZY_DATA_PATHS.ventasDepartamentoMes);
-  return recordsOf(payload);
+  const rows = recordsOf(payload);
+  validateDepartmentMonthSales(rows);
+  return rows;
 }
 
 export async function loadProductMonthSales(): Promise<ProductMonthSale[]> {
   const payload = await fetchJson<{ records: ProductMonthSale[] }>(LAZY_DATA_PATHS.ventasProductoMes);
-  return recordsOf(payload);
+  const rows = recordsOf(payload);
+  validateProductMonthSales(rows);
+  return rows;
 }
 
 export async function loadDetailedSalesCsv(): Promise<DetailedSaleRow[]> {
   const csvText = await fetchText(LAZY_DATA_PATHS.ventasMensualesCsv);
-  return parseDetailedSalesCsv(csvText);
+  const rows = parseDetailedSalesCsv(csvText);
+  validateDetailedSales(rows);
+  return rows;
 }
 
 export async function loadProvinceLayer(relativePath: string): Promise<GeoJsonFeatureCollection> {
-  return fetchJson<GeoJsonFeatureCollection>(`data/${relativePath.replace(/^data\//, '')}`);
+  const normalizedPath = `data/${relativePath.replace(/^data\//, '')}`;
+  const payload = await fetchJson<GeoJsonFeatureCollection>(normalizedPath);
+  validateProvinceLayer(payload, normalizedPath);
+  return payload;
 }

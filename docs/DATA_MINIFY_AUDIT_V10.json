@@ -1,0 +1,1806 @@
+{
+  "phase": "V10 — optimización lossless de datos públicos",
+  "generated_at": "2026-07-05T22:50:26.849Z",
+  "strategy": "JSON.parse + JSON.stringify sin espacios; no modifica valores, geometrías ni registros canónicos.",
+  "files_processed": 299,
+  "files_failed": [],
+  "before_bytes": 175182930,
+  "after_bytes": 160540191,
+  "saved_bytes": 14642739,
+  "items": [
+    {
+      "path": "public/data/localidades_poligonos_fracciones.geojson",
+      "before_bytes": 11126930,
+      "after_bytes": 10201154,
+      "saved_bytes": 925776
+    },
+    {
+      "path": "public/data/business/agregados/ventas_departamento_mes.json",
+      "before_bytes": 3339536,
+      "after_bytes": 2450617,
+      "saved_bytes": 888919
+    },
+    {
+      "path": "public/data/provincias/provincia_14_cordoba/radios.geojson",
+      "before_bytes": 10414797,
+      "after_bytes": 9699726,
+      "saved_bytes": 715071
+    },
+    {
+      "path": "public/data/business/agregados/heatmap_clientes_ventas.geojson",
+      "before_bytes": 2039878,
+      "after_bytes": 1421530,
+      "saved_bytes": 618348
+    },
+    {
+      "path": "public/data/provincias/provincia_82_santa_fe/radios.geojson",
+      "before_bytes": 8349606,
+      "after_bytes": 7775663,
+      "saved_bytes": 573943
+    },
+    {
+      "path": "public/data/business/clientes.geojson",
+      "before_bytes": 1949275,
+      "after_bytes": 1391263,
+      "saved_bytes": 558012
+    },
+    {
+      "path": "public/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson",
+      "before_bytes": 5937870,
+      "after_bytes": 5543245,
+      "saved_bytes": 394625
+    },
+    {
+      "path": "public/data/provincias/provincia_30_entre_rios/radios.geojson",
+      "before_bytes": 5125132,
+      "after_bytes": 4764397,
+      "saved_bytes": 360735
+    },
+    {
+      "path": "public/data/business/agregados/ventas_cliente_totales.json",
+      "before_bytes": 1530247,
+      "after_bytes": 1173880,
+      "saved_bytes": 356367
+    },
+    {
+      "path": "public/data/localidades_poligonos_gobiernos_locales.geojson",
+      "before_bytes": 3937937,
+      "after_bytes": 3585864,
+      "saved_bytes": 352073
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/fracciones.geojson",
+      "before_bytes": 4181471,
+      "after_bytes": 3866986,
+      "saved_bytes": 314485
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/puntos.geojson",
+      "before_bytes": 4505899,
+      "after_bytes": 4240863,
+      "saved_bytes": 265036
+    },
+    {
+      "path": "public/data/provincias/provincia_50_mendoza/radios.geojson",
+      "before_bytes": 3686937,
+      "after_bytes": 3433567,
+      "saved_bytes": 253370
+    },
+    {
+      "path": "public/data/provincias/provincia_90_tucuman/radios.geojson",
+      "before_bytes": 3588837,
+      "after_bytes": 3343256,
+      "saved_bytes": 245581
+    },
+    {
+      "path": "public/data/provincias/provincia_18_corrientes/radios.geojson",
+      "before_bytes": 3159805,
+      "after_bytes": 2937081,
+      "saved_bytes": 222724
+    },
+    {
+      "path": "public/data/provincias/provincia_54_misiones/radios.geojson",
+      "before_bytes": 3156477,
+      "after_bytes": 2936954,
+      "saved_bytes": 219523
+    },
+    {
+      "path": "public/data/business/agregados/ventas_producto_mes.json",
+      "before_bytes": 810196,
+      "after_bytes": 593973,
+      "saved_bytes": 216223
+    },
+    {
+      "path": "public/data/provincias/provincia_22_chaco/radios.geojson",
+      "before_bytes": 3030558,
+      "after_bytes": 2820564,
+      "saved_bytes": 209994
+    },
+    {
+      "path": "public/data/provincias/provincia_66_salta/radios.geojson",
+      "before_bytes": 2904702,
+      "after_bytes": 2699215,
+      "saved_bytes": 205487
+    },
+    {
+      "path": "public/data/localidades_poligonos_departamentos.geojson",
+      "before_bytes": 1813573,
+      "after_bytes": 1611057,
+      "saved_bytes": 202516
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06427.geojson",
+      "before_bytes": 2542223,
+      "after_bytes": 2366157,
+      "saved_bytes": 176066
+    },
+    {
+      "path": "public/data/provincias/provincia_14_cordoba/puntos.geojson",
+      "before_bytes": 2775101,
+      "after_bytes": 2610744,
+      "saved_bytes": 164357
+    },
+    {
+      "path": "public/data/provincias/provincia_62_rio_negro/radios.geojson",
+      "before_bytes": 1923444,
+      "after_bytes": 1788350,
+      "saved_bytes": 135094
+    },
+    {
+      "path": "public/data/provincias/provincia_86_santiago_del_estero/radios.geojson",
+      "before_bytes": 1785308,
+      "after_bytes": 1658005,
+      "saved_bytes": 127303
+    },
+    {
+      "path": "public/data/provincias/provincia_58_neuquen/radios.geojson",
+      "before_bytes": 1713136,
+      "after_bytes": 1591788,
+      "saved_bytes": 121348
+    },
+    {
+      "path": "public/data/provincias/provincia_26_chubut/radios.geojson",
+      "before_bytes": 1662666,
+      "after_bytes": 1542749,
+      "saved_bytes": 119917
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06357.geojson",
+      "before_bytes": 1683036,
+      "after_bytes": 1566843,
+      "saved_bytes": 116193
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06441.geojson",
+      "before_bytes": 1616582,
+      "after_bytes": 1504370,
+      "saved_bytes": 112212
+    },
+    {
+      "path": "public/data/provincias/provincia_38_jujuy/radios.geojson",
+      "before_bytes": 1599749,
+      "after_bytes": 1487857,
+      "saved_bytes": 111892
+    },
+    {
+      "path": "public/data/provincias/provincia_34_formosa/radios.geojson",
+      "before_bytes": 1566638,
+      "after_bytes": 1455356,
+      "saved_bytes": 111282
+    },
+    {
+      "path": "public/data/provincias/provincia_86_santiago_del_estero/puntos.geojson",
+      "before_bytes": 1870863,
+      "after_bytes": 1759709,
+      "saved_bytes": 111154
+    },
+    {
+      "path": "public/data/provincias/provincia_82_santa_fe/puntos.geojson",
+      "before_bytes": 1879056,
+      "after_bytes": 1768151,
+      "saved_bytes": 110905
+    },
+    {
+      "path": "public/data/provincias/provincia_74_san_luis/radios.geojson",
+      "before_bytes": 1405671,
+      "after_bytes": 1307500,
+      "saved_bytes": 98171
+    },
+    {
+      "path": "public/data/provincias/provincia_42_la_pampa/radios.geojson",
+      "before_bytes": 1404914,
+      "after_bytes": 1307951,
+      "saved_bytes": 96963
+    },
+    {
+      "path": "public/data/provincias/provincia_70_san_juan/radios.geojson",
+      "before_bytes": 1389854,
+      "after_bytes": 1293507,
+      "saved_bytes": 96347
+    },
+    {
+      "path": "public/data/provincias/provincia_94_tierra_del_fuego_antartida_e_islas_del_atlantico_sur/radios.geojson",
+      "before_bytes": 799138,
+      "after_bytes": 709467,
+      "saved_bytes": 89671
+    },
+    {
+      "path": "public/data/provincias/provincia_10_catamarca/radios.geojson",
+      "before_bytes": 1119590,
+      "after_bytes": 1039298,
+      "saved_bytes": 80292
+    },
+    {
+      "path": "public/data/provincias/provincia_90_tucuman/puntos.geojson",
+      "before_bytes": 1288355,
+      "after_bytes": 1212393,
+      "saved_bytes": 75962
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06490.geojson",
+      "before_bytes": 1092131,
+      "after_bytes": 1016751,
+      "saved_bytes": 75380
+    },
+    {
+      "path": "public/data/provincias/provincia_66_salta/puntos.geojson",
+      "before_bytes": 1246221,
+      "after_bytes": 1172500,
+      "saved_bytes": 73721
+    },
+    {
+      "path": "public/data/provincias/provincia_22_chaco/puntos.geojson",
+      "before_bytes": 1247869,
+      "after_bytes": 1174231,
+      "saved_bytes": 73638
+    },
+    {
+      "path": "public/data/provincias/provincia_30_entre_rios/puntos.geojson",
+      "before_bytes": 1201086,
+      "after_bytes": 1130436,
+      "saved_bytes": 70650
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06658.geojson",
+      "before_bytes": 1004721,
+      "after_bytes": 934996,
+      "saved_bytes": 69725
+    },
+    {
+      "path": "public/data/provincias/provincia_94_tierra_del_fuego_antartida_e_islas_del_atlantico_sur/fracciones.geojson",
+      "before_bytes": 455986,
+      "after_bytes": 389011,
+      "saved_bytes": 66975
+    },
+    {
+      "path": "public/data/provincias/provincia_94_tierra_del_fuego_antartida_e_islas_del_atlantico_sur/departamentos.geojson",
+      "before_bytes": 433495,
+      "after_bytes": 367419,
+      "saved_bytes": 66076
+    },
+    {
+      "path": "public/data/provincias/provincia_50_mendoza/puntos.geojson",
+      "before_bytes": 1027292,
+      "after_bytes": 966768,
+      "saved_bytes": 60524
+    },
+    {
+      "path": "public/data/provincias/provincia_14_cordoba/gobiernos_locales.geojson",
+      "before_bytes": 686677,
+      "after_bytes": 626801,
+      "saved_bytes": 59876
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06434.geojson",
+      "before_bytes": 850183,
+      "after_bytes": 791158,
+      "saved_bytes": 59025
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06560.geojson",
+      "before_bytes": 844008,
+      "after_bytes": 785403,
+      "saved_bytes": 58605
+    },
+    {
+      "path": "public/data/provincias/provincia_18_corrientes/puntos.geojson",
+      "before_bytes": 991628,
+      "after_bytes": 933262,
+      "saved_bytes": 58366
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06539.geojson",
+      "before_bytes": 821841,
+      "after_bytes": 764750,
+      "saved_bytes": 57091
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06028.geojson",
+      "before_bytes": 827131,
+      "after_bytes": 770044,
+      "saved_bytes": 57087
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06371.geojson",
+      "before_bytes": 813724,
+      "after_bytes": 757695,
+      "saved_bytes": 56029
+    },
+    {
+      "path": "public/data/provincias/provincia_78_santa_cruz/radios.geojson",
+      "before_bytes": 758970,
+      "after_bytes": 703750,
+      "saved_bytes": 55220
+    },
+    {
+      "path": "public/data/provincias/provincia_10_catamarca/puntos.geojson",
+      "before_bytes": 933850,
+      "after_bytes": 878638,
+      "saved_bytes": 55212
+    },
+    {
+      "path": "public/data/provincias/provincia_46_la_rioja/radios.geojson",
+      "before_bytes": 779327,
+      "after_bytes": 725017,
+      "saved_bytes": 54310
+    },
+    {
+      "path": "public/data/provincias/provincia_14_cordoba/fracciones.geojson",
+      "before_bytes": 658197,
+      "after_bytes": 604361,
+      "saved_bytes": 53836
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06056.geojson",
+      "before_bytes": 756210,
+      "after_bytes": 703663,
+      "saved_bytes": 52547
+    },
+    {
+      "path": "public/data/provincias/provincia_30_entre_rios/fracciones.geojson",
+      "before_bytes": 574808,
+      "after_bytes": 522837,
+      "saved_bytes": 51971
+    },
+    {
+      "path": "public/data/provincias/provincia_54_misiones/puntos.geojson",
+      "before_bytes": 831495,
+      "after_bytes": 782508,
+      "saved_bytes": 48987
+    },
+    {
+      "path": "public/data/provincias/provincia_38_jujuy/puntos.geojson",
+      "before_bytes": 814764,
+      "after_bytes": 766441,
+      "saved_bytes": 48323
+    },
+    {
+      "path": "public/data/provincias/provincia_82_santa_fe/gobiernos_locales.geojson",
+      "before_bytes": 575034,
+      "after_bytes": 526766,
+      "saved_bytes": 48268
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06805.geojson",
+      "before_bytes": 689467,
+      "after_bytes": 641409,
+      "saved_bytes": 48058
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06840.geojson",
+      "before_bytes": 668905,
+      "after_bytes": 622752,
+      "saved_bytes": 46153
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06035.geojson",
+      "before_bytes": 662296,
+      "after_bytes": 616420,
+      "saved_bytes": 45876
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06274.geojson",
+      "before_bytes": 664797,
+      "after_bytes": 618941,
+      "saved_bytes": 45856
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06638.geojson",
+      "before_bytes": 651197,
+      "after_bytes": 605931,
+      "saved_bytes": 45266
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06420.geojson",
+      "before_bytes": 641051,
+      "after_bytes": 596506,
+      "saved_bytes": 44545
+    },
+    {
+      "path": "public/data/provincias/provincia_46_la_rioja/puntos.geojson",
+      "before_bytes": 751677,
+      "after_bytes": 707255,
+      "saved_bytes": 44422
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06568.geojson",
+      "before_bytes": 634462,
+      "after_bytes": 590409,
+      "saved_bytes": 44053
+    },
+    {
+      "path": "public/data/provincias/provincia_18_corrientes/fracciones.geojson",
+      "before_bytes": 507922,
+      "after_bytes": 464524,
+      "saved_bytes": 43398
+    },
+    {
+      "path": "public/data/provincias/provincia_62_rio_negro/puntos.geojson",
+      "before_bytes": 688742,
+      "after_bytes": 648138,
+      "saved_bytes": 40604
+    },
+    {
+      "path": "public/data/provincias/provincia_34_formosa/puntos.geojson",
+      "before_bytes": 684740,
+      "after_bytes": 644468,
+      "saved_bytes": 40272
+    },
+    {
+      "path": "public/data/provincias/provincia_58_neuquen/puntos.geojson",
+      "before_bytes": 668236,
+      "after_bytes": 628545,
+      "saved_bytes": 39691
+    },
+    {
+      "path": "public/data/metadata.json",
+      "before_bytes": 143818,
+      "after_bytes": 104647,
+      "saved_bytes": 39171
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06861.geojson",
+      "before_bytes": 561895,
+      "after_bytes": 523077,
+      "saved_bytes": 38818
+    },
+    {
+      "path": "public/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/fracciones.geojson",
+      "before_bytes": 532220,
+      "after_bytes": 493631,
+      "saved_bytes": 38589
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06756.geojson",
+      "before_bytes": 555844,
+      "after_bytes": 517355,
+      "saved_bytes": 38489
+    },
+    {
+      "path": "public/data/provincias/provincia_74_san_luis/puntos.geojson",
+      "before_bytes": 626056,
+      "after_bytes": 588772,
+      "saved_bytes": 37284
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06091.geojson",
+      "before_bytes": 531246,
+      "after_bytes": 494481,
+      "saved_bytes": 36765
+    },
+    {
+      "path": "public/data/provincias.geojson",
+      "before_bytes": 252719,
+      "after_bytes": 217276,
+      "saved_bytes": 35443
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06760.geojson",
+      "before_bytes": 506566,
+      "after_bytes": 471473,
+      "saved_bytes": 35093
+    },
+    {
+      "path": "public/data/business/agregados/ventas_provincia_mes.json",
+      "before_bytes": 124020,
+      "after_bytes": 89619,
+      "saved_bytes": 34401
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06515.geojson",
+      "before_bytes": 497108,
+      "after_bytes": 462883,
+      "saved_bytes": 34225
+    },
+    {
+      "path": "public/data/provincias/provincia_30_entre_rios/gobiernos_locales.geojson",
+      "before_bytes": 395554,
+      "after_bytes": 361611,
+      "saved_bytes": 33943
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06260.geojson",
+      "before_bytes": 489443,
+      "after_bytes": 455729,
+      "saved_bytes": 33714
+    },
+    {
+      "path": "public/data/provincias/provincia_82_santa_fe/fracciones.geojson",
+      "before_bytes": 400883,
+      "after_bytes": 367734,
+      "saved_bytes": 33149
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06252.geojson",
+      "before_bytes": 468694,
+      "after_bytes": 436129,
+      "saved_bytes": 32565
+    },
+    {
+      "path": "public/data/provincias/provincia_26_chubut/puntos.geojson",
+      "before_bytes": 537709,
+      "after_bytes": 505820,
+      "saved_bytes": 31889
+    },
+    {
+      "path": "public/data/provincias/provincia_54_misiones/fracciones.geojson",
+      "before_bytes": 375855,
+      "after_bytes": 344121,
+      "saved_bytes": 31734
+    },
+    {
+      "path": "public/data/provincias/provincia_70_san_juan/puntos.geojson",
+      "before_bytes": 524605,
+      "after_bytes": 493712,
+      "saved_bytes": 30893
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06412.geojson",
+      "before_bytes": 429838,
+      "after_bytes": 400131,
+      "saved_bytes": 29707
+    },
+    {
+      "path": "public/data/provincias/provincia_50_mendoza/fracciones.geojson",
+      "before_bytes": 360912,
+      "after_bytes": 331742,
+      "saved_bytes": 29170
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06791.geojson",
+      "before_bytes": 389728,
+      "after_bytes": 362328,
+      "saved_bytes": 27400
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/gobiernos_locales.geojson",
+      "before_bytes": 276046,
+      "after_bytes": 248980,
+      "saved_bytes": 27066
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/departamentos.geojson",
+      "before_bytes": 296640,
+      "after_bytes": 269580,
+      "saved_bytes": 27060
+    },
+    {
+      "path": "public/data/provincias/provincia_22_chaco/fracciones.geojson",
+      "before_bytes": 331111,
+      "after_bytes": 304279,
+      "saved_bytes": 26832
+    },
+    {
+      "path": "public/data/localidades_poligonos_aglomerados.geojson",
+      "before_bytes": 266744,
+      "after_bytes": 240082,
+      "saved_bytes": 26662
+    },
+    {
+      "path": "public/data/provincias/provincia_66_salta/fracciones.geojson",
+      "before_bytes": 290639,
+      "after_bytes": 265214,
+      "saved_bytes": 25425
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06581.geojson",
+      "before_bytes": 358544,
+      "after_bytes": 333198,
+      "saved_bytes": 25346
+    },
+    {
+      "path": "public/data/provincias/provincia_86_santiago_del_estero/fracciones.geojson",
+      "before_bytes": 277773,
+      "after_bytes": 253631,
+      "saved_bytes": 24142
+    },
+    {
+      "path": "public/data/provincias/provincia_90_tucuman/fracciones.geojson",
+      "before_bytes": 302645,
+      "after_bytes": 278815,
+      "saved_bytes": 23830
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06623.geojson",
+      "before_bytes": 330601,
+      "after_bytes": 307364,
+      "saved_bytes": 23237
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06763.geojson",
+      "before_bytes": 329971,
+      "after_bytes": 307061,
+      "saved_bytes": 22910
+    },
+    {
+      "path": "public/data/provincias/provincia_42_la_pampa/puntos.geojson",
+      "before_bytes": 384492,
+      "after_bytes": 361733,
+      "saved_bytes": 22759
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06749.geojson",
+      "before_bytes": 314009,
+      "after_bytes": 291800,
+      "saved_bytes": 22209
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06595.geojson",
+      "before_bytes": 312601,
+      "after_bytes": 290576,
+      "saved_bytes": 22025
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06497.geojson",
+      "before_bytes": 314240,
+      "after_bytes": 292270,
+      "saved_bytes": 21970
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06413.geojson",
+      "before_bytes": 298275,
+      "after_bytes": 277296,
+      "saved_bytes": 20979
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06408.geojson",
+      "before_bytes": 299545,
+      "after_bytes": 278802,
+      "saved_bytes": 20743
+    },
+    {
+      "path": "public/data/provincias/provincia_26_chubut/fracciones.geojson",
+      "before_bytes": 227020,
+      "after_bytes": 206328,
+      "saved_bytes": 20692
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06364.geojson",
+      "before_bytes": 293665,
+      "after_bytes": 273397,
+      "saved_bytes": 20268
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06410.geojson",
+      "before_bytes": 291831,
+      "after_bytes": 271623,
+      "saved_bytes": 20208
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06270.geojson",
+      "before_bytes": 288479,
+      "after_bytes": 268405,
+      "saved_bytes": 20074
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06833.geojson",
+      "before_bytes": 261797,
+      "after_bytes": 243250,
+      "saved_bytes": 18547
+    },
+    {
+      "path": "public/data/provincias/provincia_62_rio_negro/fracciones.geojson",
+      "before_bytes": 217519,
+      "after_bytes": 199057,
+      "saved_bytes": 18462
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06770.geojson",
+      "before_bytes": 261335,
+      "after_bytes": 243038,
+      "saved_bytes": 18297
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06280.geojson",
+      "before_bytes": 259497,
+      "after_bytes": 241265,
+      "saved_bytes": 18232
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06882.geojson",
+      "before_bytes": 259210,
+      "after_bytes": 241044,
+      "saved_bytes": 18166
+    },
+    {
+      "path": "public/data/provincias/provincia_34_formosa/fracciones.geojson",
+      "before_bytes": 206420,
+      "after_bytes": 188445,
+      "saved_bytes": 17975
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06224.geojson",
+      "before_bytes": 254886,
+      "after_bytes": 236918,
+      "saved_bytes": 17968
+    },
+    {
+      "path": "public/data/provincias/provincia_86_santiago_del_estero/gobiernos_locales.geojson",
+      "before_bytes": 230364,
+      "after_bytes": 213058,
+      "saved_bytes": 17306
+    },
+    {
+      "path": "public/data/provincias/provincia_18_corrientes/gobiernos_locales.geojson",
+      "before_bytes": 165767,
+      "after_bytes": 148919,
+      "saved_bytes": 16848
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06203.geojson",
+      "before_bytes": 235100,
+      "after_bytes": 218401,
+      "saved_bytes": 16699
+    },
+    {
+      "path": "public/data/provincias/provincia_38_jujuy/fracciones.geojson",
+      "before_bytes": 196193,
+      "after_bytes": 179648,
+      "saved_bytes": 16545
+    },
+    {
+      "path": "public/data/provincias/provincia_78_santa_cruz/puntos.geojson",
+      "before_bytes": 278264,
+      "after_bytes": 261730,
+      "saved_bytes": 16534
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06778.geojson",
+      "before_bytes": 235914,
+      "after_bytes": 219493,
+      "saved_bytes": 16421
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06126.geojson",
+      "before_bytes": 229368,
+      "after_bytes": 213331,
+      "saved_bytes": 16037
+    },
+    {
+      "path": "public/data/provincias/provincia_10_catamarca/fracciones.geojson",
+      "before_bytes": 182301,
+      "after_bytes": 166295,
+      "saved_bytes": 16006
+    },
+    {
+      "path": "public/data/provincias/provincia_90_tucuman/gobiernos_locales.geojson",
+      "before_bytes": 182649,
+      "after_bytes": 167094,
+      "saved_bytes": 15555
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06469.geojson",
+      "before_bytes": 214139,
+      "after_bytes": 199013,
+      "saved_bytes": 15126
+    },
+    {
+      "path": "public/data/provincias/provincia_62_rio_negro/gobiernos_locales.geojson",
+      "before_bytes": 151664,
+      "after_bytes": 136895,
+      "saved_bytes": 14769
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06007.geojson",
+      "before_bytes": 206602,
+      "after_bytes": 191887,
+      "saved_bytes": 14715
+    },
+    {
+      "path": "public/data/provincias/provincia_70_san_juan/fracciones.geojson",
+      "before_bytes": 173336,
+      "after_bytes": 158812,
+      "saved_bytes": 14524
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06609.geojson",
+      "before_bytes": 205578,
+      "after_bytes": 191121,
+      "saved_bytes": 14457
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06049.geojson",
+      "before_bytes": 201695,
+      "after_bytes": 187262,
+      "saved_bytes": 14433
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06532.geojson",
+      "before_bytes": 195511,
+      "after_bytes": 181842,
+      "saved_bytes": 13669
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06588.geojson",
+      "before_bytes": 191667,
+      "after_bytes": 178104,
+      "saved_bytes": 13563
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06518.geojson",
+      "before_bytes": 192513,
+      "after_bytes": 178975,
+      "saved_bytes": 13538
+    },
+    {
+      "path": "public/data/provincias/provincia_54_misiones/gobiernos_locales.geojson",
+      "before_bytes": 145000,
+      "after_bytes": 131470,
+      "saved_bytes": 13530
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06112.geojson",
+      "before_bytes": 191431,
+      "after_bytes": 177977,
+      "saved_bytes": 13454
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06826.geojson",
+      "before_bytes": 190672,
+      "after_bytes": 177234,
+      "saved_bytes": 13438
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06189.geojson",
+      "before_bytes": 186370,
+      "after_bytes": 172983,
+      "saved_bytes": 13387
+    },
+    {
+      "path": "public/data/provincias/provincia_66_salta/gobiernos_locales.geojson",
+      "before_bytes": 132424,
+      "after_bytes": 119071,
+      "saved_bytes": 13353
+    },
+    {
+      "path": "public/data/provincias/provincia_42_la_pampa/fracciones.geojson",
+      "before_bytes": 169963,
+      "after_bytes": 156636,
+      "saved_bytes": 13327
+    },
+    {
+      "path": "public/data/provincias/provincia_58_neuquen/fracciones.geojson",
+      "before_bytes": 143377,
+      "after_bytes": 130370,
+      "saved_bytes": 13007
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06134.geojson",
+      "before_bytes": 185349,
+      "after_bytes": 172351,
+      "saved_bytes": 12998
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06196.geojson",
+      "before_bytes": 176656,
+      "after_bytes": 164102,
+      "saved_bytes": 12554
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06218.geojson",
+      "before_bytes": 172496,
+      "after_bytes": 160089,
+      "saved_bytes": 12407
+    },
+    {
+      "path": "public/data/provincias/provincia_78_santa_cruz/fracciones.geojson",
+      "before_bytes": 125995,
+      "after_bytes": 113729,
+      "saved_bytes": 12266
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06098.geojson",
+      "before_bytes": 176033,
+      "after_bytes": 163786,
+      "saved_bytes": 12247
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06868.geojson",
+      "before_bytes": 176471,
+      "after_bytes": 164228,
+      "saved_bytes": 12243
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06651.geojson",
+      "before_bytes": 171352,
+      "after_bytes": 159156,
+      "saved_bytes": 12196
+    },
+    {
+      "path": "public/data/provincias/provincia_22_chaco/gobiernos_locales.geojson",
+      "before_bytes": 130899,
+      "after_bytes": 118708,
+      "saved_bytes": 12191
+    },
+    {
+      "path": "public/data/provincias/provincia_74_san_luis/fracciones.geojson",
+      "before_bytes": 146754,
+      "after_bytes": 134604,
+      "saved_bytes": 12150
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06392.geojson",
+      "before_bytes": 170236,
+      "after_bytes": 158128,
+      "saved_bytes": 12108
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06063.geojson",
+      "before_bytes": 168653,
+      "after_bytes": 156657,
+      "saved_bytes": 11996
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06210.geojson",
+      "before_bytes": 166052,
+      "after_bytes": 154323,
+      "saved_bytes": 11729
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06182.geojson",
+      "before_bytes": 168062,
+      "after_bytes": 156429,
+      "saved_bytes": 11633
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06644.geojson",
+      "before_bytes": 163435,
+      "after_bytes": 152080,
+      "saved_bytes": 11355
+    },
+    {
+      "path": "public/data/indexes/provincias_index.json",
+      "before_bytes": 37150,
+      "after_bytes": 25986,
+      "saved_bytes": 11164
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06648.geojson",
+      "before_bytes": 156996,
+      "after_bytes": 146148,
+      "saved_bytes": 10848
+    },
+    {
+      "path": "public/data/provincias/provincia_38_jujuy/gobiernos_locales.geojson",
+      "before_bytes": 115690,
+      "after_bytes": 104980,
+      "saved_bytes": 10710
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06700.geojson",
+      "before_bytes": 145851,
+      "after_bytes": 135414,
+      "saved_bytes": 10437
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06266.geojson",
+      "before_bytes": 149505,
+      "after_bytes": 139091,
+      "saved_bytes": 10414
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06483.geojson",
+      "before_bytes": 145234,
+      "after_bytes": 134853,
+      "saved_bytes": 10381
+    },
+    {
+      "path": "public/data/provincias/provincia_42_la_pampa/gobiernos_locales.geojson",
+      "before_bytes": 124458,
+      "after_bytes": 114101,
+      "saved_bytes": 10357
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06602.geojson",
+      "before_bytes": 140618,
+      "after_bytes": 130326,
+      "saved_bytes": 10292
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/index.json",
+      "before_bytes": 46739,
+      "after_bytes": 36643,
+      "saved_bytes": 10096
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06728.geojson",
+      "before_bytes": 143017,
+      "after_bytes": 133041,
+      "saved_bytes": 9976
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06119.geojson",
+      "before_bytes": 140969,
+      "after_bytes": 131018,
+      "saved_bytes": 9951
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06686.geojson",
+      "before_bytes": 138551,
+      "after_bytes": 128676,
+      "saved_bytes": 9875
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06854.geojson",
+      "before_bytes": 135201,
+      "after_bytes": 125396,
+      "saved_bytes": 9805
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06875.geojson",
+      "before_bytes": 126427,
+      "after_bytes": 116626,
+      "saved_bytes": 9801
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06525.geojson",
+      "before_bytes": 135037,
+      "after_bytes": 125619,
+      "saved_bytes": 9418
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06714.geojson",
+      "before_bytes": 131685,
+      "after_bytes": 122338,
+      "saved_bytes": 9347
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06476.geojson",
+      "before_bytes": 125192,
+      "after_bytes": 115899,
+      "saved_bytes": 9293
+    },
+    {
+      "path": "public/data/provincias/provincia_18_corrientes/departamentos.geojson",
+      "before_bytes": 83569,
+      "after_bytes": 74393,
+      "saved_bytes": 9176
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06147.geojson",
+      "before_bytes": 127235,
+      "after_bytes": 118287,
+      "saved_bytes": 8948
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06070.geojson",
+      "before_bytes": 122427,
+      "after_bytes": 113760,
+      "saved_bytes": 8667
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06707.geojson",
+      "before_bytes": 121452,
+      "after_bytes": 112816,
+      "saved_bytes": 8636
+    },
+    {
+      "path": "public/data/provincias/provincia_58_neuquen/gobiernos_locales.geojson",
+      "before_bytes": 97591,
+      "after_bytes": 88967,
+      "saved_bytes": 8624
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06105.geojson",
+      "before_bytes": 120947,
+      "after_bytes": 112369,
+      "saved_bytes": 8578
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06322.geojson",
+      "before_bytes": 117526,
+      "after_bytes": 109092,
+      "saved_bytes": 8434
+    },
+    {
+      "path": "public/data/provincias/provincia_10_catamarca/gobiernos_locales.geojson",
+      "before_bytes": 81655,
+      "after_bytes": 73290,
+      "saved_bytes": 8365
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06245.geojson",
+      "before_bytes": 120356,
+      "after_bytes": 112001,
+      "saved_bytes": 8355
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06231.geojson",
+      "before_bytes": 116209,
+      "after_bytes": 107861,
+      "saved_bytes": 8348
+    },
+    {
+      "path": "public/data/provincias/provincia_34_formosa/gobiernos_locales.geojson",
+      "before_bytes": 81303,
+      "after_bytes": 73125,
+      "saved_bytes": 8178
+    },
+    {
+      "path": "public/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/puntos.geojson",
+      "before_bytes": 140413,
+      "after_bytes": 132262,
+      "saved_bytes": 8151
+    },
+    {
+      "path": "public/data/provincias/provincia_74_san_luis/gobiernos_locales.geojson",
+      "before_bytes": 100274,
+      "after_bytes": 92174,
+      "saved_bytes": 8100
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06665.geojson",
+      "before_bytes": 114058,
+      "after_bytes": 106016,
+      "saved_bytes": 8042
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06077.geojson",
+      "before_bytes": 110308,
+      "after_bytes": 102485,
+      "saved_bytes": 7823
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06672.geojson",
+      "before_bytes": 105933,
+      "after_bytes": 98242,
+      "saved_bytes": 7691
+    },
+    {
+      "path": "public/data/provincias/provincia_46_la_rioja/fracciones.geojson",
+      "before_bytes": 92001,
+      "after_bytes": 84324,
+      "saved_bytes": 7677
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06294.geojson",
+      "before_bytes": 107557,
+      "after_bytes": 99960,
+      "saved_bytes": 7597
+    },
+    {
+      "path": "public/data/provincias/provincia_14_cordoba/departamentos.geojson",
+      "before_bytes": 72990,
+      "after_bytes": 65651,
+      "saved_bytes": 7339
+    },
+    {
+      "path": "public/data/provincias/provincia_66_salta/departamentos.geojson",
+      "before_bytes": 70280,
+      "after_bytes": 62946,
+      "saved_bytes": 7334
+    },
+    {
+      "path": "public/data/provincias/provincia_86_santiago_del_estero/departamentos.geojson",
+      "before_bytes": 73102,
+      "after_bytes": 65888,
+      "saved_bytes": 7214
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06084.geojson",
+      "before_bytes": 98307,
+      "after_bytes": 91217,
+      "saved_bytes": 7090
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06679.geojson",
+      "before_bytes": 98606,
+      "after_bytes": 91539,
+      "saved_bytes": 7067
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06238.geojson",
+      "before_bytes": 99903,
+      "after_bytes": 92856,
+      "saved_bytes": 7047
+    },
+    {
+      "path": "public/data/localidades_poligonos_municipios.geojson",
+      "before_bytes": 53828,
+      "after_bytes": 47005,
+      "saved_bytes": 6823
+    },
+    {
+      "path": "public/data/provincias/provincia_30_entre_rios/departamentos.geojson",
+      "before_bytes": 61726,
+      "after_bytes": 54904,
+      "saved_bytes": 6822
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06547.geojson",
+      "before_bytes": 94144,
+      "after_bytes": 87346,
+      "saved_bytes": 6798
+    },
+    {
+      "path": "public/data/provincias/provincia_26_chubut/gobiernos_locales.geojson",
+      "before_bytes": 77192,
+      "after_bytes": 70506,
+      "saved_bytes": 6686
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06448.geojson",
+      "before_bytes": 91620,
+      "after_bytes": 85095,
+      "saved_bytes": 6525
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06455.geojson",
+      "before_bytes": 90417,
+      "after_bytes": 83963,
+      "saved_bytes": 6454
+    },
+    {
+      "path": "public/data/business/productos.json",
+      "before_bytes": 25746,
+      "after_bytes": 19333,
+      "saved_bytes": 6413
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06505.geojson",
+      "before_bytes": 87562,
+      "after_bytes": 81288,
+      "saved_bytes": 6274
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06175.geojson",
+      "before_bytes": 87476,
+      "after_bytes": 81297,
+      "saved_bytes": 6179
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06735.geojson",
+      "before_bytes": 87122,
+      "after_bytes": 81004,
+      "saved_bytes": 6118
+    },
+    {
+      "path": "public/data/provincias/provincia_82_santa_fe/departamentos.geojson",
+      "before_bytes": 58425,
+      "after_bytes": 52333,
+      "saved_bytes": 6092
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06462.geojson",
+      "before_bytes": 86083,
+      "after_bytes": 80067,
+      "saved_bytes": 6016
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06819.geojson",
+      "before_bytes": 80289,
+      "after_bytes": 74365,
+      "saved_bytes": 5924
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06161.geojson",
+      "before_bytes": 83436,
+      "after_bytes": 77570,
+      "saved_bytes": 5866
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06784.geojson",
+      "before_bytes": 82166,
+      "after_bytes": 76321,
+      "saved_bytes": 5845
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06042.geojson",
+      "before_bytes": 79588,
+      "after_bytes": 73762,
+      "saved_bytes": 5826
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06574.geojson",
+      "before_bytes": 79871,
+      "after_bytes": 74116,
+      "saved_bytes": 5755
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06168.geojson",
+      "before_bytes": 79757,
+      "after_bytes": 74024,
+      "saved_bytes": 5733
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06154.geojson",
+      "before_bytes": 78989,
+      "after_bytes": 73295,
+      "saved_bytes": 5694
+    },
+    {
+      "path": "public/data/provincias/provincia_26_chubut/departamentos.geojson",
+      "before_bytes": 50101,
+      "after_bytes": 44495,
+      "saved_bytes": 5606
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06021.geojson",
+      "before_bytes": 77909,
+      "after_bytes": 72319,
+      "saved_bytes": 5590
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06385.geojson",
+      "before_bytes": 79919,
+      "after_bytes": 74339,
+      "saved_bytes": 5580
+    },
+    {
+      "path": "public/data/provincias/provincia_14_cordoba/aglomerados.geojson",
+      "before_bytes": 57674,
+      "after_bytes": 52207,
+      "saved_bytes": 5467
+    },
+    {
+      "path": "public/data/provincias/provincia_58_neuquen/departamentos.geojson",
+      "before_bytes": 51417,
+      "after_bytes": 45952,
+      "saved_bytes": 5465
+    },
+    {
+      "path": "public/data/provincias/provincia_54_misiones/departamentos.geojson",
+      "before_bytes": 52034,
+      "after_bytes": 46616,
+      "saved_bytes": 5418
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06351.geojson",
+      "before_bytes": 76896,
+      "after_bytes": 71496,
+      "saved_bytes": 5400
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06798.geojson",
+      "before_bytes": 73972,
+      "after_bytes": 68621,
+      "saved_bytes": 5351
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06301.geojson",
+      "before_bytes": 72046,
+      "after_bytes": 66894,
+      "saved_bytes": 5152
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06399.geojson",
+      "before_bytes": 69883,
+      "after_bytes": 64767,
+      "saved_bytes": 5116
+    },
+    {
+      "path": "public/data/provincias/provincia_50_mendoza/gobiernos_locales.geojson",
+      "before_bytes": 46781,
+      "after_bytes": 41750,
+      "saved_bytes": 5031
+    },
+    {
+      "path": "public/data/provincias/provincia_10_catamarca/departamentos.geojson",
+      "before_bytes": 48383,
+      "after_bytes": 43370,
+      "saved_bytes": 5013
+    },
+    {
+      "path": "public/data/provincias/provincia_50_mendoza/departamentos.geojson",
+      "before_bytes": 49919,
+      "after_bytes": 44914,
+      "saved_bytes": 5005
+    },
+    {
+      "path": "public/data/provincias/provincia_70_san_juan/departamentos.geojson",
+      "before_bytes": 49929,
+      "after_bytes": 45039,
+      "saved_bytes": 4890
+    },
+    {
+      "path": "public/data/provincias/provincia_70_san_juan/gobiernos_locales.geojson",
+      "before_bytes": 46004,
+      "after_bytes": 41176,
+      "saved_bytes": 4828
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06693.geojson",
+      "before_bytes": 66168,
+      "after_bytes": 61382,
+      "saved_bytes": 4786
+    },
+    {
+      "path": "public/data/provincias/provincia_22_chaco/departamentos.geojson",
+      "before_bytes": 53470,
+      "after_bytes": 48846,
+      "saved_bytes": 4624
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06343.geojson",
+      "before_bytes": 62495,
+      "after_bytes": 58005,
+      "saved_bytes": 4490
+    },
+    {
+      "path": "public/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/aglomerados.geojson",
+      "before_bytes": 36147,
+      "after_bytes": 31810,
+      "saved_bytes": 4337
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06014.geojson",
+      "before_bytes": 61009,
+      "after_bytes": 56676,
+      "saved_bytes": 4333
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06329.geojson",
+      "before_bytes": 61352,
+      "after_bytes": 57058,
+      "saved_bytes": 4294
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06655.geojson",
+      "before_bytes": 59384,
+      "after_bytes": 55104,
+      "saved_bytes": 4280
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06553.geojson",
+      "before_bytes": 59098,
+      "after_bytes": 54983,
+      "saved_bytes": 4115
+    },
+    {
+      "path": "public/data/provincias/provincia_38_jujuy/departamentos.geojson",
+      "before_bytes": 41850,
+      "after_bytes": 37765,
+      "saved_bytes": 4085
+    },
+    {
+      "path": "public/data/provincias/provincia_94_tierra_del_fuego_antartida_e_islas_del_atlantico_sur/puntos.geojson",
+      "before_bytes": 70761,
+      "after_bytes": 66677,
+      "saved_bytes": 4084
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06140.geojson",
+      "before_bytes": 58064,
+      "after_bytes": 54020,
+      "saved_bytes": 4044
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06406.geojson",
+      "before_bytes": 56068,
+      "after_bytes": 52076,
+      "saved_bytes": 3992
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06315.geojson",
+      "before_bytes": 54732,
+      "after_bytes": 50833,
+      "saved_bytes": 3899
+    },
+    {
+      "path": "public/data/provincias/provincia_90_tucuman/departamentos.geojson",
+      "before_bytes": 40725,
+      "after_bytes": 36933,
+      "saved_bytes": 3792
+    },
+    {
+      "path": "public/data/provincias/provincia_78_santa_cruz/departamentos.geojson",
+      "before_bytes": 30730,
+      "after_bytes": 27062,
+      "saved_bytes": 3668
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06511.geojson",
+      "before_bytes": 48391,
+      "after_bytes": 44868,
+      "saved_bytes": 3523
+    },
+    {
+      "path": "public/data/provincias/provincia_62_rio_negro/departamentos.geojson",
+      "before_bytes": 35140,
+      "after_bytes": 31636,
+      "saved_bytes": 3504
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06287.geojson",
+      "before_bytes": 47028,
+      "after_bytes": 43624,
+      "saved_bytes": 3404
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06466.geojson",
+      "before_bytes": 45019,
+      "after_bytes": 41637,
+      "saved_bytes": 3382
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06742.geojson",
+      "before_bytes": 45414,
+      "after_bytes": 42113,
+      "saved_bytes": 3301
+    },
+    {
+      "path": "public/data/provincias/provincia_46_la_rioja/departamentos.geojson",
+      "before_bytes": 38318,
+      "after_bytes": 35031,
+      "saved_bytes": 3287
+    },
+    {
+      "path": "public/data/provincias/provincia_46_la_rioja/gobiernos_locales.geojson",
+      "before_bytes": 34965,
+      "after_bytes": 31682,
+      "saved_bytes": 3283
+    },
+    {
+      "path": "public/data/provincias/provincia_74_san_luis/departamentos.geojson",
+      "before_bytes": 29459,
+      "after_bytes": 26339,
+      "saved_bytes": 3120
+    },
+    {
+      "path": "public/data/provincias/provincia_42_la_pampa/departamentos.geojson",
+      "before_bytes": 39693,
+      "after_bytes": 36634,
+      "saved_bytes": 3059
+    },
+    {
+      "path": "public/data/provincias/provincia_34_formosa/departamentos.geojson",
+      "before_bytes": 28581,
+      "after_bytes": 25557,
+      "saved_bytes": 3024
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06277.geojson",
+      "before_bytes": 39796,
+      "after_bytes": 36988,
+      "saved_bytes": 2808
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/aglomerados.geojson",
+      "before_bytes": 27064,
+      "after_bytes": 24365,
+      "saved_bytes": 2699
+    },
+    {
+      "path": "public/data/provincias/provincia_58_neuquen/aglomerados.geojson",
+      "before_bytes": 18191,
+      "after_bytes": 15544,
+      "saved_bytes": 2647
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/municipios.geojson",
+      "before_bytes": 21277,
+      "after_bytes": 18679,
+      "saved_bytes": 2598
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06616.geojson",
+      "before_bytes": 36482,
+      "after_bytes": 33888,
+      "saved_bytes": 2594
+    },
+    {
+      "path": "public/data/provincias/provincia_78_santa_cruz/gobiernos_locales.geojson",
+      "before_bytes": 31214,
+      "after_bytes": 28625,
+      "saved_bytes": 2589
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06847.geojson",
+      "before_bytes": 36017,
+      "after_bytes": 33491,
+      "saved_bytes": 2526
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06721.geojson",
+      "before_bytes": 36004,
+      "after_bytes": 33482,
+      "saved_bytes": 2522
+    },
+    {
+      "path": "public/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/gobiernos_locales.geojson",
+      "before_bytes": 27548,
+      "after_bytes": 25050,
+      "saved_bytes": 2498
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06336.geojson",
+      "before_bytes": 32321,
+      "after_bytes": 29879,
+      "saved_bytes": 2442
+    },
+    {
+      "path": "public/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/departamentos.geojson",
+      "before_bytes": 28037,
+      "after_bytes": 25803,
+      "saved_bytes": 2234
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06308.geojson",
+      "before_bytes": 28455,
+      "after_bytes": 26331,
+      "saved_bytes": 2124
+    },
+    {
+      "path": "public/data/provincias/provincia_54_misiones/municipios.geojson",
+      "before_bytes": 15224,
+      "after_bytes": 13132,
+      "saved_bytes": 2092
+    },
+    {
+      "path": "public/data/indexes/localidades_puntos_index.json",
+      "before_bytes": 8940,
+      "after_bytes": 6929,
+      "saved_bytes": 2011
+    },
+    {
+      "path": "public/data/business/calendario.json",
+      "before_bytes": 6114,
+      "after_bytes": 4107,
+      "saved_bytes": 2007
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06812.geojson",
+      "before_bytes": 27351,
+      "after_bytes": 25379,
+      "saved_bytes": 1972
+    },
+    {
+      "path": "public/data/business/metadata_business_v6.json",
+      "before_bytes": 5979,
+      "after_bytes": 4208,
+      "saved_bytes": 1771
+    },
+    {
+      "path": "public/data/provincias/provincia_82_santa_fe/aglomerados.geojson",
+      "before_bytes": 16245,
+      "after_bytes": 14609,
+      "saved_bytes": 1636
+    },
+    {
+      "path": "public/data/provincias/provincia_06_buenos_aires/radios/d_06630.geojson",
+      "before_bytes": 20761,
+      "after_bytes": 19152,
+      "saved_bytes": 1609
+    },
+    {
+      "path": "public/data/provincias/provincia_90_tucuman/aglomerados.geojson",
+      "before_bytes": 18407,
+      "after_bytes": 16921,
+      "saved_bytes": 1486
+    },
+    {
+      "path": "public/data/provincias/provincia_66_salta/aglomerados.geojson",
+      "before_bytes": 12767,
+      "after_bytes": 11506,
+      "saved_bytes": 1261
+    },
+    {
+      "path": "public/data/provincias/provincia_50_mendoza/aglomerados.geojson",
+      "before_bytes": 13705,
+      "after_bytes": 12516,
+      "saved_bytes": 1189
+    },
+    {
+      "path": "public/data/provincias/provincia_14_cordoba/municipios.geojson",
+      "before_bytes": 9029,
+      "after_bytes": 7920,
+      "saved_bytes": 1109
+    },
+    {
+      "path": "public/data/provincias/provincia_54_misiones/aglomerados.geojson",
+      "before_bytes": 13002,
+      "after_bytes": 11947,
+      "saved_bytes": 1055
+    },
+    {
+      "path": "public/data/indexes/layers_index.json",
+      "before_bytes": 4709,
+      "after_bytes": 3783,
+      "saved_bytes": 926
+    },
+    {
+      "path": "public/data/provincias/provincia_74_san_luis/aglomerados.geojson",
+      "before_bytes": 6986,
+      "after_bytes": 6292,
+      "saved_bytes": 694
+    },
+    {
+      "path": "public/data/provincias/provincia_62_rio_negro/municipios.geojson",
+      "before_bytes": 5162,
+      "after_bytes": 4526,
+      "saved_bytes": 636
+    },
+    {
+      "path": "public/data/provincias/provincia_30_entre_rios/aglomerados.geojson",
+      "before_bytes": 6604,
+      "after_bytes": 5970,
+      "saved_bytes": 634
+    },
+    {
+      "path": "public/data/provincias/provincia_38_jujuy/aglomerados.geojson",
+      "before_bytes": 5578,
+      "after_bytes": 4963,
+      "saved_bytes": 615
+    },
+    {
+      "path": "public/data/provincias/provincia_86_santiago_del_estero/aglomerados.geojson",
+      "before_bytes": 7129,
+      "after_bytes": 6528,
+      "saved_bytes": 601
+    },
+    {
+      "path": "public/data/provincias/provincia_10_catamarca/aglomerados.geojson",
+      "before_bytes": 6982,
+      "after_bytes": 6399,
+      "saved_bytes": 583
+    },
+    {
+      "path": "public/data/provincias/provincia_94_tierra_del_fuego_antartida_e_islas_del_atlantico_sur/gobiernos_locales.geojson",
+      "before_bytes": 5716,
+      "after_bytes": 5206,
+      "saved_bytes": 510
+    },
+    {
+      "path": "public/data/provincias/provincia_70_san_juan/aglomerados.geojson",
+      "before_bytes": 5648,
+      "after_bytes": 5142,
+      "saved_bytes": 506
+    },
+    {
+      "path": "public/data/provincias/provincia_90_tucuman/municipios.geojson",
+      "before_bytes": 3878,
+      "after_bytes": 3422,
+      "saved_bytes": 456
+    },
+    {
+      "path": "public/data/provincias/provincia_18_corrientes/aglomerados.geojson",
+      "before_bytes": 4948,
+      "after_bytes": 4538,
+      "saved_bytes": 410
+    },
+    {
+      "path": "public/data/provincias/provincia_62_rio_negro/aglomerados.geojson",
+      "before_bytes": 4167,
+      "after_bytes": 3780,
+      "saved_bytes": 387
+    },
+    {
+      "path": "public/data/provincias/provincia_42_la_pampa/aglomerados.geojson",
+      "before_bytes": 3373,
+      "after_bytes": 3094,
+      "saved_bytes": 279
+    },
+    {
+      "path": "public/data/provincias/provincia_22_chaco/aglomerados.geojson",
+      "before_bytes": 2489,
+      "after_bytes": 2239,
+      "saved_bytes": 250
+    },
+    {
+      "path": "public/data/provincias/provincia_34_formosa/aglomerados.geojson",
+      "before_bytes": 3264,
+      "after_bytes": 3015,
+      "saved_bytes": 249
+    }
+  ]
+}

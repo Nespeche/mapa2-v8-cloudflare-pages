@@ -1,0 +1,67 @@
+{
+  "phase": "V10.3 — Data contract umbrella checks",
+  "generated_at": "2026-07-07T01:20:42.044Z",
+  "status": "OK",
+  "requiredFiles": 18,
+  "publicAudit": {
+    "fileCount": 301,
+    "maxAsset": {
+      "rel": "data/business/ventas_mensuales.csv",
+      "size": 14680144
+    },
+    "top": [
+      {
+        "rel": "data/business/ventas_mensuales.csv",
+        "size_bytes": 14680144,
+        "size_mib": 14
+      },
+      {
+        "rel": "data/localidades_poligonos_fracciones.geojson",
+        "size_bytes": 10201154,
+        "size_mib": 9.729
+      },
+      {
+        "rel": "data/provincias/provincia_14_cordoba/radios.geojson",
+        "size_bytes": 9699726,
+        "size_mib": 9.25
+      },
+      {
+        "rel": "data/provincias/provincia_82_santa_fe/radios.geojson",
+        "size_bytes": 7775663,
+        "size_mib": 7.415
+      },
+      {
+        "rel": "data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson",
+        "size_bytes": 5543245,
+        "size_mib": 5.286
+      },
+      {
+        "rel": "data/provincias/provincia_30_entre_rios/radios.geojson",
+        "size_bytes": 4764397,
+        "size_mib": 4.544
+      },
+      {
+        "rel": "data/provincias/provincia_06_buenos_aires/puntos.geojson",
+        "size_bytes": 4240863,
+        "size_mib": 4.044
+      },
+      {
+        "rel": "data/provincias/provincia_06_buenos_aires/fracciones.geojson",
+        "size_bytes": 3866986,
+        "size_mib": 3.688
+      },
+      {
+        "rel": "data/localidades_poligonos_gobiernos_locales.geojson",
+        "size_bytes": 3585864,
+        "size_mib": 3.42
+      },
+      {
+        "rel": "data/provincias/provincia_50_mendoza/radios.geojson",
+        "size_bytes": 3433567,
+        "size_mib": 3.275
+      }
+    ]
+  },
+  "warnings": [],
+  "violations": []
+}

@@ -1,0 +1,65 @@
+{
+  "phase": "V10.3 — MapLibre static smoke checks",
+  "generated_at": "2026-07-07T01:23:42.426Z",
+  "status": "OK",
+  "checks": [
+    {
+      "id": "maplibre_css_import",
+      "ok": true
+    },
+    {
+      "id": "map_container_class",
+      "ok": true
+    },
+    {
+      "id": "map_constructor",
+      "ok": true
+    },
+    {
+      "id": "map_resize_guard",
+      "ok": true
+    },
+    {
+      "id": "provincias_fill_layer",
+      "ok": true
+    },
+    {
+      "id": "department_lazy_layer",
+      "ok": true
+    },
+    {
+      "id": "clientes_lazy_load",
+      "ok": true
+    },
+    {
+      "id": "csv_lazy_load",
+      "ok": true
+    },
+    {
+      "id": "product_filter_triggers_csv",
+      "ok": true
+    },
+    {
+      "id": "clusters_layer",
+      "ok": true
+    },
+    {
+      "id": "heatmap_layer",
+      "ok": true
+    },
+    {
+      "id": "map_canvas_css_position",
+      "ok": true
+    },
+    {
+      "id": "map_stage_height",
+      "ok": true
+    },
+    {
+      "id": "no_persistent_detail_loading_text",
+      "ok": true
+    }
+  ],
+  "warnings": [],
+  "violations": []
+}

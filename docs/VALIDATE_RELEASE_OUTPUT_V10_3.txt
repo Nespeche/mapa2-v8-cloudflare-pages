@@ -1,0 +1,60 @@
+
+> mapa2-v10-3-data-contracts-antiregression@10.0.3 validate:release
+> npm run build && npm run check:data-contracts && npm run check:business-contracts && npm run check:geo-contracts
+
+
+> mapa2-v10-3-data-contracts-antiregression@10.0.3 build
+> tsc -b && node scripts/check_v10_client_counts.mjs && vite build && node scripts/check_cloudflare_dist.mjs && node scripts/audit_dist_v10.mjs
+
+[client-count-v10.3] OK auditoría generada
+[client-count-v10.3] clientes=2000 departamentos_con_clientes=268 bolivar=7
+[36mvite v8.1.3 [32mbuilding client environment for production...[36m[39m
+[2Ktransforming...✓ 44 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                      0.71 kB │ gzip:   0.42 kB
+dist/assets/index-CbpVaSvo.css      81.69 kB │ gzip:  13.28 kB
+dist/assets/index-CaY6cnn4.js      230.04 kB │ gzip:  70.76 kB
+dist/assets/MapView-C1MZ1aWa.js  1,038.62 kB │ gzip: 276.24 kB
+
+[32m✓ built in 1.04s[39m
+[cloudflare-check] OK: auditoría de dist completada
+[cloudflare-check] Archivos en dist: 310
+[cloudflare-check] Tamaño total dist: 168.78 MiB
+[cloudflare-check] Mayor asset: data/business/ventas_mensuales.csv (14.00 MiB)
+[cloudflare-check] Top 10 archivos más grandes:
+  - data/business/ventas_mensuales.csv: 14.00 MiB
+  - data/localidades_poligonos_fracciones.geojson: 9.73 MiB
+  - data/provincias/provincia_14_cordoba/radios.geojson: 9.25 MiB
+  - data/provincias/provincia_82_santa_fe/radios.geojson: 7.42 MiB
+  - data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson: 5.29 MiB
+  - data/provincias/provincia_30_entre_rios/radios.geojson: 4.54 MiB
+  - data/provincias/provincia_06_buenos_aires/puntos.geojson: 4.04 MiB
+  - data/provincias/provincia_06_buenos_aires/fracciones.geojson: 3.69 MiB
+  - data/localidades_poligonos_gobiernos_locales.geojson: 3.42 MiB
+  - data/provincias/provincia_50_mendoza/radios.geojson: 3.27 MiB
+[cloudflare-check] Advertencias:
+  - No se incluye _redirects: correcto para SPA completa en Cloudflare Pages si no existe 404.html.
+[cloudflare-check] Sin errores bloqueantes para Cloudflare Pages Free.
+[dist-audit-v10] Reportes generados:
+  - docs/DIST_AUDIT_V10.json
+  - docs/DIST_AUDIT_V10.md
+[dist-audit-v10] dist=168.7846 MiB files=310 blocking_errors=0
+
+> mapa2-v10-3-data-contracts-antiregression@10.0.3 check:data-contracts
+> node scripts/check_data_contracts.mjs
+
+[data-contracts-v10.3] OK auditoría general generada
+[data-contracts-v10.3] required_files=18 public_files=301
+
+> mapa2-v10-3-data-contracts-antiregression@10.0.3 check:business-contracts
+> node scripts/check_business_contracts.mjs
+
+[business-contracts-v10.3] OK auditoría comercial generada
+[business-contracts-v10.3] clientes=2000 productos=65 ventas_csv=128998 bolivar=7
+
+> mapa2-v10-3-data-contracts-antiregression@10.0.3 check:geo-contracts
+> node scripts/check_geo_contracts.mjs
+
+[geo-contracts-v10.3] OK auditoría geográfica/censal generada
+[geo-contracts-v10.3] provincias=24 departamentos_ids=529 max_asset=data/business/ventas_mensuales.csv

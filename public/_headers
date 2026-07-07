@@ -1,4 +1,4 @@
-# Mapa 2 V9 — Cloudflare Pages Free
+# Mapa 2 V10 — Cloudflare Pages Free
 # Headers estáticos básicos. Cloudflare ya agrega ETag, Content-Type,
 # Referrer-Policy y X-Content-Type-Options por defecto para Pages.
 
@@ -9,3 +9,7 @@
 # Assets generados por Vite con hash de contenido.
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Datos estáticos públicos: cache moderado para evitar datos obsoletos entre deploys.
+/data/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400

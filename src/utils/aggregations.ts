@@ -37,6 +37,7 @@ function emptyBucket(id: string, name: string): AggregatedBucket {
     margen_bruto: 0,
     volumen_kg: 0,
     clientes: new Set<string>(),
+    clientes_unicos: 0,
     registros: 0,
   };
 }
@@ -51,6 +52,7 @@ function addToBucket(
   margenBruto: number,
   volumenKg: number,
   registros = 1,
+  clientesUnicos = 0,
 ): void {
   if (!id) return;
   const bucket = map.get(id) ?? emptyBucket(id, name || id);
@@ -60,7 +62,15 @@ function addToBucket(
   bucket.volumen_kg += volumenKg || 0;
   bucket.registros += registros;
   if (clienteId) bucket.clientes.add(clienteId);
+  // En agregados por mes/departamento no existen IDs de clientes. Guardamos el
+  // máximo de clientes únicos informado por la fuente para no mostrar 0 en tooltip.
+  if (clientesUnicos > 0) bucket.clientes_unicos = Math.max(bucket.clientes_unicos, clientesUnicos);
   map.set(id, bucket);
+}
+
+export function getBucketClientCount(bucket: AggregatedBucket | undefined): number {
+  if (!bucket) return 0;
+  return Math.max(bucket.clientes.size, bucket.clientes_unicos || 0);
 }
 
 function periodMatches(periodo: string, anio: number, mes: number, filters: FilterState): boolean {
@@ -97,7 +107,7 @@ function topBucketName(map: Map<string, AggregatedBucket>, fallback: string): st
 }
 
 function baseMetricsFromBuckets(
-  source: 'agregados' | 'detalle-csv',
+  source: 'agregados' | 'cliente-agregado' | 'departamento-agregado' | 'detalle-csv',
   provinceSales: Map<string, AggregatedBucket>,
   productSales: Map<string, AggregatedBucket>,
   categorySales: Map<string, AggregatedBucket>,
@@ -144,6 +154,33 @@ export function buildLookupMaps(clientTotals: ClientTotalSale[], products: Produ
   };
 }
 
+
+function hasProductLevelFilter(filters: FilterState): boolean {
+  return Boolean(filters.productoId || filters.categoriaProducto);
+}
+
+function hasPeriodLevelFilter(filters: FilterState): boolean {
+  return Boolean(filters.anio || filters.mes || filters.periodoDesde || filters.periodoHasta);
+}
+
+function hasClientLevelFilter(filters: FilterState): boolean {
+  return Boolean(
+    filters.tipoCliente ||
+    filters.segmentoCliente ||
+    filters.clienteQuery.trim() ||
+    filters.departamentoId ||
+    filters.localidadQuery.trim()
+  );
+}
+
+export function canUseClientTotals(filters: FilterState): boolean {
+  return hasClientLevelFilter(filters) && !hasProductLevelFilter(filters) && !hasPeriodLevelFilter(filters);
+}
+
+export function needsDepartmentAggregates(filters: FilterState): boolean {
+  return Boolean(filters.departamentoId) && !hasProductLevelFilter(filters) && !filters.tipoCliente && !filters.segmentoCliente && !filters.clienteQuery.trim() && !filters.localidadQuery.trim();
+}
+
 export function computeDataFromProvinceAggregates(
   rows: ProvinceMonthSale[],
   clientTotals: ClientTotalSale[],
@@ -169,6 +206,7 @@ export function computeDataFromProvinceAggregates(
       row.margen_bruto,
       row.volumen_kg,
       row.registros_venta,
+      row.clientes_unicos,
     );
   }
 
@@ -191,6 +229,124 @@ export function computeDataFromProvinceAggregates(
     filteredClientIds: null,
   };
 }
+
+export function computeDataFromClientTotals(
+  clientTotals: ClientTotalSale[],
+  products: ProductRecord[],
+  filters: FilterState,
+  fallbackProduct: string,
+): V7ComputedData {
+  const provinceSales = new Map<string, AggregatedBucket>();
+  const departmentSales = new Map<string, AggregatedBucket>();
+  const productSales = new Map<string, AggregatedBucket>();
+  const categorySales = new Map<string, AggregatedBucket>();
+  const filteredClientIds = new Set<string>();
+
+  for (const client of clientTotals) {
+    if (!clientMatches(client, filters)) continue;
+    filteredClientIds.add(client.cliente_id);
+    addToBucket(
+      provinceSales,
+      client.provincia_id,
+      client.provincia_nombre,
+      client.cliente_id,
+      client.venta_neta,
+      client.unidades,
+      client.margen_bruto,
+      client.volumen_kg,
+      client.registros_venta,
+    );
+    addToBucket(
+      departmentSales,
+      client.departamento_id,
+      client.departamento_nombre,
+      client.cliente_id,
+      client.venta_neta,
+      client.unidades,
+      client.margen_bruto,
+      client.volumen_kg,
+      client.registros_venta,
+    );
+  }
+
+  for (const product of products) {
+    addToBucket(productSales, product.producto_id, product.producto_nombre, '', 0, 0, 0, 0, 0);
+    addToBucket(categorySales, product.categoria_producto, product.categoria_producto, '', 0, 0, 0, 0, 0);
+  }
+
+  return {
+    metrics: baseMetricsFromBuckets('cliente-agregado', provinceSales, productSales, categorySales, filteredClientIds.size, fallbackProduct),
+    provinceSales,
+    departmentSales,
+    productSales,
+    categorySales,
+    filteredClientIds,
+  };
+}
+
+export function computeDataFromDepartmentAggregates(
+  rows: DepartmentMonthSale[],
+  clientTotals: ClientTotalSale[],
+  products: ProductRecord[],
+  filters: FilterState,
+  fallbackProduct: string,
+): V7ComputedData {
+  const provinceSales = new Map<string, AggregatedBucket>();
+  const departmentSales = new Map<string, AggregatedBucket>();
+  const productSales = new Map<string, AggregatedBucket>();
+  const categorySales = new Map<string, AggregatedBucket>();
+  const filteredClientIds = new Set<string>();
+
+  for (const client of clientTotals) {
+    if (clientMatches(client, filters)) filteredClientIds.add(client.cliente_id);
+  }
+
+  for (const row of rows) {
+    if (!periodMatches(row.periodo, row.anio, row.mes, filters)) continue;
+    if (filters.provinciaId && row.provincia_id !== filters.provinciaId) continue;
+    if (filters.departamentoId && row.departamento_id !== filters.departamentoId) continue;
+
+    addToBucket(
+      provinceSales,
+      row.provincia_id,
+      row.provincia_nombre,
+      '',
+      row.venta_neta,
+      row.unidades,
+      row.margen_bruto,
+      row.volumen_kg,
+      row.registros_venta,
+      row.clientes_unicos,
+    );
+    addToBucket(
+      departmentSales,
+      row.departamento_id,
+      row.departamento_nombre,
+      '',
+      row.venta_neta,
+      row.unidades,
+      row.margen_bruto,
+      row.volumen_kg,
+      row.registros_venta,
+      row.clientes_unicos,
+    );
+  }
+
+  for (const product of products) {
+    addToBucket(productSales, product.producto_id, product.producto_nombre, '', 0, 0, 0, 0, 0);
+    addToBucket(categorySales, product.categoria_producto, product.categoria_producto, '', 0, 0, 0, 0, 0);
+  }
+
+  return {
+    metrics: baseMetricsFromBuckets('departamento-agregado', provinceSales, productSales, categorySales, filteredClientIds.size, fallbackProduct),
+    provinceSales,
+    departmentSales,
+    productSales,
+    categorySales,
+    filteredClientIds,
+  };
+}
+
 
 export function computeDataFromDetailedSales(
   rows: DetailedSaleRow[],
@@ -302,7 +458,7 @@ export function enrichGeoJsonWithSales(
         unidades_v7: bucket?.unidades ?? 0,
         margen_bruto_v7: bucket?.margen_bruto ?? 0,
         volumen_kg_v7: bucket?.volumen_kg ?? 0,
-        clientes_v7: bucket?.clientes.size ?? 0,
+        clientes_v7: getBucketClientCount(bucket),
       },
     };
   });
@@ -333,15 +489,8 @@ export function getTopSalesValue(map: Map<string, AggregatedBucket>): number {
 }
 
 export function shouldLoadDetailedSales(filters: FilterState): boolean {
-  return Boolean(
-    filters.productoId ||
-    filters.categoriaProducto ||
-    filters.tipoCliente ||
-    filters.segmentoCliente ||
-    filters.clienteQuery.trim() ||
-    filters.departamentoId ||
-    filters.localidadQuery.trim()
-  );
+  if (hasProductLevelFilter(filters)) return true;
+  return hasClientLevelFilter(filters) && hasPeriodLevelFilter(filters);
 }
 
 
@@ -364,9 +513,63 @@ export function computeDepartmentSalesFromAggregates(
       row.margen_bruto,
       row.volumen_kg,
       row.registros_venta,
+      row.clientes_unicos,
     );
   }
   return departmentSales;
+}
+
+
+export function computeDepartmentSalesFromClientTotals(
+  clientTotals: ClientTotalSale[],
+  filters: FilterState,
+): Map<string, AggregatedBucket> {
+  const departmentSales = new Map<string, AggregatedBucket>();
+  for (const client of clientTotals) {
+    if (!clientMatches(client, filters)) continue;
+    addToBucket(
+      departmentSales,
+      client.departamento_id,
+      client.departamento_nombre,
+      client.cliente_id,
+      client.venta_neta,
+      client.unidades,
+      client.margen_bruto,
+      client.volumen_kg,
+      client.registros_venta,
+      1,
+    );
+  }
+  return departmentSales;
+}
+
+export function mergeClientCountsIntoDepartmentSales(
+  departmentSales: Map<string, AggregatedBucket>,
+  clientTotals: ClientTotalSale[],
+  filters: FilterState,
+): Map<string, AggregatedBucket> {
+  const merged = new Map<string, AggregatedBucket>();
+
+  for (const [id, bucket] of departmentSales.entries()) {
+    merged.set(id, {
+      ...bucket,
+      clientes: new Set(bucket.clientes),
+      clientes_unicos: bucket.clientes_unicos || bucket.clientes.size,
+    });
+  }
+
+  const clientTotalsByDepartment = computeDepartmentSalesFromClientTotals(clientTotals, filters);
+  for (const [id, clientBucket] of clientTotalsByDepartment.entries()) {
+    const existing = merged.get(id);
+    if (!existing) {
+      merged.set(id, clientBucket);
+      continue;
+    }
+    for (const clientId of clientBucket.clientes) existing.clientes.add(clientId);
+    existing.clientes_unicos = Math.max(existing.clientes_unicos, clientBucket.clientes.size, clientBucket.clientes_unicos);
+  }
+
+  return merged;
 }
 
 export function computeSalesByClientFromDetailed(

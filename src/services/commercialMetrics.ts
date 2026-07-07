@@ -1,0 +1,15 @@
+export {
+  DEFAULT_FILTERS,
+  canUseClientTotals,
+  computeDataFromClientTotals,
+  computeDataFromDepartmentAggregates,
+  computeDataFromDetailedSales,
+  computeDataFromProvinceAggregates,
+  computeDepartmentSalesFromAggregates,
+  computeSalesByClientFromDetailed,
+  getBucketClientCount,
+  getTopSalesValue,
+  mergeClientCountsIntoDepartmentSales,
+  needsDepartmentAggregates,
+  shouldLoadDetailedSales,
+} from '../utils/aggregations';

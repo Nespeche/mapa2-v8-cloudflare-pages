@@ -154,7 +154,7 @@ export interface SalesMetrics {
   productoLider: string;
   categoriaLider: string;
   registros: number;
-  fuente: 'agregados' | 'detalle-csv';
+  fuente: 'agregados' | 'cliente-agregado' | 'departamento-agregado' | 'detalle-csv';
 }
 
 export interface AggregatedBucket {
@@ -165,6 +165,11 @@ export interface AggregatedBucket {
   margen_bruto: number;
   volumen_kg: number;
   clientes: Set<string>;
+  /**
+   * Recuento disponible cuando la fuente ya viene agregada y no incluye IDs de clientes.
+   * En buckets con IDs, el Set `clientes` sigue siendo la fuente más precisa.
+   */
+  clientes_unicos: number;
   registros: number;
 }
 

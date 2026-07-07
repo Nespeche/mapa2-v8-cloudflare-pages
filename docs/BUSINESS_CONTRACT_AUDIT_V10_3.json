@@ -1,0 +1,35 @@
+{
+  "phase": "V10.3 — Business contract checks",
+  "generated_at": "2026-07-07T01:20:45.730Z",
+  "status": "OK",
+  "expected": {
+    "clientes": 2000,
+    "productos": 65,
+    "ventasMensuales": 128998,
+    "calendario": 24,
+    "periodoDesde": "2025-01",
+    "periodoHasta": "2026-12",
+    "ventasClienteTotales": 2000,
+    "ventasDepartamentoMes": 6432,
+    "ventasProductoMes": 1560,
+    "ventasProvinciaMes": 264
+  },
+  "actual": {
+    "clientes_geojson_features": 2000,
+    "clientes_agregados": 2000,
+    "productos": 65,
+    "ventas_mensuales_csv": 128998,
+    "calendario": 24,
+    "ventas_departamento_mes": 6432,
+    "ventas_producto_mes": 1560,
+    "ventas_provincia_mes": 264,
+    "csv_clientes_unicos": 2000,
+    "csv_productos_unicos": 65,
+    "buenos_aires_clientes": 1400,
+    "bolivar_clientes": 7,
+    "venta_neta_total_csv": 156598296863.76,
+    "venta_neta_total_agregado_inicial": 156598296863.76
+  },
+  "warnings": [],
+  "violations": []
+}

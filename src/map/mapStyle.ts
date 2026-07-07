@@ -3,25 +3,18 @@ import type { StyleSpecification } from 'maplibre-gl';
 export const argentinaInitialCenter: [number, number] = [-64.4, -38.4];
 export const argentinaInitialZoom = 3.35;
 
+// V10.1: estilo base interno, sin dependencia inicial de tiles externos.
+// La app geoespacial renderiza con GeoJSON propio; esto evita que un bloqueo o latencia de OSM
+// impida el evento de estilo y deje el mapa en blanco durante desarrollo o deploy estático.
 export const mapBaseStyle: StyleSpecification = {
   version: 8,
-  sources: {
-    osm: {
-      type: 'raster',
-      tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
-      tileSize: 256,
-      attribution: '© OpenStreetMap contributors',
-    },
-  },
+  sources: {},
   layers: [
     {
-      id: 'osm-base',
-      type: 'raster',
-      source: 'osm',
+      id: 'mapa2-background',
+      type: 'background',
       paint: {
-        'raster-opacity': 0.46,
-        'raster-saturation': -0.68,
-        'raster-contrast': 0.05,
+        'background-color': '#dbe4f0',
       },
     },
   ],

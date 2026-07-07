@@ -1,0 +1,224 @@
+{
+  "phase": "V10 — Optimización avanzada de performance, GeoJSON y carga de datos",
+  "generated_at": "2026-07-07T01:20:40.433Z",
+  "base": "V9 aprobada — commit informado 985782d",
+  "dist_exists": true,
+  "file_count": 310,
+  "total_size_bytes": 176983471,
+  "total_size_mib": 168.7846,
+  "largest_asset": {
+    "path": "data/business/ventas_mensuales.csv",
+    "size_bytes": 14680144,
+    "size_mib": 14.0001,
+    "extension": ".csv"
+  },
+  "top_20_largest": [
+    {
+      "path": "data/business/ventas_mensuales.csv",
+      "size_bytes": 14680144,
+      "size_mib": 14.0001,
+      "extension": ".csv"
+    },
+    {
+      "path": "data/localidades_poligonos_fracciones.geojson",
+      "size_bytes": 10201154,
+      "size_mib": 9.7286,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_14_cordoba/radios.geojson",
+      "size_bytes": 9699726,
+      "size_mib": 9.2504,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_82_santa_fe/radios.geojson",
+      "size_bytes": 7775663,
+      "size_mib": 7.4155,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson",
+      "size_bytes": 5543245,
+      "size_mib": 5.2865,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_30_entre_rios/radios.geojson",
+      "size_bytes": 4764397,
+      "size_mib": 4.5437,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_06_buenos_aires/puntos.geojson",
+      "size_bytes": 4240863,
+      "size_mib": 4.0444,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_06_buenos_aires/fracciones.geojson",
+      "size_bytes": 3866986,
+      "size_mib": 3.6878,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/localidades_poligonos_gobiernos_locales.geojson",
+      "size_bytes": 3585864,
+      "size_mib": 3.4197,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_50_mendoza/radios.geojson",
+      "size_bytes": 3433567,
+      "size_mib": 3.2745,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_90_tucuman/radios.geojson",
+      "size_bytes": 3343256,
+      "size_mib": 3.1884,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_18_corrientes/radios.geojson",
+      "size_bytes": 2937081,
+      "size_mib": 2.801,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_54_misiones/radios.geojson",
+      "size_bytes": 2936954,
+      "size_mib": 2.8009,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_22_chaco/radios.geojson",
+      "size_bytes": 2820564,
+      "size_mib": 2.6899,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_66_salta/radios.geojson",
+      "size_bytes": 2699215,
+      "size_mib": 2.5742,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_14_cordoba/puntos.geojson",
+      "size_bytes": 2610744,
+      "size_mib": 2.4898,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/business/agregados/ventas_departamento_mes.json",
+      "size_bytes": 2450617,
+      "size_mib": 2.3371,
+      "extension": ".json"
+    },
+    {
+      "path": "data/provincias/provincia_06_buenos_aires/radios/d_06427.geojson",
+      "size_bytes": 2366157,
+      "size_mib": 2.2565,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_62_rio_negro/radios.geojson",
+      "size_bytes": 1788350,
+      "size_mib": 1.7055,
+      "extension": ".geojson"
+    },
+    {
+      "path": "data/provincias/provincia_82_santa_fe/puntos.geojson",
+      "size_bytes": 1768151,
+      "size_mib": 1.6862,
+      "extension": ".geojson"
+    }
+  ],
+  "by_extension": [
+    {
+      "extension": ".geojson",
+      "files": 287,
+      "size_bytes": 156026466,
+      "size_mib": 148.7984
+    },
+    {
+      "extension": ".csv",
+      "files": 1,
+      "size_bytes": 14680144,
+      "size_mib": 14.0001
+    },
+    {
+      "extension": ".json",
+      "files": 12,
+      "size_bytes": 4513725,
+      "size_mib": 4.3046
+    },
+    {
+      "extension": ".js",
+      "files": 2,
+      "size_bytes": 1268670,
+      "size_mib": 1.2099
+    },
+    {
+      "extension": ".png",
+      "files": 3,
+      "size_bytes": 410137,
+      "size_mib": 0.3911
+    },
+    {
+      "extension": ".css",
+      "files": 1,
+      "size_bytes": 81694,
+      "size_mib": 0.0779
+    },
+    {
+      "extension": ".md",
+      "files": 1,
+      "size_bytes": 1088,
+      "size_mib": 0.001
+    },
+    {
+      "extension": ".html",
+      "files": 1,
+      "size_bytes": 712,
+      "size_mib": 0.0007
+    },
+    {
+      "extension": "[sin extension]",
+      "files": 1,
+      "size_bytes": 567,
+      "size_mib": 0.0005
+    },
+    {
+      "extension": ".svg",
+      "files": 1,
+      "size_bytes": 268,
+      "size_mib": 0.0003
+    }
+  ],
+  "files_over_25_mib": [],
+  "suspicious_dist_files": [],
+  "raw_or_output_files": [],
+  "has_index_html": true,
+  "has_headers": true,
+  "has_redirects": false,
+  "cloudflare": {
+    "build_command": "npm run build",
+    "output_directory": "dist",
+    "max_single_asset_mib": 25,
+    "git_or_wrangler_file_limit": 20000,
+    "drag_and_drop_file_limit": 1000
+  },
+  "v10_optimizations": [
+    "Code splitting: MapView/MapLibre se cargan por import dinámico.",
+    "clientes.geojson sale de la carga inicial y se solicita solo en capas clientes/clusters/heatmap.",
+    "Cache en memoria para JSON/text fetch: evita refetch al alternar capas/filtros.",
+    "Actualización granular de sources MapLibre: reduce setData innecesarios.",
+    "Minificación lossless de JSON/GeoJSON públicos: reduce peso raw de dist sin alterar datos.",
+    "Uso de agregados cliente/departamento V10 para evitar CSV detallado en filtros que no lo requieren.",
+    "Headers de cache moderado para /data/* y cache largo inmutable para /assets/*."
+  ],
+  "warnings": [],
+  "violations": [],
+  "blocking_errors": 0
+}

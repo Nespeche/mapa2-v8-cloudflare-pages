@@ -1,77 +1,123 @@
-# Mapa 2 V9 — UI/UX final para Cloudflare Pages
+# Mapa 2 V10.3 — Estabilización, contratos de datos y anti-regresión
 
-**Estado de fase:** V9 implementada sobre V8 validada.  
+**Estado de fase:** V10.3 implementada sobre V10.2 funcional.  
 **Deploy objetivo:** Cloudflare Pages Free.  
 **Build command:** `npm run build`  
-**Build output directory:** `dist`
+**Build output directory:** `dist`  
+**Node:** `22.16.0` según `.node-version`.
 
-Mapa 2 V9 refina la experiencia visual y de uso de la app geoespacial publicada en V8. Mantiene la arquitectura estática con **Vite + React + TypeScript + MapLibre**, preserva la base censal V5.1, la base comercial sintética V6, el fix runtime V7.1 y la configuración de deploy V8.
+Mapa 2 es una app web geoespacial profesional para Argentina basada en **Vite + React + TypeScript + MapLibre**, datos estáticos en `public/data`, carga progresiva y deploy estático en Cloudflare Pages Free.
 
-> Los clientes, productos y ventas son datos sintéticos. No representan clientes reales ni operaciones reales.
+V10.3 no implementa backend, no rediseña la UI, no regenera V5.1 ni V6 y no cambia el modelo territorial `País → Provincia → Localidad`. La fase agrega contratos internos, validadores runtime, scripts anti-regresión y documentación para impedir que futuras fases rompan funcionalidades ya validadas.
 
----
-
-## Qué cambia en V9
-
-- Corrección visible de versión: la UI y metadata ya no muestran “V7”; ahora muestran `MAPA 2 · V9`.
-- UI más profesional: panel lateral refinado, KPIs con mayor jerarquía, tarjetas glass moderadas, mejor espaciado y contraste.
-- Navegación más clara: capas con ayuda contextual, filtros con conteo de activos y estados de carga más visibles.
-- Responsive mejorado: se elimina el ancho mínimo rígido y se adapta mejor a notebooks y pantallas medianas.
-- Accesibilidad básica: inputs/selects con `id` y `name`, labels asociados, foco visible y estados con `aria-live`.
-- Estados visuales: loading inicial, carga bajo demanda, estado sin resultados y error inicial más claros.
-- Microinteracciones: hover/focus states, transiciones sutiles y soporte de `prefers-reduced-motion`.
+> Los clientes, productos y ventas son datos sintéticos V6. No representan clientes reales ni operaciones reales.
 
 ---
 
-## Estado preservado
-
-V9 no regenera ni modifica datos censales o comerciales. Se preserva:
+## Base preservada
 
 ```text
-V5.1 — base censal y geográfica validada
-V6   — base comercial sintética de autopartes
-V7.1 — fix runtime de frontend
-V8   — deploy profesional en Cloudflare Pages Free
+V5.1 — base censal/geográfica preservada
+V6   — base comercial sintética de autopartes preservada
+V7.1 — fix runtime de frontend preservado
+V8   — deploy Cloudflare Pages Free preservado
+V9   — UI/UX profesional preservada
+V10  — performance/carga progresiva preservada
+V10.1 — fix visibilidad de mapa preservado
+V10.2 — fix conteo/visibilidad de clientes preservado
+V10.3 — contratos de datos y anti-regresión
 ```
+
+---
+
+## Qué agrega V10.3
+
+- `src/domain/appVersion.ts`, `businessContracts.ts`, `geoContracts.ts`, `dataContracts.ts`.
+- `src/data/dataManifest.ts` para centralizar rutas iniciales/lazy.
+- `src/data/dataValidators.ts` con validaciones runtime sin dependencias nuevas.
+- `src/services/commercialMetrics.ts`, `filterEngine.ts`, `geoEnrichment.ts` como capa progresiva de servicios sin romper `src/utils/aggregations.ts`.
+- Scripts nuevos:
+  - `npm run check:data-contracts`
+  - `npm run check:business-contracts`
+  - `npm run check:geo-contracts`
+  - `npm run check:map-smoke`
+  - `npm run validate:release`
+- Documentación V10.3 en `docs/`.
+
+---
+
+## Contratos principales
+
+### Comercial V6
+
+- Clientes: `2.000`.
+- Productos: `65`.
+- Ventas CSV: `128.998` registros.
+- Calendario: `24` meses, de `2025-01` a `2026-12`.
+- Agregados esperados:
+  - `ventas_cliente_totales.json`: `2.000` clientes.
+  - `ventas_departamento_mes.json`: `6.432` registros.
+  - `ventas_producto_mes.json`: `1.560` registros.
+  - `ventas_provincia_mes.json`: `264` registros.
+- IDs de clientes y productos del CSV deben existir en sus maestros.
+- Agregados por cliente, departamento/mes, producto/mes y provincia/mes deben cerrar contra el CSV.
+
+### Geográfico/censal V5.1
+
+- `provincias.geojson`: `24` features.
+- `provincias_index.json`: `24` provincias.
+- IDs territoriales comerciales deben existir en geometrías.
+- Ningún asset público debe superar `25 MiB`.
+- Radios nacionales, clientes y CSV detallado no se cargan al inicio.
+
+### KPIs
+
+La semántica completa está documentada en `docs/DATA_CONTRACTS_V10_3.md`. En síntesis, `clientesVisibles` significa clientes territoriales filtrados cuando se usan agregados; si el CSV detallado se carga por filtro de período/producto, significa clientes con ventas activas en ese subconjunto.
 
 ---
 
 ## Instalación local en Windows / PowerShell
 
-Extraé el ZIP en una ruta corta, por ejemplo:
+Extraer el ZIP en una ruta corta, por ejemplo:
 
 ```powershell
-C:\Mapa2\mapa2_v9_ui_ux_final
+C:\Mapa2\mapa2_v10_3_data_contracts_antiregression
 ```
 
-Entrá a la carpeta:
+Entrar a la carpeta:
 
 ```powershell
-cd C:\Mapa2\mapa2_v9_ui_ux_final
+cd C:\Mapa2\mapa2_v10_3_data_contracts_antiregression
 ```
 
-Instalá dependencias:
+Instalar dependencias:
 
 ```powershell
 npm install
 ```
 
-Corré local:
+Ejecutar validaciones:
+
+```powershell
+npm run check:client-counts
+npm run check:data-contracts
+npm run check:business-contracts
+npm run check:geo-contracts
+npm run check:map-smoke
+npm run build
+npm run validate:release
+```
+
+Correr local:
 
 ```powershell
 npm run dev
 ```
 
-Abrí:
+Abrir:
 
 ```text
 http://127.0.0.1:5173/
-```
-
-Build de producción:
-
-```powershell
-npm run build
 ```
 
 Preview del build:
@@ -80,7 +126,7 @@ Preview del build:
 npm run preview
 ```
 
-Abrí:
+Abrir:
 
 ```text
 http://127.0.0.1:4173/
@@ -88,27 +134,30 @@ http://127.0.0.1:4173/
 
 ---
 
-## Validación mínima
+## Scripts disponibles
 
-Validar localmente:
+```powershell
+npm run dev
+npm run build
+npm run preview
+npm run check:client-counts
+npm run check:data-contracts
+npm run check:business-contracts
+npm run check:geo-contracts
+npm run check:map-smoke
+npm run check:cloudflare
+npm run audit:dist
+npm run validate:release
+npm run data:minify
+```
 
-- `npm install` funciona.
-- `npm run dev` abre la app.
-- `npm run build` genera `dist`.
-- El mapa renderiza.
-- Los KPIs funcionan.
-- Los filtros funcionan.
-- El detalle comercial bajo demanda funciona.
-- La UI muestra `MAPA 2 · V9`.
-- No aparece nuevamente un mensaje fijo de carga bajo demanda.
-- No hay errores bloqueantes en consola.
-- En Network, filtrar `404` y confirmar que no haya assets propios faltantes.
+`validate:release` ejecuta build y los contratos obligatorios de datos, negocio y geografía.
 
 ---
 
 ## Deploy Cloudflare Pages
 
-Usar GitHub integration con la misma configuración validada en V8:
+Configuración esperada:
 
 ```text
 Framework preset: React (Vite) o None
@@ -119,18 +168,35 @@ Root directory: /
 Node version: 22.16.0
 ```
 
-No se requiere backend, Workers, Pages Functions, D1, R2 ni KV para V9.
+No se requiere backend, Workers, Pages Functions, D1, R2, KV, Railway, Postgres ni PostGIS en V10.3.
 
 ---
 
-## Documentación V9
-
-Ver:
+## Próximo orden documentado
 
 ```text
-docs/RUNBOOK_V9_UI_UX_FINAL.md
-docs/CHANGELOG_V9.md
-docs/DIST_AUDIT_V9.md
-docs/DIST_AUDIT_V9.json
-docs/VALIDATION_LOG_V9.txt
+V10.3 — Estabilización, contratos de datos y anti-regresión.
+V10.4 — Decisión de arquitectura de carga de datos y backend.
+V11 — Implementación de carga de datos/backend si se justifica.
+V12 — Refactor y mejora profesional del frontend.
+V13 — Analytics comercial avanzado y storytelling.
+V14 — Producto final, documentación pública y mantenimiento.
+```
+
+Backend no se implementa automáticamente. Railway/Postgres/PostGIS solo debe evaluarse si aparece una necesidad real de consultas geoespaciales dinámicas.
+
+---
+
+## Documentación V10.3
+
+```text
+docs/ARCHITECTURE_V10_3.md
+docs/DATA_CONTRACTS_V10_3.md
+docs/ANTI_REGRESSION_CHECKLIST_V10_3.md
+docs/VALIDATION_LOG_V10_3.md
+docs/CHANGELOG_V10_3.md
+docs/DATA_CONTRACT_AUDIT_V10_3.md
+docs/BUSINESS_CONTRACT_AUDIT_V10_3.md
+docs/GEO_CONTRACT_AUDIT_V10_3.md
+docs/MAP_SMOKE_AUDIT_V10_3.md
 ```

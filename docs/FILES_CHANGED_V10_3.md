@@ -1,0 +1,55 @@
+# Mapa 2 — Archivos modificados V10.3
+
+## Agregados
+- `docs/ANTI_REGRESSION_CHECKLIST_V10_3.md`
+- `docs/ARCHITECTURE_V10_3.md`
+- `docs/BUSINESS_CONTRACT_AUDIT_V10_3.json`
+- `docs/BUSINESS_CONTRACT_AUDIT_V10_3.md`
+- `docs/CHANGELOG_V10_3.md`
+- `docs/CLIENT_COUNT_AUDIT_V10_3.json`
+- `docs/CLIENT_COUNT_AUDIT_V10_3.md`
+- `docs/DATA_CONTRACTS_V10_3.md`
+- `docs/DATA_CONTRACT_AUDIT_V10_3.json`
+- `docs/DATA_CONTRACT_AUDIT_V10_3.md`
+- `docs/GEO_CONTRACT_AUDIT_V10_3.json`
+- `docs/GEO_CONTRACT_AUDIT_V10_3.md`
+- `docs/MAP_SMOKE_AUDIT_V10_3.json`
+- `docs/MAP_SMOKE_AUDIT_V10_3.md`
+- `docs/PREVIEW_HTTP_HEADERS_V10_3.txt`
+- `docs/PREVIEW_OUTPUT_V10_3.txt`
+- `docs/VALIDATE_RELEASE_OUTPUT_V10_3.txt`
+- `docs/VALIDATION_LOG_V10_3.md`
+- `docs/VALIDATION_OUTPUT_V10_3.txt`
+- `scripts/check_business_contracts.mjs`
+- `scripts/check_data_contracts.mjs`
+- `scripts/check_geo_contracts.mjs`
+- `scripts/check_map_smoke_v10_3.mjs`
+- `scripts/lib/contract_helpers.mjs`
+- `src/data/dataManifest.ts`
+- `src/data/dataValidators.ts`
+- `src/domain/appVersion.ts`
+- `src/domain/businessContracts.ts`
+- `src/domain/dataContracts.ts`
+- `src/domain/geoContracts.ts`
+- `src/services/commercialMetrics.ts`
+- `src/services/filterEngine.ts`
+- `src/services/geoEnrichment.ts`
+
+## Modificados
+- `README.md`
+- `SKILL.md`
+- `docs/CLIENT_COUNT_AUDIT_V10_2.json`
+- `docs/CLIENT_COUNT_AUDIT_V10_2.md`
+- `docs/DIST_AUDIT_V10.json`
+- `docs/DIST_AUDIT_V10.md`
+- `docs/PROJECT_CONTEXT.md`
+- `index.html`
+- `package-lock.json`
+- `package.json`
+- `scripts/check_v10_client_counts.mjs`
+- `src/app/App.tsx`
+- `src/data/dataClient.ts`
+- `src/data/dataPaths.ts`
+
+## Removidos
+- Ninguno.

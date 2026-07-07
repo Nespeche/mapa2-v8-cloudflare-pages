@@ -1,0 +1,193 @@
+{
+  "phase": "V10.3 — Geo/census contract checks",
+  "generated_at": "2026-07-07T01:20:46.872Z",
+  "status": "OK",
+  "actual": {
+    "provincias_geojson_features": 24,
+    "provincias_index_count": 24,
+    "departamentos_ids": 529,
+    "clientes_agregados": 2000,
+    "clientes_geojson_features": 2000,
+    "public_data_files": 301,
+    "max_public_asset": {
+      "rel": "data/business/ventas_mensuales.csv",
+      "size": 14680144
+    },
+    "top_public_assets": [
+      {
+        "rel": "data/business/ventas_mensuales.csv",
+        "size_bytes": 14680144,
+        "size_mib": 14
+      },
+      {
+        "rel": "data/localidades_poligonos_fracciones.geojson",
+        "size_bytes": 10201154,
+        "size_mib": 9.729
+      },
+      {
+        "rel": "data/provincias/provincia_14_cordoba/radios.geojson",
+        "size_bytes": 9699726,
+        "size_mib": 9.25
+      },
+      {
+        "rel": "data/provincias/provincia_82_santa_fe/radios.geojson",
+        "size_bytes": 7775663,
+        "size_mib": 7.415
+      },
+      {
+        "rel": "data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson",
+        "size_bytes": 5543245,
+        "size_mib": 5.286
+      },
+      {
+        "rel": "data/provincias/provincia_30_entre_rios/radios.geojson",
+        "size_bytes": 4764397,
+        "size_mib": 4.544
+      },
+      {
+        "rel": "data/provincias/provincia_06_buenos_aires/puntos.geojson",
+        "size_bytes": 4240863,
+        "size_mib": 4.044
+      },
+      {
+        "rel": "data/provincias/provincia_06_buenos_aires/fracciones.geojson",
+        "size_bytes": 3866986,
+        "size_mib": 3.688
+      },
+      {
+        "rel": "data/localidades_poligonos_gobiernos_locales.geojson",
+        "size_bytes": 3585864,
+        "size_mib": 3.42
+      },
+      {
+        "rel": "data/provincias/provincia_50_mendoza/radios.geojson",
+        "size_bytes": 3433567,
+        "size_mib": 3.275
+      }
+    ]
+  },
+  "departmentLayerSummary": [
+    {
+      "provincia_id": "provincia:02",
+      "path": "provincias/provincia_02_ciudad_autonoma_de_buenos_aires/departamentos.geojson",
+      "features": 15
+    },
+    {
+      "provincia_id": "provincia:06",
+      "path": "provincias/provincia_06_buenos_aires/departamentos.geojson",
+      "features": 135
+    },
+    {
+      "provincia_id": "provincia:10",
+      "path": "provincias/provincia_10_catamarca/departamentos.geojson",
+      "features": 16
+    },
+    {
+      "provincia_id": "provincia:14",
+      "path": "provincias/provincia_14_cordoba/departamentos.geojson",
+      "features": 26
+    },
+    {
+      "provincia_id": "provincia:18",
+      "path": "provincias/provincia_18_corrientes/departamentos.geojson",
+      "features": 25
+    },
+    {
+      "provincia_id": "provincia:22",
+      "path": "provincias/provincia_22_chaco/departamentos.geojson",
+      "features": 25
+    },
+    {
+      "provincia_id": "provincia:26",
+      "path": "provincias/provincia_26_chubut/departamentos.geojson",
+      "features": 15
+    },
+    {
+      "provincia_id": "provincia:30",
+      "path": "provincias/provincia_30_entre_rios/departamentos.geojson",
+      "features": 17
+    },
+    {
+      "provincia_id": "provincia:34",
+      "path": "provincias/provincia_34_formosa/departamentos.geojson",
+      "features": 9
+    },
+    {
+      "provincia_id": "provincia:38",
+      "path": "provincias/provincia_38_jujuy/departamentos.geojson",
+      "features": 16
+    },
+    {
+      "provincia_id": "provincia:42",
+      "path": "provincias/provincia_42_la_pampa/departamentos.geojson",
+      "features": 22
+    },
+    {
+      "provincia_id": "provincia:46",
+      "path": "provincias/provincia_46_la_rioja/departamentos.geojson",
+      "features": 18
+    },
+    {
+      "provincia_id": "provincia:50",
+      "path": "provincias/provincia_50_mendoza/departamentos.geojson",
+      "features": 18
+    },
+    {
+      "provincia_id": "provincia:54",
+      "path": "provincias/provincia_54_misiones/departamentos.geojson",
+      "features": 17
+    },
+    {
+      "provincia_id": "provincia:58",
+      "path": "provincias/provincia_58_neuquen/departamentos.geojson",
+      "features": 16
+    },
+    {
+      "provincia_id": "provincia:62",
+      "path": "provincias/provincia_62_rio_negro/departamentos.geojson",
+      "features": 13
+    },
+    {
+      "provincia_id": "provincia:66",
+      "path": "provincias/provincia_66_salta/departamentos.geojson",
+      "features": 23
+    },
+    {
+      "provincia_id": "provincia:70",
+      "path": "provincias/provincia_70_san_juan/departamentos.geojson",
+      "features": 19
+    },
+    {
+      "provincia_id": "provincia:74",
+      "path": "provincias/provincia_74_san_luis/departamentos.geojson",
+      "features": 9
+    },
+    {
+      "provincia_id": "provincia:78",
+      "path": "provincias/provincia_78_santa_cruz/departamentos.geojson",
+      "features": 7
+    },
+    {
+      "provincia_id": "provincia:82",
+      "path": "provincias/provincia_82_santa_fe/departamentos.geojson",
+      "features": 19
+    },
+    {
+      "provincia_id": "provincia:86",
+      "path": "provincias/provincia_86_santiago_del_estero/departamentos.geojson",
+      "features": 27
+    },
+    {
+      "provincia_id": "provincia:90",
+      "path": "provincias/provincia_90_tucuman/departamentos.geojson",
+      "features": 17
+    },
+    {
+      "provincia_id": "provincia:94",
+      "path": "provincias/provincia_94_tierra_del_fuego_antartida_e_islas_del_atlantico_sur/departamentos.geojson",
+      "features": 5
+    }
+  ],
+  "warnings": [],
+  "violations": []
+}

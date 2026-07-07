@@ -1,0 +1,73 @@
+Mapa 2 — VALIDATION LOG V10 / V10.1
+
+Base validada recibida:
+- V9 aprobada por el usuario.
+- V10 performance original generada sobre V9.
+
+Incidencia reportada:
+- En `npm run dev`, la UI cargaba pero el mapa no se visualizaba.
+- Captura local mostraba sidebar, KPIs, topbar y leyenda, pero canvas central sin geometrías visibles.
+
+Diagnóstico:
+- React y carga de datos iniciales funcionaban.
+- El problema estaba localizado en MapLibre/canvas/capas.
+- Posible dependencia excesiva del evento `load` de MapLibre y del estilo con tiles externos.
+- Posible lavado visual por overlay de `.map-stage::before` encima del canvas.
+
+Fix V10.1 aplicado:
+- CSS de MapLibre cargado globalmente desde `src/app/main.tsx`.
+- Estilo base interno sin tiles externos iniciales en `src/map/mapStyle.ts`.
+- Inicialización robusta de capas propias en `style.load`, `load`, `requestAnimationFrame` y fallback timeout.
+- `ResizeObserver` para `map.resize()`.
+- Canvas del mapa por encima del overlay decorativo.
+
+Validaciones ejecutadas en sandbox:
+- Extracción ZIP: OK.
+- Revisión de estructura: OK.
+- `npm run build`: OK.
+- `tsc -b`: OK.
+- `vite build`: OK.
+- `check_cloudflare_dist`: OK.
+- `audit_dist_v10`: OK.
+- `dist`: 168.7779 MiB.
+- Archivos en `dist`: 310.
+- Mayor asset: data/business/ventas_mensuales.csv (14.00 MiB).
+- Archivos > 25 MiB: 0.
+- Errores bloqueantes Cloudflare: 0.
+
+Validación pendiente por el usuario:
+- `npm run dev` visual en Windows/Chrome.
+- Captura de Console.
+- Captura de Network 404.
+- Captura de mapa renderizado.
+- Deploy Cloudflare Pages y log del build.
+
+Conclusión técnica:
+- No conviene aprobar la V10 original sin fix.
+- La V10.1 corrige el punto bloqueante reportado y conserva el alcance V10.
+- No avanzar a V11 hasta validar local y Cloudflare.
+
+## V10.2 — Client Count Tooltip Fix
+
+Fecha: 2026-07-07
+Base: V10.1 Map Visibility Fix
+
+Validaciones ejecutadas:
+- npm install: OK
+- npm run check:client-counts: OK
+- npm run build: OK
+- tsc -b: OK
+- vite build: OK
+- check_cloudflare_dist: OK
+- audit_dist_v10: OK
+
+Resultado auditoría clientes:
+- clientes agregados: 2000
+- departamentos con clientes desde ventas_cliente_totales: 268
+- Bolívar clientes desde totales cliente: 7
+- errores bloqueantes: 0
+
+Corrección:
+- Se preserva clientes_unicos en AggregatedBucket.
+- Se agregan helpers para fusionar conteos de clientes desde ventas_cliente_totales.
+- El tooltip territorial usa el conteo derivado correcto en vez de mostrar 0 cuando la fuente agregada no trae IDs individuales.

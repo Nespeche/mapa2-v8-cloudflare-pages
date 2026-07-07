@@ -1,6 +1,13 @@
 import type { SalesMetrics } from '../types/business';
 import { formatCompactCurrency, formatCurrency, formatNumber } from '../utils/formatters';
 
+function sourceLabel(source: SalesMetrics['fuente']): string {
+  if (source === 'detalle-csv') return 'Detalle CSV bajo demanda';
+  if (source === 'cliente-agregado') return 'Agregado cliente V10';
+  if (source === 'departamento-agregado') return 'Agregado territorial V10';
+  return 'Agregados iniciales';
+}
+
 export function KpiCards({ metrics }: { metrics: SalesMetrics }) {
   const cards = [
     { label: 'Clientes visibles', value: formatNumber(metrics.clientesVisibles), hint: `${formatNumber(metrics.registros)} registros`, tone: 'default' },
@@ -23,7 +30,7 @@ export function KpiCards({ metrics }: { metrics: SalesMetrics }) {
         </article>
       ))}
       <div className="kpi-source" aria-label="Fuente de cálculo de indicadores">
-        <span>{metrics.fuente === 'detalle-csv' ? 'Detalle CSV bajo demanda' : 'Agregados iniciales'}</span>
+        <span>{sourceLabel(metrics.fuente)}</span>
       </div>
     </section>
   );

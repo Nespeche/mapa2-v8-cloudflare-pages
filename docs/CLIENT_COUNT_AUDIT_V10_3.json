@@ -1,0 +1,66 @@
+{
+  "phase": "V10.3 — Anti-regresión de conteo de clientes",
+  "generated_at": "2026-07-07T01:23:36.178Z",
+  "client_total_records": 2000,
+  "department_month_records": 6432,
+  "province_features": 24,
+  "departments_with_clients_from_client_totals": 268,
+  "bolivar_clients_from_client_totals": 7,
+  "bolivar_max_monthly_clients": 7,
+  "top_departments_by_client_count": [
+    {
+      "id": "departamento:06427",
+      "name": "La Matanza",
+      "clients": 90
+    },
+    {
+      "id": "departamento:06441",
+      "name": "La Plata",
+      "clients": 64
+    },
+    {
+      "id": "departamento:06371",
+      "name": "General San Martín",
+      "clients": 40
+    },
+    {
+      "id": "departamento:06490",
+      "name": "Lomas de Zamora",
+      "clients": 37
+    },
+    {
+      "id": "departamento:06658",
+      "name": "Quilmes",
+      "clients": 36
+    },
+    {
+      "id": "departamento:06560",
+      "name": "Moreno",
+      "clients": 31
+    },
+    {
+      "id": "departamento:06638",
+      "name": "Pilar",
+      "clients": 31
+    },
+    {
+      "id": "departamento:06805",
+      "name": "Tigre",
+      "clients": 30
+    },
+    {
+      "id": "departamento:06434",
+      "name": "Lanús",
+      "clients": 29
+    },
+    {
+      "id": "departamento:06274",
+      "name": "Florencio Varela",
+      "clients": 29
+    }
+  ],
+  "status": "OK",
+  "warnings": [],
+  "violations": [],
+  "blocking_errors": 0
+}

@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import maplibregl, { GeoJSONSource, Map as MapLibreMap } from 'maplibre-gl';
-import 'maplibre-gl/dist/maplibre-gl.css';
 import type { AggregatedBucket, ViewMode } from '../types/business';
 import type { GeoJsonFeatureCollection } from '../types/geo';
 import { boundsFromFeature, findFeatureById } from '../map/bounds';
@@ -63,6 +62,11 @@ function tooltipFromProvince(props: Record<string, any>, sales?: AggregatedBucke
   };
 }
 
+function bucketClientCount(bucket?: AggregatedBucket): number {
+  if (!bucket) return 0;
+  return Math.max(bucket.clientes.size, bucket.clientes_unicos || 0);
+}
+
 function tooltipFromDepartment(props: Record<string, any>, sales?: AggregatedBucket): TooltipInfo {
   return {
     title: String(props.nombre ?? props.departamento_nombre ?? props.tooltip_nombre ?? 'Departamento'),
@@ -70,7 +74,7 @@ function tooltipFromDepartment(props: Record<string, any>, sales?: AggregatedBuc
     rows: [
       { label: 'Población 2022', value: formatNumber(Number(props.poblacion_total ?? props.tooltip_poblacion ?? 0)) },
       { label: 'Venta neta', value: formatCompactCurrency(sales?.venta_neta ?? Number(props.venta_neta_v7 ?? 0)) },
-      { label: 'Clientes', value: sales?.clientes.size ?? Number(props.clientes_v7 ?? 0) },
+      { label: 'Clientes', value: bucketClientCount(sales) || Number(props.clientes_v7 ?? 0) },
     ],
   };
 }
@@ -114,23 +118,27 @@ export function MapView({
   const salesRefsRef = useRef(salesRefs);
   salesRefsRef.current = salesRefs;
 
+  const layersReadyRef = useRef(false);
+
   useEffect(() => {
     if (!mapContainerRef.current || mapRef.current) return;
+
+    const container = mapContainerRef.current;
     const map = new maplibregl.Map({
-      container: mapContainerRef.current,
+      container,
       style: mapBaseStyle,
       center: argentinaInitialCenter,
       zoom: argentinaInitialZoom,
       minZoom: 2.6,
       maxZoom: 14,
       attributionControl: false,
+      renderWorldCopies: false,
     });
 
-    map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
-    map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-right');
-    mapRef.current = map;
+    const initializeMapLayers = () => {
+      if (layersReadyRef.current || !map.isStyleLoaded()) return;
+      layersReadyRef.current = true;
 
-    map.on('load', () => {
       updateGeoJsonSource(map, SOURCE_PROVINCIAS, provinciasGeo);
       updateGeoJsonSource(map, SOURCE_DEPARTAMENTOS, departamentosGeo ?? { type: 'FeatureCollection', features: [] });
       updateGeoJsonSource(map, SOURCE_CLIENTES, clientesGeo, true);
@@ -311,12 +319,42 @@ export function MapView({
         if (feature?.properties) onClientSelect(tooltipFromClient(feature.properties));
       });
 
+
+      map.resize();
       setIsReady(true);
+    };
+
+    map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
+    map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-right');
+    mapRef.current = map;
+
+    const resizeObserver = typeof ResizeObserver !== 'undefined'
+      ? new ResizeObserver(() => map.resize())
+      : null;
+    resizeObserver?.observe(container);
+
+    map.on('style.load', initializeMapLayers);
+    map.on('load', initializeMapLayers);
+    map.on('error', (event) => {
+      console.warn('[Mapa2 V10] Evento MapLibre no bloqueante:', event.error?.message ?? event);
     });
 
+    const raf = window.requestAnimationFrame(() => {
+      map.resize();
+      initializeMapLayers();
+    });
+    const timer = window.setTimeout(() => {
+      map.resize();
+      initializeMapLayers();
+    }, 350);
+
     return () => {
+      window.cancelAnimationFrame(raf);
+      window.clearTimeout(timer);
+      resizeObserver?.disconnect();
       map.remove();
       mapRef.current = null;
+      layersReadyRef.current = false;
       setIsReady(false);
     };
   }, []);
@@ -325,10 +363,25 @@ export function MapView({
     const map = mapRef.current;
     if (!map || !isReady) return;
     updateGeoJsonSource(map, SOURCE_PROVINCIAS, provinciasGeo);
+  }, [isReady, provinciasGeo]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !isReady) return;
     updateGeoJsonSource(map, SOURCE_DEPARTAMENTOS, departamentosGeo ?? { type: 'FeatureCollection', features: [] });
+  }, [isReady, departamentosGeo]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !isReady) return;
     updateGeoJsonSource(map, SOURCE_CLIENTES, clientesGeo, true);
+  }, [isReady, clientesGeo]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !isReady) return;
     updateGeoJsonSource(map, SOURCE_LOCALIDADES, localidadesGeo ?? { type: 'FeatureCollection', features: [] });
-  }, [isReady, provinciasGeo, departamentosGeo, clientesGeo, localidadesGeo]);
+  }, [isReady, localidadesGeo]);
 
   useEffect(() => {
     const map = mapRef.current;
