@@ -1,0 +1,68 @@
+{
+  "project": "Mapa 2",
+  "phase": "V11A.1 Cloudflare Free optimization + API read models",
+  "generated_at": "2026-07-07T00:00:00.000Z",
+  "schema_version": "v11a1",
+  "source_files": {
+    "seedSummary": "data/d1/seed_summary.json",
+    "clients": "data/output/business_v6/clientes_v6.csv",
+    "products": "data/output/business_v6/productos_v6.csv",
+    "sales": "data/output/business_v6/ventas_mensuales_v6.csv",
+    "aggClient": "data/output/business_v6/agregados_cliente_v6.csv",
+    "aggLocalityMonth": "data/output/business_v6/agregados_departamento_mes_v6.csv",
+    "aggProvinceMonth": "data/output/business_v6/agregados_provincia_mes_v6.csv"
+  },
+  "table_counts": {
+    "api_province_summary": 24,
+    "api_locality_summary": 21289,
+    "api_locality_month_summary": 6432,
+    "api_locality_top_products": 3216,
+    "api_locality_client_metrics": 2000,
+    "api_client_sales_summary": 2000,
+    "api_query_budget": 11
+  },
+  "source_counts": {
+    "province": 24,
+    "locality": 21289,
+    "client": 2000,
+    "product": 65,
+    "sale_monthly_csv_rows": 128998,
+    "agg_locality_month_rows": 6432
+  },
+  "business_integrity": {
+    "expected_clients_v6": 2000,
+    "actual_clients": 2000,
+    "expected_products_from_v11a": 65,
+    "actual_products": 65,
+    "actual_sales": 128998,
+    "synthetic_rows_preserved": true,
+    "client_metrics_rows": 2000,
+    "client_summary_rows": 2000
+  },
+  "payload_policy": {
+    "top_products_json_limit_locality_summary": 5,
+    "top_products_rows_per_locality_table": 12,
+    "monthly_summary_json_max_periods_per_client": 24,
+    "no_raw_sales_in_static_cache": true,
+    "no_heavy_geometry_in_read_models": true
+  },
+  "sql_output": {
+    "file": "data/d1/v11a1_read_models.sql",
+    "statement_count": 34980,
+    "size_bytes": 31853703,
+    "chunks": [
+      {
+        "file": "data/d1/chunks/v11a1_read_models_001.sql",
+        "statement_count": 22076,
+        "size_bytes": 15999719
+      },
+      {
+        "file": "data/d1/chunks/v11a1_read_models_002.sql",
+        "statement_count": 12904,
+        "size_bytes": 15854133
+      }
+    ]
+  },
+  "warnings": [],
+  "status": "OK"
+}

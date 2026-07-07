@@ -1,0 +1,201 @@
+{
+  "project": "Mapa 2",
+  "phase": "V11A.1",
+  "schema_version": "v11a1",
+  "generated_at": "2026-07-07T00:00:00.000Z",
+  "source": "public/data/api-cache generado; D1 sigue siendo canónico.",
+  "file_count": 29,
+  "total_bytes": 15256633,
+  "total_size": "14.55 MB",
+  "files": [
+    {
+      "file": "localities_by_province/index.json",
+      "bytes": 6063,
+      "size": "5.92 KB",
+      "sha256": "43408b33699ea43670070b6e713da0fef9a21a0057b5f97bd4c61117611a87c7"
+    },
+    {
+      "file": "localities_by_province/provincia_02.json",
+      "bytes": 92219,
+      "size": "90.06 KB",
+      "sha256": "bd3912114ebbfc97c6009c6d455809b0710164a1f799d4e99e714e42eeb12584"
+    },
+    {
+      "file": "localities_by_province/provincia_06.json",
+      "bytes": 2475108,
+      "size": "2.36 MB",
+      "sha256": "5ab5f6c1e57180b2957a1b1e9ad050d784b789505f8209247efc7cbcefe11bfd"
+    },
+    {
+      "file": "localities_by_province/provincia_10.json",
+      "bytes": 508979,
+      "size": "497.05 KB",
+      "sha256": "81e3eb6dab2125fb29215b0baa833dca0e0c659c5b0557ee2b7f74981ae34158"
+    },
+    {
+      "file": "localities_by_province/provincia_14.json",
+      "bytes": 1745386,
+      "size": "1.66 MB",
+      "sha256": "c82f757a9f0124b9cafc4729dce1394a22e05b4b83ed607ffa6f3c6be9c5ad52"
+    },
+    {
+      "file": "localities_by_province/provincia_18.json",
+      "bytes": 572950,
+      "size": "559.52 KB",
+      "sha256": "ad1b28be28eb56e6b2e2ebf16dc22830e2f030fffa810d3cb0c073da39de7362"
+    },
+    {
+      "file": "localities_by_province/provincia_22.json",
+      "bytes": 701745,
+      "size": "685.30 KB",
+      "sha256": "33b98c6cdeda4b94b98392f39f157ef6ce6c9dc0d80e1e2e67a288c5d689b560"
+    },
+    {
+      "file": "localities_by_province/provincia_26.json",
+      "bytes": 319929,
+      "size": "312.43 KB",
+      "sha256": "2bd788d717a366f6d3eff2d52a661151911d87020ef8b2d409a586afe7904050"
+    },
+    {
+      "file": "localities_by_province/provincia_30.json",
+      "bytes": 797008,
+      "size": "778.33 KB",
+      "sha256": "4f4bd58fb18d44ef5d3430263a08bf60825adbe49b4edcfda04da3950cf70974"
+    },
+    {
+      "file": "localities_by_province/provincia_34.json",
+      "bytes": 381082,
+      "size": "372.15 KB",
+      "sha256": "311e95f6f9d468e39e805a1f0ef82a8683a08825e06dfdf274c53ea96135136d"
+    },
+    {
+      "file": "localities_by_province/provincia_38.json",
+      "bytes": 469325,
+      "size": "458.33 KB",
+      "sha256": "b37ba060f4df3ed6b130b36d23e4aa05fcdf5f61f724810832926582d411fbd3"
+    },
+    {
+      "file": "localities_by_province/provincia_42.json",
+      "bytes": 267730,
+      "size": "261.46 KB",
+      "sha256": "2dcc291fc9a68e1f5c1364b68a347b12ea1a38de98a70e9026f2d613d94b9562"
+    },
+    {
+      "file": "localities_by_province/provincia_46.json",
+      "bytes": 406023,
+      "size": "396.51 KB",
+      "sha256": "6228682a364589151ff2abaa0a0a3050fe30b9defd8a40c1cacf5761e281f84b"
+    },
+    {
+      "file": "localities_by_province/provincia_50.json",
+      "bytes": 547637,
+      "size": "534.80 KB",
+      "sha256": "99d916e613ad523e67624c933950e1dbc478832c19bf5e83c5a5065bc03aca3a"
+    },
+    {
+      "file": "localities_by_province/provincia_54.json",
+      "bytes": 489878,
+      "size": "478.40 KB",
+      "sha256": "6c6676b3fd9ec44c8a9fc77fbb132ec8f8b456837714057afc8dbe98c495f544"
+    },
+    {
+      "file": "localities_by_province/provincia_58.json",
+      "bytes": 394562,
+      "size": "385.31 KB",
+      "sha256": "0c0ea6f845e32e9cfd9b7c2d4ab37d0128e13ff9251090a98fb4be9fb8bf455f"
+    },
+    {
+      "file": "localities_by_province/provincia_62.json",
+      "bytes": 414313,
+      "size": "404.60 KB",
+      "sha256": "19a73cd672bfc57b8c43d6853a44da37e516c948b585b4a5ae4a8dd10bc501c2"
+    },
+    {
+      "file": "localities_by_province/provincia_66.json",
+      "bytes": 691171,
+      "size": "674.97 KB",
+      "sha256": "0c70d2e169e0c5411cc51cd664d3611eebae2b66e3b06c69e89c3b498d216b7c"
+    },
+    {
+      "file": "localities_by_province/provincia_70.json",
+      "bytes": 293196,
+      "size": "286.32 KB",
+      "sha256": "7933b74416a788c9fff4672becc92c4fbd47fd35d1cf72788b3aaf19c535e6c0"
+    },
+    {
+      "file": "localities_by_province/provincia_74.json",
+      "bytes": 374225,
+      "size": "365.45 KB",
+      "sha256": "47a8a797e65b599ab4c8040191ded7a58330cf29e014793a771db6ed5af21899"
+    },
+    {
+      "file": "localities_by_province/provincia_78.json",
+      "bytes": 162683,
+      "size": "158.87 KB",
+      "sha256": "2a432478ff70ae56916b6fdcdf9f390935fee334fc97f921934ec0f0f2822d97"
+    },
+    {
+      "file": "localities_by_province/provincia_82.json",
+      "bytes": 1228535,
+      "size": "1.17 MB",
+      "sha256": "074a795087aab7446e09245289328163d2abb1afc65d9b9421a8da3ef017cbf4"
+    },
+    {
+      "file": "localities_by_province/provincia_86.json",
+      "bytes": 1086422,
+      "size": "1.04 MB",
+      "sha256": "bc4ec5bbc1e5313db6e1f4198f25002baa0492e73acd573c70aa834bce7b4375"
+    },
+    {
+      "file": "localities_by_province/provincia_90.json",
+      "bytes": 746578,
+      "size": "729.08 KB",
+      "sha256": "72bc8ef0f840715212288147a0615d00e8345e21cabbbe94d773ad908014e61e"
+    },
+    {
+      "file": "localities_by_province/provincia_94.json",
+      "bytes": 41163,
+      "size": "40.20 KB",
+      "sha256": "7b1ff2328bb64e79448a19ec268ef847a2b5df49502cdeee7ec58d1c4efcdaaa"
+    },
+    {
+      "file": "metadata.json",
+      "bytes": 1010,
+      "size": "1010 B",
+      "sha256": "4219f2affc4a29e4c049a7099282b15c6043b35fc38f0ad84c064aa086ff1526"
+    },
+    {
+      "file": "periods.json",
+      "bytes": 5158,
+      "size": "5.04 KB",
+      "sha256": "1e6a20531da375bd6878df649994130b7a505dca1401c6355217973281183803"
+    },
+    {
+      "file": "products.json",
+      "bytes": 22386,
+      "size": "21.86 KB",
+      "sha256": "edb90c76aff0db67f837d2334cc82fbd4a08d60027b2ca34d8fa5921a16f9def"
+    },
+    {
+      "file": "provinces.json",
+      "bytes": 14169,
+      "size": "13.84 KB",
+      "sha256": "2bdb7c15d98a8395925440c59cabaad6f2af08ea99d69c4d3962b976ffd7b9ad"
+    }
+  ],
+  "warnings": [
+    {
+      "level": "WARNING",
+      "file": "localities_by_province/provincia_06.json",
+      "bytes": 2475108,
+      "message": "Asset supera 1.5 MB; revisar si conviene paginar o servir por API D1."
+    },
+    {
+      "level": "WARNING",
+      "file": "localities_by_province/provincia_14.json",
+      "bytes": 1745386,
+      "message": "Asset supera 1.5 MB; revisar si conviene paginar o servir por API D1."
+    }
+  ],
+  "status": "WARNING"
+}

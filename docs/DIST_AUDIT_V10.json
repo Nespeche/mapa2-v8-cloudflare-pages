@@ -1,11 +1,11 @@
 {
   "phase": "V10 — Optimización avanzada de performance, GeoJSON y carga de datos",
-  "generated_at": "2026-07-07T10:59:13.663Z",
+  "generated_at": "2026-07-07T13:01:13.296Z",
   "base": "V9 aprobada — commit informado 985782d",
   "dist_exists": true,
-  "file_count": 310,
-  "total_size_bytes": 176983500,
-  "total_size_mib": 168.7846,
+  "file_count": 340,
+  "total_size_bytes": 192246660,
+  "total_size_mib": 183.3407,
   "largest_asset": {
     "path": "data/business/ventas_mensuales.csv",
     "size_bytes": 14680144,
@@ -110,6 +110,12 @@
       "extension": ".geojson"
     },
     {
+      "path": "data/api-cache/localities_by_province/provincia_06.json",
+      "size_bytes": 2475108,
+      "size_mib": 2.3604,
+      "extension": ".json"
+    },
+    {
       "path": "data/business/agregados/ventas_departamento_mes.json",
       "size_bytes": 2450617,
       "size_mib": 2.3371,
@@ -126,12 +132,6 @@
       "size_bytes": 1788350,
       "size_mib": 1.7055,
       "extension": ".geojson"
-    },
-    {
-      "path": "data/provincias/provincia_82_santa_fe/puntos.geojson",
-      "size_bytes": 1768151,
-      "size_mib": 1.6862,
-      "extension": ".geojson"
     }
   ],
   "by_extension": [
@@ -142,16 +142,16 @@
       "size_mib": 148.7984
     },
     {
+      "extension": ".json",
+      "files": 42,
+      "size_bytes": 19776885,
+      "size_mib": 18.8607
+    },
+    {
       "extension": ".csv",
       "files": 1,
       "size_bytes": 14680144,
       "size_mib": 14.0001
-    },
-    {
-      "extension": ".json",
-      "files": 12,
-      "size_bytes": 4513725,
-      "size_mib": 4.3046
     },
     {
       "extension": ".js",

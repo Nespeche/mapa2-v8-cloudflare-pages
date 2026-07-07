@@ -35,3 +35,27 @@ data/output/business_v6/
 *.zip
 *.7z
 *.rar
+# Cloudflare / D1 local artifacts
+.wrangler/
+*.sqlite3
+*.d1
+*.local-db
+
+# Mantener seeds SQL/JSON de V11A, pero no bases binarias locales
+data/d1/*.db
+data/d1/*.sqlite
+data/d1/*.sqlite3
+
+
+# Mapa2 - generated heavy artifacts, not versioned
+data/d1/seed.sql
+data/d1/chunks/seed_*.sql
+data/output/*.gpkg
+*.gpkg
+*.sqlite
+*.db
+*.zip
+dist/
+node_modules/
+.wrangler/
+.env

@@ -1,0 +1,340 @@
+{
+  "project": "Mapa 2",
+  "phase": "V11A.1 API read budget audit",
+  "generated_at": "2026-07-07T00:00:00.000Z",
+  "schema_version": "v11a1",
+  "status": "WARNING",
+  "cloudflare_free_reference_from_v11a": {
+    "free_rows_read_per_day": 5000000,
+    "free_rows_written_per_day": 100000,
+    "max_queries_per_worker_invocation_free": 50,
+    "note": "Revisar límites vigentes de Cloudflare al momento del deploy remoto."
+  },
+  "available_read_model_rows": {
+    "api_province_summary": 24,
+    "api_locality_summary": 21289,
+    "api_locality_month_summary": 6432,
+    "api_locality_top_products": 3216,
+    "api_locality_client_metrics": 2000,
+    "api_client_sales_summary": 2000,
+    "api_query_budget": 11
+  },
+  "available_static_cache_rows": {
+    "provinces": 24,
+    "localities": 21289,
+    "products": 65,
+    "periods": 24,
+    "locality_index_files": 24
+  },
+  "endpoints": [
+    {
+      "endpoint": "GET /api/health",
+      "method": "GET",
+      "future_phase": "V11B",
+      "main_table": "app_metadata or static response",
+      "auxiliary_tables": [],
+      "required_indexes": [],
+      "expected_max_rows_returned": 1,
+      "expected_max_rows_scanned": 1,
+      "requires_pagination": false,
+      "approx_response_kb": 1,
+      "full_scan_risk": "LOW",
+      "cache_strategy": "Responder estático o Edge cache muy corta; D1 opcional.",
+      "fallback": "Retornar status sin D1 si DB no está disponible.",
+      "can_be_static_asset": true,
+      "should_use_d1": false,
+      "should_use_read_model": false,
+      "should_use_aggregates": false,
+      "warning": "No usar este endpoint para validar datos pesados."
+    },
+    {
+      "endpoint": "GET /api/metadata",
+      "method": "GET",
+      "future_phase": "V11B",
+      "main_table": "public/data/api-cache/metadata.json",
+      "auxiliary_tables": [
+        "app_metadata"
+      ],
+      "required_indexes": [
+        "PK app_metadata.metadata_key"
+      ],
+      "expected_max_rows_returned": 1,
+      "expected_max_rows_scanned": 4,
+      "requires_pagination": false,
+      "approx_response_kb": 4,
+      "full_scan_risk": "LOW",
+      "cache_strategy": "Asset estático con hash + Cache-Control largo; D1 solo fallback.",
+      "fallback": "Leer app_metadata si el asset no existe.",
+      "can_be_static_asset": true,
+      "should_use_d1": false,
+      "should_use_read_model": false,
+      "should_use_aggregates": false,
+      "warning": "Actualizar asset al regenerar read models."
+    },
+    {
+      "endpoint": "GET /api/provinces",
+      "method": "GET",
+      "future_phase": "V11B",
+      "main_table": "public/data/api-cache/provinces.json or api_province_summary",
+      "auxiliary_tables": [],
+      "required_indexes": [
+        "idx_api_province_summary_name",
+        "idx_api_province_summary_slug"
+      ],
+      "expected_max_rows_returned": 24,
+      "expected_max_rows_scanned": 24,
+      "requires_pagination": false,
+      "approx_response_kb": 20,
+      "full_scan_risk": "LOW",
+      "cache_strategy": "Asset preferente; D1 read model cuando se necesite consistencia remota.",
+      "fallback": "api_province_summary ordenada por name.",
+      "can_be_static_asset": true,
+      "should_use_d1": true,
+      "should_use_read_model": true,
+      "should_use_aggregates": false,
+      "warning": "Nunca sumar sale_monthly para este endpoint."
+    },
+    {
+      "endpoint": "GET /api/provinces/:provinceId/localities",
+      "method": "GET",
+      "future_phase": "V11B",
+      "main_table": "public/data/api-cache/localities_by_province/{safe_id}.json or api_locality_summary",
+      "auxiliary_tables": [],
+      "required_indexes": [
+        "idx_api_locality_summary_province",
+        "idx_api_locality_summary_province_name"
+      ],
+      "expected_max_rows_returned": 3549,
+      "expected_max_rows_scanned": 3549,
+      "requires_pagination": false,
+      "approx_response_kb": 500,
+      "full_scan_risk": "LOW_WITH_INDEX",
+      "cache_strategy": "Asset por provincia preferente; D1 filtrando por province_id si se requiere versión dinámica.",
+      "fallback": "api_locality_summary WHERE province_id = ? ORDER BY name LIMIT 5000.",
+      "can_be_static_asset": true,
+      "should_use_d1": true,
+      "should_use_read_model": true,
+      "should_use_aggregates": false,
+      "warning": "El archivo de Buenos Aires puede ser el más grande; no incluir geometrías."
+    },
+    {
+      "endpoint": "GET /api/localities/:localityId",
+      "method": "GET",
+      "future_phase": "V11B",
+      "main_table": "api_locality_summary",
+      "auxiliary_tables": [
+        "geometry_feature only for asset_path/bbox if needed"
+      ],
+      "required_indexes": [
+        "PK api_locality_summary.locality_id",
+        "idx_geometry_entity"
+      ],
+      "expected_max_rows_returned": 1,
+      "expected_max_rows_scanned": 2,
+      "requires_pagination": false,
+      "approx_response_kb": 8,
+      "full_scan_risk": "LOW",
+      "cache_strategy": "D1 read model por PK; cache por localidad.",
+      "fallback": "locality + sales aggregates si read model no está aplicado.",
+      "can_be_static_asset": false,
+      "should_use_d1": true,
+      "should_use_read_model": true,
+      "should_use_aggregates": false,
+      "warning": "No devolver geometry_json pesado."
+    },
+    {
+      "endpoint": "GET /api/localities/:localityId/summary",
+      "method": "GET",
+      "future_phase": "V11B",
+      "main_table": "api_locality_summary",
+      "auxiliary_tables": [
+        "api_locality_top_products"
+      ],
+      "required_indexes": [
+        "PK api_locality_summary.locality_id",
+        "idx_api_locality_top_products_loc_rank"
+      ],
+      "expected_max_rows_returned": 13,
+      "expected_max_rows_scanned": 13,
+      "requires_pagination": false,
+      "approx_response_kb": 12,
+      "full_scan_risk": "LOW",
+      "cache_strategy": "D1 read models; Cache-Control corto por localidad.",
+      "fallback": "api_locality_month_summary para totales si falta summary.",
+      "can_be_static_asset": false,
+      "should_use_d1": true,
+      "should_use_read_model": true,
+      "should_use_aggregates": true,
+      "warning": "No consultar sale_monthly crudo."
+    },
+    {
+      "endpoint": "GET /api/localities/:localityId/clients?page=&pageSize=",
+      "method": "GET",
+      "future_phase": "V11B",
+      "main_table": "api_locality_client_metrics",
+      "auxiliary_tables": [],
+      "required_indexes": [
+        "idx_api_locality_client_loc_rank"
+      ],
+      "expected_max_rows_returned": 50,
+      "expected_max_rows_scanned": 50,
+      "requires_pagination": true,
+      "approx_response_kb": 30,
+      "full_scan_risk": "LOW_WITH_INDEX_AND_LIMIT",
+      "cache_strategy": "D1 paginado. pageSize default 25, máximo 100.",
+      "fallback": "client filtrado por locality_id sin ventas detalladas.",
+      "can_be_static_asset": false,
+      "should_use_d1": true,
+      "should_use_read_model": true,
+      "should_use_aggregates": false,
+      "warning": "Bloquear pageSize > 100."
+    },
+    {
+      "endpoint": "GET /api/clients/:clientId",
+      "method": "GET",
+      "future_phase": "V11B",
+      "main_table": "api_client_sales_summary",
+      "auxiliary_tables": [
+        "client"
+      ],
+      "required_indexes": [
+        "PK api_client_sales_summary.client_id"
+      ],
+      "expected_max_rows_returned": 1,
+      "expected_max_rows_scanned": 1,
+      "requires_pagination": false,
+      "approx_response_kb": 12,
+      "full_scan_risk": "LOW",
+      "cache_strategy": "D1 por PK; cache por cliente.",
+      "fallback": "client + sales_aggregate_client_month filtrado por client_id.",
+      "can_be_static_asset": false,
+      "should_use_d1": true,
+      "should_use_read_model": true,
+      "should_use_aggregates": true,
+      "warning": "No exponer datos sensibles si se reemplaza base sintética por real."
+    },
+    {
+      "endpoint": "GET /api/clients/:clientId/sales?from=&to=&productId=",
+      "method": "GET",
+      "future_phase": "V11B",
+      "main_table": "api_client_sales_summary or sale_monthly filtered by client_id + period",
+      "auxiliary_tables": [
+        "product"
+      ],
+      "required_indexes": [
+        "PK api_client_sales_summary.client_id",
+        "idx_sale_client_period",
+        "idx_sale_product_period"
+      ],
+      "expected_max_rows_returned": 24,
+      "expected_max_rows_scanned": 120,
+      "requires_pagination": false,
+      "approx_response_kb": 40,
+      "full_scan_risk": "MEDIUM_IF_PRODUCT_FILTER_WITHOUT_CLIENT",
+      "cache_strategy": "Resumen desde read model; detalle crudo solo filtrado por client_id y rango.",
+      "fallback": "sales_aggregate_client_month WHERE client_id = ? AND period_yyyymm BETWEEN ? AND ?",
+      "can_be_static_asset": false,
+      "should_use_d1": true,
+      "should_use_read_model": true,
+      "should_use_aggregates": true,
+      "warning": "Bloquear consultas sin clientId."
+    },
+    {
+      "endpoint": "GET /api/sales/summary?provinceId=&localityId=&from=&to=&productId=",
+      "method": "GET",
+      "future_phase": "V11B",
+      "main_table": "api_locality_month_summary or sales_aggregate_*",
+      "auxiliary_tables": [
+        "api_province_summary",
+        "api_locality_summary"
+      ],
+      "required_indexes": [
+        "idx_api_locality_month_locality_period",
+        "idx_api_locality_month_province_period",
+        "idx_agg_locality_period",
+        "idx_agg_product_period"
+      ],
+      "expected_max_rows_returned": 24,
+      "expected_max_rows_scanned": 100,
+      "requires_pagination": false,
+      "approx_response_kb": 35,
+      "full_scan_risk": "MEDIUM_IF_NO_FILTERS",
+      "cache_strategy": "Cache por combinación normalizada de filtros; exigir from/to razonables.",
+      "fallback": "sales_aggregate_province_month o sales_aggregate_locality_month.",
+      "can_be_static_asset": false,
+      "should_use_d1": true,
+      "should_use_read_model": true,
+      "should_use_aggregates": true,
+      "warning": "No usar sale_monthly para resumen general."
+    },
+    {
+      "endpoint": "GET /api/search/territory?q=&provinceId=&postalCode=",
+      "method": "GET",
+      "future_phase": "V11B",
+      "main_table": "locality, province, territorial_alias, postal_code_area",
+      "auxiliary_tables": [
+        "api_locality_summary for enriched result"
+      ],
+      "required_indexes": [
+        "idx_locality_province_name",
+        "idx_alias_normalized",
+        "idx_postal_code_area_cp",
+        "idx_postal_code_area_prov_loc"
+      ],
+      "expected_max_rows_returned": 20,
+      "expected_max_rows_scanned": 200,
+      "requires_pagination": true,
+      "approx_response_kb": 20,
+      "full_scan_risk": "WARNING_WITH_LIKE",
+      "cache_strategy": "Límite estricto, debounce frontend futuro, cache corta por query normalizada.",
+      "fallback": "Búsqueda por provincia + localidad normalizada; código postal como señal auxiliar.",
+      "can_be_static_asset": false,
+      "should_use_d1": true,
+      "should_use_read_model": false,
+      "should_use_aggregates": false,
+      "warning": "LIKE no debe ejecutarse sin LIMIT y normalización."
+    }
+  ],
+  "risks": [
+    {
+      "level": "WARNING",
+      "endpoint": "GET /api/clients/:clientId/sales?from=&to=&productId=",
+      "message": "Bloquear consultas sin clientId."
+    },
+    {
+      "level": "WARNING",
+      "endpoint": "GET /api/sales/summary?provinceId=&localityId=&from=&to=&productId=",
+      "message": "No usar sale_monthly para resumen general."
+    },
+    {
+      "level": "WARNING",
+      "endpoint": "GET /api/search/territory?q=&provinceId=&postalCode=",
+      "message": "LIKE no debe ejecutarse sin LIMIT y normalización."
+    }
+  ],
+  "strategy": {
+    "serve_static_when_possible": [
+      "/api/metadata",
+      "/api/provinces",
+      "/api/provinces/:provinceId/localities",
+      "/api/products"
+    ],
+    "serve_read_models": [
+      "/api/localities/:id/summary",
+      "/api/localities/:id/clients",
+      "/api/clients/:id",
+      "/api/sales/summary"
+    ],
+    "avoid_raw_sales_for": [
+      "/api/provinces",
+      "/api/localities/:id/summary",
+      "/api/sales/summary"
+    ],
+    "pagination_defaults": {
+      "default_page_size": 25,
+      "max_page_size": 100,
+      "search_limit": 20
+    },
+    "future_http_cache": "ETag/Cache-Control para assets; s-maxage corto para summaries dinámicos."
+  }
+}

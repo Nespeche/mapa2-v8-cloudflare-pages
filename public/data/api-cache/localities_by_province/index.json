@@ -1,0 +1,179 @@
+{
+  "project": "Mapa 2",
+  "phase": "V11A.1",
+  "schema_version": "v11a1",
+  "kind": "localities_by_province_index",
+  "generated_at": "2026-07-07T00:00:00.000Z",
+  "source": "D1 read model generado desde V11A; este asset no es fuente canónica.",
+  "row_count": 24,
+  "records": [
+    {
+      "province_id": "provincia:06",
+      "province_name": "Buenos Aires",
+      "file": "localities_by_province/provincia_06.json",
+      "row_count": 3468,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:10",
+      "province_name": "Catamarca",
+      "file": "localities_by_province/provincia_10.json",
+      "row_count": 717,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:22",
+      "province_name": "Chaco",
+      "file": "localities_by_province/provincia_22.json",
+      "row_count": 982,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:26",
+      "province_name": "Chubut",
+      "file": "localities_by_province/provincia_26.json",
+      "row_count": 446,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:02",
+      "province_name": "Ciudad Autónoma de Buenos Aires",
+      "file": "localities_by_province/provincia_02.json",
+      "row_count": 128,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:14",
+      "province_name": "Córdoba",
+      "file": "localities_by_province/provincia_14.json",
+      "row_count": 2435,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:18",
+      "province_name": "Corrientes",
+      "file": "localities_by_province/provincia_18.json",
+      "row_count": 803,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:30",
+      "province_name": "Entre Ríos",
+      "file": "localities_by_province/provincia_30.json",
+      "row_count": 1108,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:34",
+      "province_name": "Formosa",
+      "file": "localities_by_province/provincia_34.json",
+      "row_count": 531,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:38",
+      "province_name": "Jujuy",
+      "file": "localities_by_province/provincia_38.json",
+      "row_count": 661,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:42",
+      "province_name": "La Pampa",
+      "file": "localities_by_province/provincia_42.json",
+      "row_count": 376,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:46",
+      "province_name": "La Rioja",
+      "file": "localities_by_province/provincia_46.json",
+      "row_count": 571,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:50",
+      "province_name": "Mendoza",
+      "file": "localities_by_province/provincia_50.json",
+      "row_count": 765,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:54",
+      "province_name": "Misiones",
+      "file": "localities_by_province/provincia_54.json",
+      "row_count": 685,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:58",
+      "province_name": "Neuquén",
+      "file": "localities_by_province/provincia_58.json",
+      "row_count": 551,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:62",
+      "province_name": "Río Negro",
+      "file": "localities_by_province/provincia_62.json",
+      "row_count": 577,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:66",
+      "province_name": "Salta",
+      "file": "localities_by_province/provincia_66.json",
+      "row_count": 971,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:70",
+      "province_name": "San Juan",
+      "file": "localities_by_province/provincia_70.json",
+      "row_count": 410,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:74",
+      "province_name": "San Luis",
+      "file": "localities_by_province/provincia_74.json",
+      "row_count": 525,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:78",
+      "province_name": "Santa Cruz",
+      "file": "localities_by_province/provincia_78.json",
+      "row_count": 226,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:82",
+      "province_name": "Santa Fe",
+      "file": "localities_by_province/provincia_82.json",
+      "row_count": 1720,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:86",
+      "province_name": "Santiago del Estero",
+      "file": "localities_by_province/provincia_86.json",
+      "row_count": 1531,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:94",
+      "province_name": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+      "file": "localities_by_province/provincia_94.json",
+      "row_count": 57,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    },
+    {
+      "province_id": "provincia:90",
+      "province_name": "Tucumán",
+      "file": "localities_by_province/provincia_90.json",
+      "row_count": 1045,
+      "note": "Nombre de archivo sanitizado para Windows/PowerShell."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "phase": "V10.4 — Estrategia de carga de datos",
-  "timestamp_utc": "2026-07-07T10:59:20.755Z",
+  "timestamp_utc": "2026-07-07T10:19:26.387Z",
   "strategy": {
     "initial": {
       "metadata": "data/metadata.json",

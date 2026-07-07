@@ -1,15 +1,15 @@
 # Mapa 2 — Auditoría de `dist` V10
 
 **Fase:** V10 — Optimización avanzada de performance, GeoJSON y carga de datos  
-**Generado:** 2026-07-07T10:59:13.663Z  
+**Generado:** 2026-07-07T13:01:13.296Z  
 **Base:** V9 aprobada — commit informado 985782d  
 **Resultado:** sin errores bloqueantes para Cloudflare Pages Free
 
 ## Resultado de build
 
 - `dist` generado: `true`
-- Archivos en `dist`: `310`
-- Tamaño total de `dist`: `168.7846 MiB`
+- Archivos en `dist`: `340`
+- Tamaño total de `dist`: `183.3407 MiB`
 - Mayor asset: `data/business/ventas_mensuales.csv` — `14.0001 MiB`
 - Archivos mayores a 25 MiB: `0`
 - Archivos no aptos para producción: `0`
@@ -37,8 +37,8 @@
 | Extensión | Archivos | Tamaño |
 |---|---:|---:|
 | `.geojson` | 287 | 148.7984 MiB |
+| `.json` | 42 | 18.8607 MiB |
 | `.csv` | 1 | 14.0001 MiB |
-| `.json` | 12 | 4.3046 MiB |
 | `.js` | 2 | 1.2099 MiB |
 | `.png` | 3 | 0.3911 MiB |
 | `.css` | 1 | 0.0779 MiB |

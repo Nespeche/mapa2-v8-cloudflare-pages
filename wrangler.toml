@@ -1,0 +1,8 @@
+name = "mapa2"
+compatibility_date = "2026-07-07"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "mapa2-db"
+database_id = "REEMPLAZAR_CON_DATABASE_ID_REAL"

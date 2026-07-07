@@ -1,7 +1,7 @@
 {
   "phase": "V10.4 — Decisión de arquitectura de carga de datos y backend",
   "base": "V10.3 — Estabilización, contratos de datos y anti-regresión aprobada",
-  "timestamp_utc": "2026-07-07T10:59:20.116Z",
+  "timestamp_utc": "2026-07-07T10:19:26.104Z",
   "package": {
     "name": "mapa2-v10-4-architecture-decision",
     "version": "10.0.4",
@@ -167,6 +167,10 @@
     "assets_over_25_mib": []
   },
   "deploy_safety_candidates_present_in_zip_or_worktree": [
+    "data/output/arg_geo_censo_census_ready_v4.gpkg",
+    "data/output/arg_geo_censo_full.gpkg",
+    "data/output/arg_geo_censo_semilla.gpkg",
+    "data/output/arg_geo_censo_semilla.sqlite",
     "data/raw/.gitkeep",
     "data/raw/georef/aglomerados.geojson",
     "data/raw/georef/asentamientos.geojson",
@@ -174,6 +178,7 @@
     "data/raw/georef/fracciones-censales.geojson",
     "data/raw/georef/gobiernos-locales.geojson",
     "data/raw/georef/localidades.geojson",
+    "data/raw/georef/municipios.zip",
     "data/raw/georef/provincias.geojson",
     "data/raw/georef/radios-censales.geojson",
     "data/raw/indec/c2022_tp_c_resumen.xlsx",
@@ -204,9 +209,11 @@
     "data/raw/indec/departamentos/c2022_90_tucuman_c2_1.xlsx",
     "data/raw/indec/departamentos/c2022_94_tdf_c2_1.xlsx",
     "data/raw/mininterior/datos-refeglo_25-09-2023.csv",
+    "dist/_headers",
+    "dist/assets/MapView-B_MVrhMk.js",
     "dist/assets/index-CbpVaSvo.css",
     "dist/assets/index-Depvom0a.js",
-    "dist/assets/MapView-B_MVrhMk.js",
+    "dist/data/README_PUBLIC_DATA.md",
     "dist/data/business/agregados/heatmap_clientes_ventas.geojson",
     "dist/data/business/agregados/ventas_cliente_totales.json",
     "dist/data/business/agregados/ventas_departamento_mes.json",
@@ -259,14 +266,7 @@
     "dist/data/provincias/provincia_06_buenos_aires/radios/d_06134.geojson",
     "dist/data/provincias/provincia_06_buenos_aires/radios/d_06140.geojson",
     "dist/data/provincias/provincia_06_buenos_aires/radios/d_06147.geojson",
-    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06154.geojson",
-    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06161.geojson",
-    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06168.geojson",
-    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06175.geojson",
-    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06182.geojson",
-    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06189.geojson",
-    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06196.geojson",
-    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06203.geojson"
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06154.geojson"
   ],
   "findings": [],
   "status": "OK"

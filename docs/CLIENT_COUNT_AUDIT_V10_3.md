@@ -1,7 +1,7 @@
 # Mapa 2 — Auditoría anti-regresión de conteo de clientes V10.3
 
 **Fase:** V10.3 — Anti-regresión de conteo de clientes  
-**Generado:** 2026-07-07T10:59:09.837Z  
+**Generado:** 2026-07-07T13:01:10.472Z  
 **Resultado:** sin errores bloqueantes
 
 ## Checks

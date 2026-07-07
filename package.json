@@ -1,9 +1,9 @@
 {
-  "name": "mapa2-v10-4-architecture-decision",
+  "name": "mapa2-v11a1-cloudflare-free-optimization",
   "private": true,
-  "version": "10.0.4",
+  "version": "11.0.1-alpha.1",
   "type": "module",
-  "description": "Mapa 2 V10.4 — decisión de arquitectura de carga de datos y backend sobre V10.3 aprobada.",
+  "description": "Mapa 2 V11A.1 — Cloudflare Free optimization, D1 read models, API read budget and static cache preparation over V11A.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc -b && node scripts/check_v10_client_counts.mjs && vite build && node scripts/check_cloudflare_dist.mjs && node scripts/audit_dist_v10.mjs",
@@ -22,7 +22,16 @@
     "audit:data-loading": "node scripts/audit_data_loading_v10_4.mjs",
     "audit:dependencies": "node scripts/audit_dependencies_v10_4.mjs",
     "validate:architecture": "npm run audit:architecture && npm run audit:data-loading && npm run audit:dependencies",
-    "validate:v10.4": "npm run validate:release && npm run validate:architecture"
+    "validate:v10.4": "npm run validate:release && npm run validate:architecture",
+    "data:d1:build": "node scripts/build_d1_seed.mjs",
+    "data:d1:validate": "node scripts/validate_d1_seed.mjs",
+    "audit:d1": "node scripts/audit_d1_limits.mjs",
+    "validate:v11a": "node scripts/validate_v11a.mjs",
+    "data:d1:readmodels": "node scripts/build_v11a1_read_models.mjs",
+    "data:api-cache:build": "node scripts/generate_v11a1_static_cache.mjs",
+    "audit:api-budget": "node scripts/audit_v11a1_api_read_budget.mjs",
+    "audit:query-plans": "node scripts/check_v11a1_query_plans.mjs",
+    "validate:v11a1": "node scripts/validate_v11a1.mjs"
   },
   "dependencies": {
     "maplibre-gl": "5.24.0",

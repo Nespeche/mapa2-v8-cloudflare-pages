@@ -1,0 +1,27 @@
+{
+  "project": "Mapa 2",
+  "phase": "V11A.1 Cloudflare Free optimization",
+  "schema_version": "v11a1",
+  "generated_at": "2026-07-07T00:00:00.000Z",
+  "source": "Cache estático generado desde read models D1 V11A.1; no es fuente canónica.",
+  "canonical_source": "Cloudflare D1 / migrations + seed V11A + read models V11A.1",
+  "counts": {
+    "provinces": 24,
+    "localities": 21289,
+    "products": 65,
+    "periods": 24
+  },
+  "policy": {
+    "no_raw_sales": true,
+    "no_clients_bulk": true,
+    "no_heavy_geometries": true,
+    "no_secrets": true,
+    "frontend_currently_does_not_depend_on_this_cache": true
+  },
+  "recommended_use_v11b": {
+    "/api/metadata": "Servir asset metadata.json o headers cacheados.",
+    "/api/provinces": "Servir provinces.json cuando no requiera datos frescos.",
+    "/api/provinces/:provinceId/localities": "Servir localities_by_province/{safe_id}.json para navegación de catálogo.",
+    "/api/products": "Servir products.json si se expone catálogo en V11B."
+  }
+}

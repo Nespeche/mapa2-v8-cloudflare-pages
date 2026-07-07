@@ -1,0 +1,130 @@
+{
+  "phase": "V11A D1 limits audit",
+  "generated_at": "2026-07-07T12:44:30.709Z",
+  "status": "WARNING",
+  "limits": {
+    "source": "Cloudflare D1 docs, consultadas 2026-07-07",
+    "free_database_size_bytes": 524288000,
+    "free_account_storage_bytes": 5368709120,
+    "free_rows_read_per_day": 5000000,
+    "free_rows_written_per_day": 100000,
+    "max_sql_statement_bytes": 100000,
+    "max_row_or_string_bytes": 2000000,
+    "max_queries_per_worker_invocation_free": 50,
+    "max_d1_execute_import_bytes": 5368709120
+  },
+  "seed": {
+    "seed_sql_bytes": 125642600,
+    "seed_sql_mb": 119.822,
+    "storage_usage_ratio_vs_free_db_limit": 0.2396,
+    "max_statement_bytes": 1235
+  },
+  "rows": {
+    "table_counts": {
+      "source_catalog": 6,
+      "app_metadata": 4,
+      "province": 24,
+      "locality": 21289,
+      "postal_code_area": 943,
+      "territorial_alias": 21313,
+      "territorial_match_log": 2000,
+      "census_population": 21313,
+      "geometry_feature": 21313,
+      "client": 2000,
+      "product": 65,
+      "sale_monthly": 128998,
+      "sales_aggregate_province_month": 264,
+      "sales_aggregate_locality_month": 6432,
+      "sales_aggregate_product_month": 1560,
+      "sales_aggregate_client_month": 48000,
+      "schema_migrations": 1
+    },
+    "total_rows": 275525,
+    "estimated_remote_rows_written_with_indexes": 826575
+  },
+  "geometry": {
+    "max_geometry_json_bytes": 8000,
+    "geometry_json_rows": 18470,
+    "asset_path_rows": 21313,
+    "rule": "Polígonos pesados quedan como asset_path + bbox + centroide; D1 no se usa como PostGIS."
+  },
+  "postal_codes": {
+    "rows": 943,
+    "strategy": "Extracción inicial desde direcciones postales REFLO incluidas en el proyecto. No es dataset postal exhaustivo.",
+    "confidence_rule": "Código postal es señal auxiliar; requiere cruce con provincia, localidad, alias, código oficial o coordenadas."
+  },
+  "chunks": [
+    {
+      "file": "data/d1/chunks/seed_001_sources_territory.sql",
+      "size_bytes": 57637200,
+      "statement_count": 86205,
+      "max_statement_bytes": 1235,
+      "description": "Fuentes, metadata, provincias, localidades, postal codes, aliases, censos y geometrías livianas/asset paths.",
+      "remote_free_write_risk": "MEDIUM_BECAUSE_INDEX_WRITES_COUNT"
+    },
+    {
+      "file": "data/d1/chunks/seed_002_business_core_and_aggregates.sql",
+      "size_bytes": 27172367,
+      "statement_count": 60321,
+      "max_statement_bytes": 645,
+      "description": "Productos, clientes, logs de matching y agregados comerciales precomputados.",
+      "remote_free_write_risk": "MEDIUM_BECAUSE_INDEX_WRITES_COUNT"
+    },
+    {
+      "file": "data/d1/chunks/seed_003_sales_2025.sql",
+      "size_bytes": 20379507,
+      "statement_count": 64414,
+      "max_statement_bytes": 326,
+      "description": "Ventas mensuales sintéticas del período 2025.",
+      "remote_free_write_risk": "MEDIUM_BECAUSE_INDEX_WRITES_COUNT"
+    },
+    {
+      "file": "data/d1/chunks/seed_004_sales_2026.sql",
+      "size_bytes": 20453382,
+      "statement_count": 64584,
+      "max_statement_bytes": 327,
+      "description": "Ventas mensuales sintéticas del período 2026.",
+      "remote_free_write_risk": "MEDIUM_BECAUSE_INDEX_WRITES_COUNT"
+    },
+    {
+      "file": "data/d1/chunks/v11a1_read_models_001.sql",
+      "size_bytes": 15999719,
+      "statement_count": null,
+      "max_statement_bytes": null,
+      "description": null,
+      "remote_free_write_risk": "MEDIUM_BECAUSE_INDEX_WRITES_COUNT"
+    },
+    {
+      "file": "data/d1/chunks/v11a1_read_models_002.sql",
+      "size_bytes": 15854133,
+      "statement_count": null,
+      "max_statement_bytes": null,
+      "description": null,
+      "remote_free_write_risk": "MEDIUM_BECAUSE_INDEX_WRITES_COUNT"
+    }
+  ],
+  "risks": [
+    {
+      "level": "WARNING",
+      "item": "remote_rows_written",
+      "message": "La importación remota completa supera 100.000 filas escritas/día de D1 Free."
+    },
+    {
+      "level": "WARNING",
+      "item": "remote_index_writes",
+      "message": "Con índices, la escritura remota puede multiplicar filas escritas. Cargar por chunks y monitorear métricas."
+    },
+    {
+      "level": "INFO",
+      "item": "geometry_policy",
+      "message": "Polígonos pesados quedan por asset_path + bbox/centroide; correcto para V11A."
+    }
+  ],
+  "recommendations": [
+    "Validar localmente con Wrangler antes de ejecutar remoto.",
+    "Para remoto Free, no ejecutar seed.sql completo de una vez; usar chunks y monitorear filas escritas.",
+    "Si Cloudflare corta por filas escritas, reanudar al día siguiente desde el próximo chunk.",
+    "En V11B usar APIs paginadas, queries parametrizadas e índices existentes.",
+    "No mover polígonos pesados a geometry_json sin nueva auditoría de tamaño."
+  ]
+}

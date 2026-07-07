@@ -1,0 +1,62 @@
+{
+  "project": "Mapa 2",
+  "phase": "V11A.1 static API cache",
+  "generated_at": "2026-07-07T00:00:00.000Z",
+  "schema_version": "v11a1",
+  "output_dir": "public/data/api-cache",
+  "counts": {
+    "localities_by_province/index.json": 6063,
+    "localities_by_province/provincia_02.json": 92219,
+    "localities_by_province/provincia_06.json": 2475108,
+    "localities_by_province/provincia_10.json": 508979,
+    "localities_by_province/provincia_14.json": 1745386,
+    "localities_by_province/provincia_18.json": 572950,
+    "localities_by_province/provincia_22.json": 701745,
+    "localities_by_province/provincia_26.json": 319929,
+    "localities_by_province/provincia_30.json": 797008,
+    "localities_by_province/provincia_34.json": 381082,
+    "localities_by_province/provincia_38.json": 469325,
+    "localities_by_province/provincia_42.json": 267730,
+    "localities_by_province/provincia_46.json": 406023,
+    "localities_by_province/provincia_50.json": 547637,
+    "localities_by_province/provincia_54.json": 489878,
+    "localities_by_province/provincia_58.json": 394562,
+    "localities_by_province/provincia_62.json": 414313,
+    "localities_by_province/provincia_66.json": 691171,
+    "localities_by_province/provincia_70.json": 293196,
+    "localities_by_province/provincia_74.json": 374225,
+    "localities_by_province/provincia_78.json": 162683,
+    "localities_by_province/provincia_82.json": 1228535,
+    "localities_by_province/provincia_86.json": 1086422,
+    "localities_by_province/provincia_90.json": 746578,
+    "localities_by_province/provincia_94.json": 41163,
+    "metadata.json": 1010,
+    "periods.json": 5158,
+    "products.json": 22386,
+    "provinces.json": 14169
+  },
+  "row_counts": {
+    "provinces": 24,
+    "localities": 21289,
+    "products": 65,
+    "periods": 24,
+    "locality_index_files": 24
+  },
+  "total_bytes": 15256633,
+  "total_size": "14.55 MB",
+  "warnings": [
+    {
+      "level": "WARNING",
+      "file": "localities_by_province/provincia_06.json",
+      "bytes": 2475108,
+      "message": "Asset supera 1.5 MB; revisar si conviene paginar o servir por API D1."
+    },
+    {
+      "level": "WARNING",
+      "file": "localities_by_province/provincia_14.json",
+      "bytes": 1745386,
+      "message": "Asset supera 1.5 MB; revisar si conviene paginar o servir por API D1."
+    }
+  ],
+  "status": "WARNING"
+}

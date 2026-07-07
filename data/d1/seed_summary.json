@@ -1,0 +1,112 @@
+{
+  "project": "Mapa 2",
+  "phase": "V11A D1 Schema + Migración local",
+  "generated_at": "2026-07-07T00:00:00.000Z",
+  "seed_version": "v11a",
+  "input_files": {
+    "provincesGeojson": "public/data/provincias.geojson",
+    "departmentPolygons": "public/data/localidades_poligonos_departamentos.geojson",
+    "governmentPolygons": "public/data/localidades_poligonos_gobiernos_locales.geojson",
+    "municipalityPolygons": "public/data/localidades_poligonos_municipios.geojson",
+    "pointsIndex": "public/data/indexes/localidades_puntos_index.json",
+    "provinceCentroids": "data/semilla/provincias_georef_centroides.csv",
+    "refeglo": "data/semilla/datos-refeglo_25-09-2023.csv",
+    "clientsCsv": "data/output/business_v6/clientes_v6.csv",
+    "productsCsv": "data/output/business_v6/productos_v6.csv",
+    "salesCsv": "data/output/business_v6/ventas_mensuales_v6.csv",
+    "aggProvinceCsv": "data/output/business_v6/agregados_provincia_mes_v6.csv",
+    "aggLocalityCsv": "data/output/business_v6/agregados_departamento_mes_v6.csv",
+    "aggProductCsv": "data/output/business_v6/agregados_producto_mes_v6.csv"
+  },
+  "table_counts": {
+    "source_catalog": 6,
+    "app_metadata": 4,
+    "province": 24,
+    "locality": 21289,
+    "postal_code_area": 943,
+    "territorial_alias": 21313,
+    "territorial_match_log": 2000,
+    "census_population": 21313,
+    "geometry_feature": 21313,
+    "client": 2000,
+    "product": 65,
+    "sale_monthly": 128998,
+    "sales_aggregate_province_month": 264,
+    "sales_aggregate_locality_month": 6432,
+    "sales_aggregate_product_month": 1560,
+    "sales_aggregate_client_month": 48000,
+    "schema_migrations": 1
+  },
+  "total_rows": 275525,
+  "sale_period": {
+    "from": "2025-01",
+    "to": "2026-12",
+    "period_count": 24
+  },
+  "business_integrity": {
+    "expected_clients_v6": 2000,
+    "actual_clients": 2000,
+    "actual_products": 65,
+    "actual_sales": 128998,
+    "orphan_sales_without_client": 0,
+    "orphan_sales_without_product": 0,
+    "orphan_clients_without_province": 0,
+    "orphan_clients_without_locality": 0,
+    "localities_without_province": 0,
+    "synthetic_rows_preserved": true
+  },
+  "geometry_policy": {
+    "max_geometry_json_bytes": 8000,
+    "geometry_json_rows": 18470,
+    "asset_path_rows": 21313,
+    "rule": "Polígonos pesados quedan como asset_path + bbox + centroide; D1 no se usa como PostGIS."
+  },
+  "postal_codes": {
+    "rows": 943,
+    "strategy": "Extracción inicial desde direcciones postales REFLO incluidas en el proyecto. No es dataset postal exhaustivo.",
+    "confidence_rule": "Código postal es señal auxiliar; requiere cruce con provincia, localidad, alias, código oficial o coordenadas."
+  },
+  "chunks": [
+    {
+      "file": "seed_001_sources_territory.sql",
+      "description": "Fuentes, metadata, provincias, localidades, postal codes, aliases, censos y geometrías livianas/asset paths.",
+      "statementCount": 86205,
+      "sizeBytes": 57637200,
+      "maxStatementBytes": 1235
+    },
+    {
+      "file": "seed_002_business_core_and_aggregates.sql",
+      "description": "Productos, clientes, logs de matching y agregados comerciales precomputados.",
+      "statementCount": 60321,
+      "sizeBytes": 27172367,
+      "maxStatementBytes": 645
+    },
+    {
+      "file": "seed_003_sales_2025.sql",
+      "description": "Ventas mensuales sintéticas del período 2025.",
+      "statementCount": 64414,
+      "sizeBytes": 20379507,
+      "maxStatementBytes": 326
+    },
+    {
+      "file": "seed_004_sales_2026.sql",
+      "description": "Ventas mensuales sintéticas del período 2026.",
+      "statementCount": 64584,
+      "sizeBytes": 20453382,
+      "maxStatementBytes": 327
+    }
+  ],
+  "file_sizes": {
+    "seed_sql_bytes": 125642600,
+    "seed_sql_mb": 119.822,
+    "max_statement_bytes": 1235
+  },
+  "warnings": [],
+  "omitted": [],
+  "status": "OK_WITH_REMOTE_IMPORT_WARNINGS",
+  "notes": [
+    "V11A no implementa backend API ni frontend API-first.",
+    "El frontend estático V10.4 se preserva.",
+    "Para remoto Cloudflare Free revisar docs/V11A_CLOUDFLARE_STEPS.md porque la carga completa puede exceder filas escritas diarias."
+  ]
+}

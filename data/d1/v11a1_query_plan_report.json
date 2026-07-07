@@ -1,0 +1,84 @@
+{
+  "project": "Mapa 2",
+  "phase": "V11A.1 query plan audit",
+  "generated_at": "2026-07-07T00:00:00.000Z",
+  "schema_version": "v11a1",
+  "status": "WARNING",
+  "checks": [
+    {
+      "id": "locality_by_pk",
+      "query": "api_locality_summary WHERE locality_id = ?",
+      "requiredIndex": "PRIMARY KEY api_locality_summary(locality_id)",
+      "evidence": "CREATE TABLE IF NOT EXISTS api_locality_summary",
+      "status": "OK",
+      "note": "Debe resolver por PK."
+    },
+    {
+      "id": "localities_by_province",
+      "query": "api_locality_summary WHERE province_id = ? ORDER BY name LIMIT 500",
+      "requiredIndex": "idx_api_locality_summary_province_name",
+      "evidence": "CREATE INDEX IF NOT EXISTS idx_api_locality_summary_province_name ON api_locality_summary(province_id, name_normalized)",
+      "status": "OK",
+      "note": "ORDER BY name puede requerir sort; para V11B conviene ordenar por name_normalized o aceptar sort acotado."
+    },
+    {
+      "id": "locality_clients_ranked",
+      "query": "api_locality_client_metrics WHERE locality_id = ? ORDER BY rank_net_sales LIMIT 50",
+      "requiredIndex": "idx_api_locality_client_loc_rank",
+      "evidence": "CREATE INDEX IF NOT EXISTS idx_api_locality_client_loc_rank ON api_locality_client_metrics(locality_id, rank_net_sales)",
+      "status": "OK",
+      "note": "Paginación obligatoria y pageSize máximo 100."
+    },
+    {
+      "id": "locality_top_products",
+      "query": "api_locality_top_products WHERE locality_id = ? ORDER BY rank_net_sales LIMIT 10",
+      "requiredIndex": "idx_api_locality_top_products_loc_rank",
+      "evidence": "CREATE INDEX IF NOT EXISTS idx_api_locality_top_products_loc_rank ON api_locality_top_products(locality_id, rank_net_sales)",
+      "status": "OK",
+      "note": "Top products está precalculado; no escanear ventas crudas."
+    },
+    {
+      "id": "client_summary_by_pk",
+      "query": "api_client_sales_summary WHERE client_id = ?",
+      "requiredIndex": "PRIMARY KEY api_client_sales_summary(client_id)",
+      "evidence": "client_id TEXT PRIMARY KEY",
+      "status": "OK",
+      "note": "Resuelve detalle/resumen por cliente con una fila."
+    },
+    {
+      "id": "postal_code_lookup",
+      "query": "postal_code_area WHERE postal_code = ? LIMIT 20",
+      "requiredIndex": "idx_postal_code_area_cp",
+      "evidence": "CREATE INDEX IF NOT EXISTS idx_postal_code_area_cp ON postal_code_area(postal_code)",
+      "status": "OK",
+      "note": "Código postal solo como señal auxiliar territorial."
+    },
+    {
+      "id": "territory_alias_like",
+      "query": "territorial_alias WHERE alias_normalized LIKE 'san%' LIMIT 20",
+      "requiredIndex": "idx_alias_normalized",
+      "evidence": "CREATE INDEX IF NOT EXISTS idx_alias_normalized ON territorial_alias(alias_normalized)",
+      "status": "WARNING",
+      "note": "LIKE puede usar índice solo con prefijo y collation compatible; imponer LIMIT y normalizar q."
+    },
+    {
+      "id": "locality_month_by_locality_period",
+      "query": "api_locality_month_summary WHERE locality_id = ? AND period_yyyymm BETWEEN ? AND ?",
+      "requiredIndex": "idx_api_locality_month_locality_period",
+      "evidence": "CREATE INDEX IF NOT EXISTS idx_api_locality_month_locality_period ON api_locality_month_summary(locality_id, period_yyyymm)",
+      "status": "OK",
+      "note": "Adecuado para serie mensual por localidad."
+    },
+    {
+      "id": "locality_month_by_province_period",
+      "query": "api_locality_month_summary WHERE province_id = ? AND period_yyyymm BETWEEN ? AND ?",
+      "requiredIndex": "idx_api_locality_month_province_period",
+      "evidence": "CREATE INDEX IF NOT EXISTS idx_api_locality_month_province_period ON api_locality_month_summary(province_id, period_yyyymm)",
+      "status": "OK",
+      "note": "Adecuado para resúmenes provinciales sin sale_monthly."
+    }
+  ],
+  "forbidden_findings": [],
+  "sql_file": "data/d1/v11a1_query_plan_checks.sql",
+  "execution_note": "Este script prepara EXPLAIN QUERY PLAN y valida cobertura de índices por schema. Ejecutar el SQL con Wrangler D1 local para ver el plan real."
+}

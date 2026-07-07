@@ -1,0 +1,201 @@
+{
+  "phase": "V11A release validation",
+  "generated_at": "2026-07-07T12:45:23.933Z",
+  "status": "OK",
+  "errors": [],
+  "warnings": [],
+  "checks": [
+    {
+      "name": "archivo requerido wrangler.toml",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido migrations/0001_schema.sql",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido scripts/build_d1_seed.mjs",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido scripts/validate_d1_seed.mjs",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido scripts/audit_d1_limits.mjs",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido scripts/validate_v11a.mjs",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido data/d1/seed.sql",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido data/d1/seed_summary.json",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido data/d1/d1_audit_report.json",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido docs/V11A_D1_SCHEMA.md",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido docs/V11A_MIGRATION_REPORT.md",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido docs/V11A_D1_VALIDATION.md",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido docs/V11A_CLOUDFLARE_STEPS.md",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido docs/V11A_GITHUB_STEPS.md",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido docs/V11A_ROLLBACK.md",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido docs/POSTAL_CODES_SOURCES.md",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "archivo requerido docs/V11A_CHANGELOG.md",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "script npm data:d1:build",
+      "ok": true,
+      "detail": "node scripts/build_d1_seed.mjs",
+      "level": "error"
+    },
+    {
+      "name": "script npm data:d1:validate",
+      "ok": true,
+      "detail": "node scripts/validate_d1_seed.mjs",
+      "level": "error"
+    },
+    {
+      "name": "script npm audit:d1",
+      "ok": true,
+      "detail": "node scripts/audit_d1_limits.mjs",
+      "level": "error"
+    },
+    {
+      "name": "script npm validate:v11a",
+      "ok": true,
+      "detail": "node scripts/validate_v11a.mjs",
+      "level": "error"
+    },
+    {
+      "name": "script npm build",
+      "ok": true,
+      "detail": "tsc -b && node scripts/check_v10_client_counts.mjs && vite build && node scripts/check_cloudflare_dist.mjs && node scripts/audit_dist_v10.mjs",
+      "level": "error"
+    },
+    {
+      "name": "wrangler.toml tiene binding DB",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "wrangler.toml usa database_name mapa2-db",
+      "ok": true,
+      "detail": null,
+      "level": "error"
+    },
+    {
+      "name": "wrangler.toml mantiene placeholder seguro de database_id",
+      "ok": true,
+      "detail": null,
+      "level": "warning"
+    },
+    {
+      "name": "V11A no perdió clientes",
+      "ok": true,
+      "detail": 2000,
+      "level": "error"
+    },
+    {
+      "name": "V11A no perdió ventas",
+      "ok": true,
+      "detail": 128998,
+      "level": "error"
+    },
+    {
+      "name": "V11A conserva productos",
+      "ok": true,
+      "detail": 65,
+      "level": "error"
+    },
+    {
+      "name": "V11A trae localidades normalizadas",
+      "ok": true,
+      "detail": 21289,
+      "level": "error"
+    },
+    {
+      "name": "V11A modela códigos postales",
+      "ok": true,
+      "detail": 943,
+      "level": "warning"
+    },
+    {
+      "name": "no existe .env real en raíz",
+      "ok": true,
+      "detail": [],
+      "level": "error"
+    },
+    {
+      "name": "node_modules no forma parte requerida del entregable",
+      "ok": true,
+      "detail": "Si existe localmente por npm install, se excluye al generar ZIP.",
+      "level": "error"
+    }
+  ]
+}

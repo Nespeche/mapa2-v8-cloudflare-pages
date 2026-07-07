@@ -1,0 +1,423 @@
+{
+  "project": "Mapa 2",
+  "phase": "V11A.1 validation",
+  "generated_at": "2026-07-07T00:00:00.000Z",
+  "schema_version": "v11a1",
+  "status": "OK_WITH_WARNINGS",
+  "errors": [],
+  "warnings": [
+    {
+      "id": "cache-size-warning",
+      "message": "Cache con advertencias de tamaño: 2",
+      "warnings": [
+        {
+          "level": "WARNING",
+          "file": "localities_by_province/provincia_06.json",
+          "bytes": 2475108,
+          "message": "Asset supera 1.5 MB; revisar si conviene paginar o servir por API D1."
+        },
+        {
+          "level": "WARNING",
+          "file": "localities_by_province/provincia_14.json",
+          "bytes": 1745386,
+          "message": "Asset supera 1.5 MB; revisar si conviene paginar o servir por API D1."
+        }
+      ]
+    },
+    {
+      "id": "query-plan-like-warning",
+      "message": "LIKE territorial queda como WARNING controlado con LIMIT"
+    },
+    {
+      "id": "local-exclusion-dirs",
+      "message": "Directorios locales presentes y excluidos del ZIP final: .git/, node_modules/"
+    }
+  ],
+  "checks": [
+    {
+      "id": "file:migrations/0002_v11a1_api_read_optimization.sql",
+      "status": "OK",
+      "message": "Existe migrations/0002_v11a1_api_read_optimization.sql"
+    },
+    {
+      "id": "file:data/d1/v11a1_read_models.sql",
+      "status": "OK",
+      "message": "Existe data/d1/v11a1_read_models.sql"
+    },
+    {
+      "id": "file:data/d1/v11a1_read_models_summary.json",
+      "status": "OK",
+      "message": "Existe data/d1/v11a1_read_models_summary.json"
+    },
+    {
+      "id": "file:data/d1/static_cache_summary.json",
+      "status": "OK",
+      "message": "Existe data/d1/static_cache_summary.json"
+    },
+    {
+      "id": "file:data/d1/v11a1_api_read_budget_report.json",
+      "status": "OK",
+      "message": "Existe data/d1/v11a1_api_read_budget_report.json"
+    },
+    {
+      "id": "file:data/d1/v11a1_query_plan_checks.sql",
+      "status": "OK",
+      "message": "Existe data/d1/v11a1_query_plan_checks.sql"
+    },
+    {
+      "id": "file:data/d1/v11a1_query_plan_report.json",
+      "status": "OK",
+      "message": "Existe data/d1/v11a1_query_plan_report.json"
+    },
+    {
+      "id": "file:public/data/api-cache/metadata.json",
+      "status": "OK",
+      "message": "Existe public/data/api-cache/metadata.json"
+    },
+    {
+      "id": "file:public/data/api-cache/provinces.json",
+      "status": "OK",
+      "message": "Existe public/data/api-cache/provinces.json"
+    },
+    {
+      "id": "file:public/data/api-cache/localities_by_province/index.json",
+      "status": "OK",
+      "message": "Existe public/data/api-cache/localities_by_province/index.json"
+    },
+    {
+      "id": "file:public/data/api-cache/products.json",
+      "status": "OK",
+      "message": "Existe public/data/api-cache/products.json"
+    },
+    {
+      "id": "file:public/data/api-cache/periods.json",
+      "status": "OK",
+      "message": "Existe public/data/api-cache/periods.json"
+    },
+    {
+      "id": "file:public/data/api-cache/cache_manifest.json",
+      "status": "OK",
+      "message": "Existe public/data/api-cache/cache_manifest.json"
+    },
+    {
+      "id": "file:docs/V11A1_OPTIMIZATION_PLAN.md",
+      "status": "OK",
+      "message": "Existe docs/V11A1_OPTIMIZATION_PLAN.md"
+    },
+    {
+      "id": "file:docs/V11A1_READ_MODELS.md",
+      "status": "OK",
+      "message": "Existe docs/V11A1_READ_MODELS.md"
+    },
+    {
+      "id": "file:docs/V11A1_STATIC_CACHE.md",
+      "status": "OK",
+      "message": "Existe docs/V11A1_STATIC_CACHE.md"
+    },
+    {
+      "id": "file:docs/V11A1_API_READ_BUDGET.md",
+      "status": "OK",
+      "message": "Existe docs/V11A1_API_READ_BUDGET.md"
+    },
+    {
+      "id": "file:docs/V11A1_QUERY_PLAN_AUDIT.md",
+      "status": "OK",
+      "message": "Existe docs/V11A1_QUERY_PLAN_AUDIT.md"
+    },
+    {
+      "id": "file:docs/V11A1_CLOUDFLARE_FREE_STRATEGY.md",
+      "status": "OK",
+      "message": "Existe docs/V11A1_CLOUDFLARE_FREE_STRATEGY.md"
+    },
+    {
+      "id": "file:docs/V11A1_GITHUB_STEPS.md",
+      "status": "OK",
+      "message": "Existe docs/V11A1_GITHUB_STEPS.md"
+    },
+    {
+      "id": "file:docs/V11A1_CLOUDFLARE_STEPS.md",
+      "status": "OK",
+      "message": "Existe docs/V11A1_CLOUDFLARE_STEPS.md"
+    },
+    {
+      "id": "file:docs/V11A1_ROLLBACK.md",
+      "status": "OK",
+      "message": "Existe docs/V11A1_ROLLBACK.md"
+    },
+    {
+      "id": "file:docs/V11A1_CHANGELOG.md",
+      "status": "OK",
+      "message": "Existe docs/V11A1_CHANGELOG.md"
+    },
+    {
+      "id": "file:docs/V11B_PREPARATION_NOTES.md",
+      "status": "OK",
+      "message": "Existe docs/V11B_PREPARATION_NOTES.md"
+    },
+    {
+      "id": "package-script:data:d1:readmodels",
+      "status": "OK",
+      "message": "package.json contiene data:d1:readmodels"
+    },
+    {
+      "id": "package-script:data:api-cache:build",
+      "status": "OK",
+      "message": "package.json contiene data:api-cache:build"
+    },
+    {
+      "id": "package-script:audit:api-budget",
+      "status": "OK",
+      "message": "package.json contiene audit:api-budget"
+    },
+    {
+      "id": "package-script:audit:query-plans",
+      "status": "OK",
+      "message": "package.json contiene audit:query-plans"
+    },
+    {
+      "id": "package-script:validate:v11a1",
+      "status": "OK",
+      "message": "package.json contiene validate:v11a1"
+    },
+    {
+      "id": "schema-table:api_province_summary",
+      "status": "OK",
+      "message": "Migración crea api_province_summary"
+    },
+    {
+      "id": "schema-table:api_locality_summary",
+      "status": "OK",
+      "message": "Migración crea api_locality_summary"
+    },
+    {
+      "id": "schema-table:api_locality_month_summary",
+      "status": "OK",
+      "message": "Migración crea api_locality_month_summary"
+    },
+    {
+      "id": "schema-table:api_locality_top_products",
+      "status": "OK",
+      "message": "Migración crea api_locality_top_products"
+    },
+    {
+      "id": "schema-table:api_locality_client_metrics",
+      "status": "OK",
+      "message": "Migración crea api_locality_client_metrics"
+    },
+    {
+      "id": "schema-table:api_client_sales_summary",
+      "status": "OK",
+      "message": "Migración crea api_client_sales_summary"
+    },
+    {
+      "id": "schema-table:api_query_budget",
+      "status": "OK",
+      "message": "Migración crea api_query_budget"
+    },
+    {
+      "id": "schema-index:idx_api_province_summary_slug",
+      "status": "OK",
+      "message": "Migración crea índice idx_api_province_summary_slug"
+    },
+    {
+      "id": "schema-index:idx_api_locality_summary_province",
+      "status": "OK",
+      "message": "Migración crea índice idx_api_locality_summary_province"
+    },
+    {
+      "id": "schema-index:idx_api_locality_summary_province_name",
+      "status": "OK",
+      "message": "Migración crea índice idx_api_locality_summary_province_name"
+    },
+    {
+      "id": "schema-index:idx_api_locality_month_locality_period",
+      "status": "OK",
+      "message": "Migración crea índice idx_api_locality_month_locality_period"
+    },
+    {
+      "id": "schema-index:idx_api_locality_month_province_period",
+      "status": "OK",
+      "message": "Migración crea índice idx_api_locality_month_province_period"
+    },
+    {
+      "id": "schema-index:idx_api_locality_top_products_loc_rank",
+      "status": "OK",
+      "message": "Migración crea índice idx_api_locality_top_products_loc_rank"
+    },
+    {
+      "id": "schema-index:idx_api_locality_client_loc_rank",
+      "status": "OK",
+      "message": "Migración crea índice idx_api_locality_client_loc_rank"
+    },
+    {
+      "id": "schema-index:idx_api_client_sales_locality",
+      "status": "OK",
+      "message": "Migración crea índice idx_api_client_sales_locality"
+    },
+    {
+      "id": "schema-index:idx_api_query_budget_endpoint",
+      "status": "OK",
+      "message": "Migración crea índice idx_api_query_budget_endpoint"
+    },
+    {
+      "id": "schema-forbidden:SERIAL",
+      "status": "OK",
+      "message": "Migración no contiene SERIAL"
+    },
+    {
+      "id": "schema-forbidden:JSONB",
+      "status": "OK",
+      "message": "Migración no contiene JSONB"
+    },
+    {
+      "id": "schema-forbidden:GEOMETRY",
+      "status": "OK",
+      "message": "Migración no contiene GEOMETRY"
+    },
+    {
+      "id": "schema-forbidden:GEOGRAPHY",
+      "status": "OK",
+      "message": "Migración no contiene GEOGRAPHY"
+    },
+    {
+      "id": "schema-forbidden:ST_*",
+      "status": "OK",
+      "message": "Migración no contiene ST_*"
+    },
+    {
+      "id": "schema-forbidden:ILIKE",
+      "status": "OK",
+      "message": "Migración no contiene ILIKE"
+    },
+    {
+      "id": "schema-drop-table",
+      "status": "OK",
+      "message": "Migración no contiene DROP TABLE"
+    },
+    {
+      "id": "data-province-count",
+      "status": "OK",
+      "message": "api_province_summary=24"
+    },
+    {
+      "id": "data-locality-count",
+      "status": "OK",
+      "message": "api_locality_summary=21289"
+    },
+    {
+      "id": "data-client-metrics-count",
+      "status": "OK",
+      "message": "api_locality_client_metrics=2000"
+    },
+    {
+      "id": "data-client-summary-count",
+      "status": "OK",
+      "message": "api_client_sales_summary=2000"
+    },
+    {
+      "id": "data-product-count",
+      "status": "OK",
+      "message": "Productos=65"
+    },
+    {
+      "id": "data-sales-count",
+      "status": "OK",
+      "message": "Ventas preservadas=128998"
+    },
+    {
+      "id": "data-synthetic-flag",
+      "status": "OK",
+      "message": "Datos sintéticos preservados/documentados"
+    },
+    {
+      "id": "cache-file-count",
+      "status": "OK",
+      "message": "Cache contiene 29 archivos"
+    },
+    {
+      "id": "cache-size-warning",
+      "status": "WARNING",
+      "message": "Cache con advertencias de tamaño: 2",
+      "warnings": [
+        {
+          "level": "WARNING",
+          "file": "localities_by_province/provincia_06.json",
+          "bytes": 2475108,
+          "message": "Asset supera 1.5 MB; revisar si conviene paginar o servir por API D1."
+        },
+        {
+          "level": "WARNING",
+          "file": "localities_by_province/provincia_14.json",
+          "bytes": 1745386,
+          "message": "Asset supera 1.5 MB; revisar si conviene paginar o servir por API D1."
+        }
+      ]
+    },
+    {
+      "id": "cache-provinces-not-empty",
+      "status": "OK",
+      "message": "provinces.json filas=24"
+    },
+    {
+      "id": "cache-locality-index-not-empty",
+      "status": "OK",
+      "message": "index localidades filas=24"
+    },
+    {
+      "id": "cache-products-raw-sales",
+      "status": "OK",
+      "message": "products.json no contiene ventas crudas"
+    },
+    {
+      "id": "cache-heavy-geometry",
+      "status": "OK",
+      "message": "Cache no contiene geometrías pesadas"
+    },
+    {
+      "id": "budget-endpoint-count",
+      "status": "OK",
+      "message": "Presupuesto cubre 11 endpoints"
+    },
+    {
+      "id": "budget-status",
+      "status": "OK",
+      "message": "API budget status=WARNING"
+    },
+    {
+      "id": "query-plan-status",
+      "status": "OK",
+      "message": "Query plan status=WARNING"
+    },
+    {
+      "id": "query-plan-like-warning",
+      "status": "WARNING",
+      "message": "LIKE territorial queda como WARNING controlado con LIMIT"
+    },
+    {
+      "id": "forbidden-files",
+      "status": "OK",
+      "message": "No hay .env, .sqlite, .db ni .zip internos"
+    },
+    {
+      "id": "local-exclusion-dirs",
+      "status": "WARNING",
+      "message": "Directorios locales presentes y excluidos del ZIP final: .git/, node_modules/"
+    },
+    {
+      "id": "readmodel-sale-fullscan",
+      "status": "OK",
+      "message": "Read model SQL no recomienda full scan sobre sale_monthly"
+    },
+    {
+      "id": "readmodel-geometry-json",
+      "status": "OK",
+      "message": "Read models no incluyen geometrías pesadas"
+    }
+  ],
+  "summary": {
+    "required_files_checked": 24,
+    "cache_files": 30,
+    "cache_total_size": "14.55 MB",
+    "read_model_sql_size": "30.38 MB"
+  }
+}
