@@ -1,5 +1,8 @@
 # Mapa 2 — Arquitectura V10.3
 
+> **Nota V10.4:** este documento queda como registro histórico de V10.3. La versión funcional vigente es V10.4 sobre V10.3 aprobada.
+
+
 **Fase:** V10.3 — Estabilización, contratos de datos y anti-regresión  
 **Base:** V10.2 funcional  
 **Decisión:** no rehacer arquitectura completa; estabilizar con contratos y capas progresivas.

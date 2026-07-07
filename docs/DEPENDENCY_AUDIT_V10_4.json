@@ -1,0 +1,39 @@
+{
+  "phase": "V10.4 — Auditoría de dependencias y build Cloudflare",
+  "timestamp_utc": "2026-07-07T10:59:21.468Z",
+  "node_version": "22.16.0",
+  "npmrc": [
+    "registry=https://registry.npmjs.org/",
+    "fetch-retries=5",
+    "fetch-retry-mintimeout=20000",
+    "fetch-retry-maxtimeout=120000"
+  ],
+  "package_lock_exists": true,
+  "dependencies": [
+    "maplibre-gl",
+    "react",
+    "react-dom"
+  ],
+  "dev_dependencies": [
+    "@types/react",
+    "@types/react-dom",
+    "@vitejs/plugin-react",
+    "typescript",
+    "vite"
+  ],
+  "python": {
+    "root_requirements_exists": false,
+    "tools_python_requirements_exists": true,
+    "requirements_path_for_local_etl": "tools/python/requirements.txt"
+  },
+  "backend": {
+    "implemented": false,
+    "backend_signals": [],
+    "backend_dependencies": []
+  },
+  "security": {
+    "env_files_detected": []
+  },
+  "findings": [],
+  "status": "OK"
+}

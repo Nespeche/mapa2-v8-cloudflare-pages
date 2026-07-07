@@ -1,10 +1,10 @@
 {
   "phase": "V10 — Optimización avanzada de performance, GeoJSON y carga de datos",
-  "generated_at": "2026-07-07T01:20:40.433Z",
+  "generated_at": "2026-07-07T10:59:13.663Z",
   "base": "V9 aprobada — commit informado 985782d",
   "dist_exists": true,
   "file_count": 310,
-  "total_size_bytes": 176983471,
+  "total_size_bytes": 176983500,
   "total_size_mib": 168.7846,
   "largest_asset": {
     "path": "data/business/ventas_mensuales.csv",
@@ -156,7 +156,7 @@
     {
       "extension": ".js",
       "files": 2,
-      "size_bytes": 1268670,
+      "size_bytes": 1268720,
       "size_mib": 1.2099
     },
     {
@@ -180,13 +180,13 @@
     {
       "extension": ".html",
       "files": 1,
-      "size_bytes": 712,
+      "size_bytes": 689,
       "size_mib": 0.0007
     },
     {
       "extension": "[sin extension]",
       "files": 1,
-      "size_bytes": 567,
+      "size_bytes": 569,
       "size_mib": 0.0005
     },
     {

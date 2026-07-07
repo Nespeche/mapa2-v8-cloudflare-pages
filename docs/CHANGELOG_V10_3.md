@@ -1,5 +1,8 @@
 # Mapa 2 — CHANGELOG V10.3
 
+> **Nota V10.4:** este documento queda como registro histórico de V10.3. La versión funcional vigente es V10.4 sobre V10.3 aprobada.
+
+
 **Fase:** Estabilización, contratos de datos y anti-regresión  
 **Base:** `mapa2_v10_2_client_count_fix.zip`
 

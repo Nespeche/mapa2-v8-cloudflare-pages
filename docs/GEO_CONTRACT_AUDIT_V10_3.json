@@ -1,6 +1,6 @@
 {
   "phase": "V10.3 — Geo/census contract checks",
-  "generated_at": "2026-07-07T01:20:46.872Z",
+  "generated_at": "2026-07-07T10:59:18.738Z",
   "status": "OK",
   "actual": {
     "provincias_geojson_features": 24,

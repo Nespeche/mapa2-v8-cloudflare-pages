@@ -384,6 +384,7 @@ export default function App() {
             <span>Censo V5.1</span>
             <span>Ventas sintéticas V6</span>
             <span>Contratos V10.3</span>
+            <span>Arquitectura V10.4</span>
           </div>
         </header>
 

@@ -1,0 +1,274 @@
+{
+  "phase": "V10.4 — Estrategia de carga de datos",
+  "timestamp_utc": "2026-07-07T10:59:20.755Z",
+  "strategy": {
+    "initial": {
+      "metadata": "data/metadata.json",
+      "provinciasGeo": "data/provincias.geojson",
+      "provinciasIndex": "data/indexes/provincias_index.json",
+      "businessMetadata": "data/business/metadata_business_v6.json",
+      "ventasProvinciaMes": "data/business/agregados/ventas_provincia_mes.json",
+      "ventasClienteTotales": "data/business/agregados/ventas_cliente_totales.json",
+      "productos": "data/business/productos.json",
+      "calendario": "data/business/calendario.json"
+    },
+    "lazy": {
+      "clientesGeo": "data/business/clientes.geojson",
+      "ventasDepartamentoMes": "data/business/agregados/ventas_departamento_mes.json",
+      "ventasProductoMes": "data/business/agregados/ventas_producto_mes.json",
+      "ventasMensualesCsv": "data/business/ventas_mensuales.csv"
+    },
+    "forbidden_initial_patterns": [
+      "radios.geojson",
+      "/radios/",
+      "data/business/clientes.geojson",
+      "data/business/ventas_mensuales.csv"
+    ],
+    "decision": "Mantener carga inicial estática mínima y carga bajo demanda para clientes, agregados pesados, capas provinciales y CSV detallado."
+  },
+  "initial_files": [
+    {
+      "key": "metadata",
+      "path": "data/metadata.json",
+      "exists": true,
+      "size": {
+        "bytes": 104647,
+        "mib": 0.0998
+      }
+    },
+    {
+      "key": "provinciasGeo",
+      "path": "data/provincias.geojson",
+      "exists": true,
+      "size": {
+        "bytes": 217276,
+        "mib": 0.2072
+      }
+    },
+    {
+      "key": "provinciasIndex",
+      "path": "data/indexes/provincias_index.json",
+      "exists": true,
+      "size": {
+        "bytes": 25986,
+        "mib": 0.0248
+      }
+    },
+    {
+      "key": "businessMetadata",
+      "path": "data/business/metadata_business_v6.json",
+      "exists": true,
+      "size": {
+        "bytes": 4208,
+        "mib": 0.004
+      }
+    },
+    {
+      "key": "ventasProvinciaMes",
+      "path": "data/business/agregados/ventas_provincia_mes.json",
+      "exists": true,
+      "size": {
+        "bytes": 89619,
+        "mib": 0.0855
+      }
+    },
+    {
+      "key": "ventasClienteTotales",
+      "path": "data/business/agregados/ventas_cliente_totales.json",
+      "exists": true,
+      "size": {
+        "bytes": 1173880,
+        "mib": 1.1195
+      }
+    },
+    {
+      "key": "productos",
+      "path": "data/business/productos.json",
+      "exists": true,
+      "size": {
+        "bytes": 19333,
+        "mib": 0.0184
+      }
+    },
+    {
+      "key": "calendario",
+      "path": "data/business/calendario.json",
+      "exists": true,
+      "size": {
+        "bytes": 4107,
+        "mib": 0.0039
+      }
+    }
+  ],
+  "lazy_files": [
+    {
+      "key": "clientesGeo",
+      "path": "data/business/clientes.geojson",
+      "exists": true,
+      "size": {
+        "bytes": 1391263,
+        "mib": 1.3268
+      }
+    },
+    {
+      "key": "ventasDepartamentoMes",
+      "path": "data/business/agregados/ventas_departamento_mes.json",
+      "exists": true,
+      "size": {
+        "bytes": 2450617,
+        "mib": 2.3371
+      }
+    },
+    {
+      "key": "ventasProductoMes",
+      "path": "data/business/agregados/ventas_producto_mes.json",
+      "exists": true,
+      "size": {
+        "bytes": 593973,
+        "mib": 0.5665
+      }
+    },
+    {
+      "key": "ventasMensualesCsv",
+      "path": "data/business/ventas_mensuales.csv",
+      "exists": true,
+      "size": {
+        "bytes": 14680144,
+        "mib": 14.0001
+      }
+    }
+  ],
+  "totals": {
+    "initial_known_mib": 1.5631,
+    "lazy_known_mib": 18.2304,
+    "public_data_files": 301,
+    "public_data_total_mib": 167.1042,
+    "radio_files": 23,
+    "radio_total_mib": 59.6659
+  },
+  "top_20_public_data_assets": [
+    {
+      "path": "data/business/ventas_mensuales.csv",
+      "bytes": 14680144,
+      "mib": 14.0001,
+      "layer_type": "business"
+    },
+    {
+      "path": "data/localidades_poligonos_fracciones.geojson",
+      "bytes": 10201154,
+      "mib": 9.7286,
+      "layer_type": "territorial"
+    },
+    {
+      "path": "data/provincias/provincia_14_cordoba/radios.geojson",
+      "bytes": 9699726,
+      "mib": 9.2504,
+      "layer_type": "radios"
+    },
+    {
+      "path": "data/provincias/provincia_82_santa_fe/radios.geojson",
+      "bytes": 7775663,
+      "mib": 7.4155,
+      "layer_type": "radios"
+    },
+    {
+      "path": "data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson",
+      "bytes": 5543245,
+      "mib": 5.2865,
+      "layer_type": "radios"
+    },
+    {
+      "path": "data/provincias/provincia_30_entre_rios/radios.geojson",
+      "bytes": 4764397,
+      "mib": 4.5437,
+      "layer_type": "radios"
+    },
+    {
+      "path": "data/provincias/provincia_06_buenos_aires/puntos.geojson",
+      "bytes": 4240863,
+      "mib": 4.0444,
+      "layer_type": "localidades_puntos"
+    },
+    {
+      "path": "data/provincias/provincia_06_buenos_aires/fracciones.geojson",
+      "bytes": 3866986,
+      "mib": 3.6878,
+      "layer_type": "fracciones"
+    },
+    {
+      "path": "data/localidades_poligonos_gobiernos_locales.geojson",
+      "bytes": 3585864,
+      "mib": 3.4197,
+      "layer_type": "territorial"
+    },
+    {
+      "path": "data/provincias/provincia_50_mendoza/radios.geojson",
+      "bytes": 3433567,
+      "mib": 3.2745,
+      "layer_type": "radios"
+    },
+    {
+      "path": "data/provincias/provincia_90_tucuman/radios.geojson",
+      "bytes": 3343256,
+      "mib": 3.1884,
+      "layer_type": "radios"
+    },
+    {
+      "path": "data/provincias/provincia_18_corrientes/radios.geojson",
+      "bytes": 2937081,
+      "mib": 2.801,
+      "layer_type": "radios"
+    },
+    {
+      "path": "data/provincias/provincia_54_misiones/radios.geojson",
+      "bytes": 2936954,
+      "mib": 2.8009,
+      "layer_type": "radios"
+    },
+    {
+      "path": "data/provincias/provincia_22_chaco/radios.geojson",
+      "bytes": 2820564,
+      "mib": 2.6899,
+      "layer_type": "radios"
+    },
+    {
+      "path": "data/provincias/provincia_66_salta/radios.geojson",
+      "bytes": 2699215,
+      "mib": 2.5742,
+      "layer_type": "radios"
+    },
+    {
+      "path": "data/provincias/provincia_14_cordoba/puntos.geojson",
+      "bytes": 2610744,
+      "mib": 2.4898,
+      "layer_type": "localidades_puntos"
+    },
+    {
+      "path": "data/business/agregados/ventas_departamento_mes.json",
+      "bytes": 2450617,
+      "mib": 2.3371,
+      "layer_type": "business"
+    },
+    {
+      "path": "data/provincias/provincia_06_buenos_aires/radios/d_06427.geojson",
+      "bytes": 2366157,
+      "mib": 2.2565,
+      "layer_type": "territorial"
+    },
+    {
+      "path": "data/provincias/provincia_62_rio_negro/radios.geojson",
+      "bytes": 1788350,
+      "mib": 1.7055,
+      "layer_type": "radios"
+    },
+    {
+      "path": "data/provincias/provincia_82_santa_fe/puntos.geojson",
+      "bytes": 1768151,
+      "mib": 1.6862,
+      "layer_type": "localidades_puntos"
+    }
+  ],
+  "initial_violations": [],
+  "findings": [],
+  "status": "OK"
+}

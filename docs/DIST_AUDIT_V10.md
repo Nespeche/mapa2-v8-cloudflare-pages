@@ -1,7 +1,7 @@
 # Mapa 2 — Auditoría de `dist` V10
 
 **Fase:** V10 — Optimización avanzada de performance, GeoJSON y carga de datos  
-**Generado:** 2026-07-07T01:20:40.433Z  
+**Generado:** 2026-07-07T10:59:13.663Z  
 **Base:** V9 aprobada — commit informado 985782d  
 **Resultado:** sin errores bloqueantes para Cloudflare Pages Free
 

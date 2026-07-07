@@ -1,9 +1,9 @@
 {
-  "name": "mapa2-v10-3-data-contracts-antiregression",
+  "name": "mapa2-v10-4-architecture-decision",
   "private": true,
-  "version": "10.0.3",
+  "version": "10.0.4",
   "type": "module",
-  "description": "Mapa 2 V10.3 — estabilización, contratos de datos y checks anti-regresión sobre V10.2 funcional.",
+  "description": "Mapa 2 V10.4 — decisión de arquitectura de carga de datos y backend sobre V10.3 aprobada.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc -b && node scripts/check_v10_client_counts.mjs && vite build && node scripts/check_cloudflare_dist.mjs && node scripts/audit_dist_v10.mjs",
@@ -17,7 +17,12 @@
     "check:business-contracts": "node scripts/check_business_contracts.mjs",
     "check:geo-contracts": "node scripts/check_geo_contracts.mjs",
     "check:map-smoke": "node scripts/check_map_smoke_v10_3.mjs",
-    "validate:release": "npm run build && npm run check:data-contracts && npm run check:business-contracts && npm run check:geo-contracts"
+    "validate:release": "npm run build && npm run check:data-contracts && npm run check:business-contracts && npm run check:geo-contracts",
+    "audit:architecture": "node scripts/audit_architecture_v10_4.mjs",
+    "audit:data-loading": "node scripts/audit_data_loading_v10_4.mjs",
+    "audit:dependencies": "node scripts/audit_dependencies_v10_4.mjs",
+    "validate:architecture": "npm run audit:architecture && npm run audit:data-loading && npm run audit:dependencies",
+    "validate:v10.4": "npm run validate:release && npm run validate:architecture"
   },
   "dependencies": {
     "maplibre-gl": "5.24.0",

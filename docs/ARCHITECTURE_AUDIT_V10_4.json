@@ -1,0 +1,273 @@
+{
+  "phase": "V10.4 — Decisión de arquitectura de carga de datos y backend",
+  "base": "V10.3 — Estabilización, contratos de datos y anti-regresión aprobada",
+  "timestamp_utc": "2026-07-07T10:59:20.116Z",
+  "package": {
+    "name": "mapa2-v10-4-architecture-decision",
+    "version": "10.0.4",
+    "scripts": [
+      "audit:architecture",
+      "audit:data-loading",
+      "audit:dependencies",
+      "audit:dist",
+      "build",
+      "check:business-contracts",
+      "check:client-counts",
+      "check:cloudflare",
+      "check:data-contracts",
+      "check:geo-contracts",
+      "check:map-smoke",
+      "data:minify",
+      "dev",
+      "preview",
+      "preview:prod",
+      "validate:architecture",
+      "validate:release",
+      "validate:v10.4"
+    ],
+    "dependencies": {
+      "maplibre-gl": "5.24.0",
+      "react": "19.2.7",
+      "react-dom": "19.2.7"
+    },
+    "devDependencies": {
+      "@types/react": "19.2.17",
+      "@types/react-dom": "19.2.3",
+      "@vitejs/plugin-react": "6.0.3",
+      "typescript": "6.0.3",
+      "vite": "8.1.3"
+    }
+  },
+  "required_files": {
+    "checked": 48,
+    "missing": []
+  },
+  "backend_status": {
+    "implemented": false,
+    "functions_dir_exists": false,
+    "worker_config_exists": false,
+    "decision": "No se implementa backend en V10.4; se documenta la decisión y criterios de adopción."
+  },
+  "python_etl": {
+    "root_requirements_exists": false,
+    "tools_requirements_exists": true,
+    "recommendation": "Mantener dependencias Python en tools/python/requirements.txt para que Cloudflare Pages build frontend no ejecute pip install."
+  },
+  "dist": {
+    "exists": true,
+    "files": 310,
+    "total_mib": 168.7846,
+    "largest_asset": {
+      "path": "data/business/ventas_mensuales.csv",
+      "bytes": 14680144,
+      "mib": 14.0001
+    },
+    "top_20_assets": [
+      {
+        "path": "data/business/ventas_mensuales.csv",
+        "bytes": 14680144,
+        "mib": 14.0001
+      },
+      {
+        "path": "data/localidades_poligonos_fracciones.geojson",
+        "bytes": 10201154,
+        "mib": 9.7286
+      },
+      {
+        "path": "data/provincias/provincia_14_cordoba/radios.geojson",
+        "bytes": 9699726,
+        "mib": 9.2504
+      },
+      {
+        "path": "data/provincias/provincia_82_santa_fe/radios.geojson",
+        "bytes": 7775663,
+        "mib": 7.4155
+      },
+      {
+        "path": "data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson",
+        "bytes": 5543245,
+        "mib": 5.2865
+      },
+      {
+        "path": "data/provincias/provincia_30_entre_rios/radios.geojson",
+        "bytes": 4764397,
+        "mib": 4.5437
+      },
+      {
+        "path": "data/provincias/provincia_06_buenos_aires/puntos.geojson",
+        "bytes": 4240863,
+        "mib": 4.0444
+      },
+      {
+        "path": "data/provincias/provincia_06_buenos_aires/fracciones.geojson",
+        "bytes": 3866986,
+        "mib": 3.6878
+      },
+      {
+        "path": "data/localidades_poligonos_gobiernos_locales.geojson",
+        "bytes": 3585864,
+        "mib": 3.4197
+      },
+      {
+        "path": "data/provincias/provincia_50_mendoza/radios.geojson",
+        "bytes": 3433567,
+        "mib": 3.2745
+      },
+      {
+        "path": "data/provincias/provincia_90_tucuman/radios.geojson",
+        "bytes": 3343256,
+        "mib": 3.1884
+      },
+      {
+        "path": "data/provincias/provincia_18_corrientes/radios.geojson",
+        "bytes": 2937081,
+        "mib": 2.801
+      },
+      {
+        "path": "data/provincias/provincia_54_misiones/radios.geojson",
+        "bytes": 2936954,
+        "mib": 2.8009
+      },
+      {
+        "path": "data/provincias/provincia_22_chaco/radios.geojson",
+        "bytes": 2820564,
+        "mib": 2.6899
+      },
+      {
+        "path": "data/provincias/provincia_66_salta/radios.geojson",
+        "bytes": 2699215,
+        "mib": 2.5742
+      },
+      {
+        "path": "data/provincias/provincia_14_cordoba/puntos.geojson",
+        "bytes": 2610744,
+        "mib": 2.4898
+      },
+      {
+        "path": "data/business/agregados/ventas_departamento_mes.json",
+        "bytes": 2450617,
+        "mib": 2.3371
+      },
+      {
+        "path": "data/provincias/provincia_06_buenos_aires/radios/d_06427.geojson",
+        "bytes": 2366157,
+        "mib": 2.2565
+      },
+      {
+        "path": "data/provincias/provincia_62_rio_negro/radios.geojson",
+        "bytes": 1788350,
+        "mib": 1.7055
+      },
+      {
+        "path": "data/provincias/provincia_82_santa_fe/puntos.geojson",
+        "bytes": 1768151,
+        "mib": 1.6862
+      }
+    ],
+    "assets_over_25_mib": []
+  },
+  "deploy_safety_candidates_present_in_zip_or_worktree": [
+    "data/raw/.gitkeep",
+    "data/raw/georef/aglomerados.geojson",
+    "data/raw/georef/asentamientos.geojson",
+    "data/raw/georef/departamentos.geojson",
+    "data/raw/georef/fracciones-censales.geojson",
+    "data/raw/georef/gobiernos-locales.geojson",
+    "data/raw/georef/localidades.geojson",
+    "data/raw/georef/provincias.geojson",
+    "data/raw/georef/radios-censales.geojson",
+    "data/raw/indec/c2022_tp_c_resumen.xlsx",
+    "data/raw/indec/c2022_tp_gobierno_local_c1.xlsx",
+    "data/raw/indec/codgeo_2022/codcart_index.html",
+    "data/raw/indec/departamentos/c2022_02_caba_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_06_bsas_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_10_catamarca_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_14_cordoba_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_18_corrientes_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_22_chaco_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_26_chubut_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_30_entrerios_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_34_formosa_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_38_jujuy_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_42_lapampa_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_46_larioja_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_50_mendoza_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_54_misiones_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_58_neuquen_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_62_rionegro_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_66_salta_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_70_sanjuan_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_74_sanluis_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_78_santacruz_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_82_santafe_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_86_santiago_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_90_tucuman_c2_1.xlsx",
+    "data/raw/indec/departamentos/c2022_94_tdf_c2_1.xlsx",
+    "data/raw/mininterior/datos-refeglo_25-09-2023.csv",
+    "dist/assets/index-CbpVaSvo.css",
+    "dist/assets/index-Depvom0a.js",
+    "dist/assets/MapView-B_MVrhMk.js",
+    "dist/data/business/agregados/heatmap_clientes_ventas.geojson",
+    "dist/data/business/agregados/ventas_cliente_totales.json",
+    "dist/data/business/agregados/ventas_departamento_mes.json",
+    "dist/data/business/agregados/ventas_producto_mes.json",
+    "dist/data/business/agregados/ventas_provincia_mes.json",
+    "dist/data/business/calendario.json",
+    "dist/data/business/clientes.geojson",
+    "dist/data/business/metadata_business_v6.json",
+    "dist/data/business/productos.json",
+    "dist/data/business/ventas_mensuales.csv",
+    "dist/data/indexes/layers_index.json",
+    "dist/data/indexes/localidades_puntos_index.json",
+    "dist/data/indexes/provincias_index.json",
+    "dist/data/localidades_poligonos_aglomerados.geojson",
+    "dist/data/localidades_poligonos_departamentos.geojson",
+    "dist/data/localidades_poligonos_fracciones.geojson",
+    "dist/data/localidades_poligonos_gobiernos_locales.geojson",
+    "dist/data/localidades_poligonos_municipios.geojson",
+    "dist/data/metadata.json",
+    "dist/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/aglomerados.geojson",
+    "dist/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/departamentos.geojson",
+    "dist/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/fracciones.geojson",
+    "dist/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/gobiernos_locales.geojson",
+    "dist/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/puntos.geojson",
+    "dist/data/provincias/provincia_02_ciudad_autonoma_de_buenos_aires/radios.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/aglomerados.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/departamentos.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/fracciones.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/gobiernos_locales.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/municipios.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/puntos.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06007.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06014.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06021.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06028.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06035.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06042.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06049.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06056.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06063.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06070.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06077.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06084.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06091.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06098.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06105.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06112.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06119.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06126.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06134.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06140.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06147.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06154.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06161.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06168.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06175.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06182.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06189.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06196.geojson",
+    "dist/data/provincias/provincia_06_buenos_aires/radios/d_06203.geojson"
+  ],
+  "findings": [],
+  "status": "OK"
+}

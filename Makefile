@@ -1,4 +1,10 @@
-.PHONY: seed download gpkg diagnose full postgis validate codgeo census-ready check-census map-ready-v5-1 check-map-ready-v5-1 sizes-v5-1 business-v6 check-business-v6 sizes-v6
+.PHONY: python-install seed download gpkg diagnose full postgis validate codgeo census-ready check-census map-ready-v5-1 check-map-ready-v5-1 sizes-v5-1 business-v6 check-business-v6 sizes-v6
+
+PYTHON ?= python
+PYTHON_REQUIREMENTS ?= tools/python/requirements.txt
+
+python-install:
+	$(PYTHON) -m pip install -r $(PYTHON_REQUIREMENTS)
 
 seed:
 	python src/create_seed_sqlite.py --seed-dir data/semilla --out data/output/arg_geo_censo_semilla.sqlite

@@ -1,9 +1,9 @@
-export const APP_VERSION = 'V10.3' as const;
-export const APP_VERSION_NAME = 'V10.3 — Estabilización, contratos de datos y anti-regresión' as const;
-export const APP_VERSION_SOURCE = 'V10.2 — Client Count Tooltip Fix' as const;
+export const APP_VERSION = 'V10.4' as const;
+export const APP_VERSION_NAME = 'V10.4 — Decisión de arquitectura de carga de datos y backend' as const;
+export const APP_VERSION_SOURCE = 'V10.3 — Estabilización, contratos de datos y anti-regresión aprobada' as const;
 
 export const APP_PHASE_ORDER = [
-  'V10.3 — Estabilización, contratos de datos y anti-regresión',
+  'V10.3 — Estabilización, contratos de datos y anti-regresión · aprobada',
   'V10.4 — Decisión de arquitectura de carga de datos y backend',
   'V11 — Implementación de carga de datos/backend si se justifica',
   'V12 — Refactor y mejora profesional del frontend',
